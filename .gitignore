@@ -18,3 +18,7 @@ extracted_data/
 .idea/
 .vscode/
 .DS_Store
+MainStage Concert/
+dump*.py
+log.txt
+extracted_data/

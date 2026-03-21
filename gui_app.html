@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MainStage Concert Batch Editor</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0; padding: 20px; background-color: #f5f5f7; color: #1d1d1f;
+        }
+        .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+        .controls { display: flex; gap: 10px; align-items: center; }
+        input[type="text"] {
+            padding: 8px 12px; border: 1px solid #d2d2d7; border-radius: 6px; font-size: 14px; width: 250px;
+        }
+        button {
+            padding: 8px 16px; background-color: #0071e3; color: white; border: none; border-radius: 6px; 
+            font-size: 14px; cursor: pointer; transition: background 0.2s;
+        }
+        button:hover { background-color: #0077ed; }
+        table {
+            width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #ebebeb; }
+        th { background-color: #fcfcfc; font-weight: 600; font-size: 13px; color: #86868b; text-transform: uppercase; }
+        tr:hover { background-color: #f5f5f7; }
+        tr.selected { background-color: #e8f0fe; }
+        .checkbox-cell { width: 40px; text-align: center; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h2>MainStage Concert Batch Editor</h2>
+        <div class="controls">
+            <input type="text" id="searchInput" placeholder="Filter by Port or Control Name...">
+            <button onclick="rescanConcert()" style="background-color: #34c759;">🔄 Rescan Concert File</button>
+            <button onclick="batchEdit('Channel')">Batch Change Channel</button>
+            <button onclick="batchEdit('Port')">Batch Change Port</button>
+        </div>
+    </div>
+
+    <table id="mappingsTable">
+        <thead>
+            <tr>
+                <th class="checkbox-cell"><input type="checkbox" id="selectAll" onclick="toggleAll()"></th>
+                <th>Patch</th>
+                <th>UI Control?</th>
+                <th>Control Name</th>
+                <th>Port Name</th>
+                <th>Channel</th>
+                <th>CC ID</th>
+                <th>Target Plug / Strip</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            <!-- Data injected via JS -->
+        </tbody>
+    </table>
+
+    <script>
+        let allMappings = [];
+
+        // Load JSON data un-cached
+        fetch('./extracted_data/midi_assistant_schema.json?t=' + Date.now())
+            .then(response => response.json())
+            .then(data => {
+                allMappings = data.concertMappings || [];
+                // Assign a permanent global ID to each object to prevent search filter misalignment!
+                allMappings.forEach((m, idx) => { m.globalId = idx; });
+                renderTable();
+            })
+            .catch(error => alert('Error loading schema data: ' + error));
+
+        function renderTable(mappings = allMappings) {
+            const tbody = document.getElementById('tableBody');
+            tbody.innerHTML = '';
+            
+            mappings.forEach((item, index) => {
+                const uiTag = item.hasScreenControl 
+                    ? '<span style="color:#34c759; font-weight:bold;">YES</span>' 
+                    : '<span style="color:#ff3b30; font-weight:bold;">NO (Direct)</span>';
+                    
+                const targetDisplay = item.targetName ? item.targetName : `<span style="color:#999; font-style:italic;">Routed to CH ${item.channel} Layer</span>`;
+
+                const uniqueId = item.globalId;
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td class="checkbox-cell"><input type="checkbox" class="row-checkbox" value="${uniqueId}"></td>
+                    <td style="font-size: 12px; color: #555;">${item.sourcePatch.split('/').pop()}</td>
+                    <td>${uiTag}</td>
+                    <td style="font-family: monospace;">${item.controlName}</td>
+                    <td>${item.portName}</td>
+                    <td>${item.channel}</td>
+                    <td>${item.controllerID}</td>
+                    <td style="font-weight: 500; color: #0071e3;">${targetDisplay}</td>
+                `;
+                tr.addEventListener('click', function(e) {
+                    if(e.target.type !== 'checkbox') {
+                        const cb = this.querySelector('.row-checkbox');
+                        cb.checked = !cb.checked;
+                    }
+                    this.classList.toggle('selected', this.querySelector('.row-checkbox').checked);
+                });
+                tbody.appendChild(tr);
+            });
+        }
+
+        // Live Search Filtering with Wildcard Support
+        document.getElementById('searchInput').addEventListener('input', function(e) {
+            const rawTerm = e.target.value.toLowerCase();
+            
+            // Convert wildcard text (e.g., "*Worship*Pads") to Regex
+            const regexStr = rawTerm.split('*').map(s => s.replace(/[.+?^${}()|[\]\\]/g, '\\$&')).join('.*');
+            const searchRegex = new RegExp(regexStr, 'i');
+
+            const filtered = allMappings.filter(m => {
+                const combinedRowData = `${m.sourcePatch} ${m.portName} ${m.controlName} ${m.channel}`.toLowerCase();
+                return searchRegex.test(combinedRowData);
+            });
+            renderTable(filtered);
+        });
+
+        function toggleAll() {
+            const isChecked = document.getElementById('selectAll').checked;
+            document.querySelectorAll('.row-checkbox').forEach(cb => {
+                cb.checked = isChecked;
+                cb.closest('tr').classList.toggle('selected', isChecked);
+            });
+        }
+
+        function batchEdit(type) {
+            // Find selected items
+            const selectedRows = Array.from(document.querySelectorAll('.row-checkbox:checked'));
+            if(selectedRows.length === 0) {
+                alert('Please select mappings to edit.');
+                return;
+            }
+            
+            // Build Context Objects array from Data Models
+            const selectedItemsData = selectedRows.map(cb => {
+                const uniqueId = parseInt(cb.value, 10); 
+                return allMappings[uniqueId];
+            });
+            
+            // Ask user for the new Variable using normal Javascript prompt
+            const userInput = prompt(`Enter the new ${type} for the ${selectedRows.length} selected items:`);
+            if (!userInput) return;
+            
+            const doReplicate = confirm("Do you want to REPLICATE these mappings (create copies) instead of overwriting the original?");
+            
+            // Build the Payload for our Python API Server
+            const payload = {
+                items: selectedItemsData,
+                replicate: doReplicate
+            };
+            
+            if (type === 'Channel') payload.newChannel = userInput;
+            if (type === 'Port') payload.newPort = userInput;
+
+            // Submit background POST request to backend Python Script
+            fetch('/api/batch_edit', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            })
+            .then(res => res.json())
+            .then(data => {
+                alert(data.message);
+                location.reload(); // Instantly refresh the grid!
+            })
+            .catch(err => {
+                alert("API Error: Make sure server.py is running! " + err);
+            });
+        } // Closing batchEdit function
+
+        function rescanConcert() {
+            // Tell Python to run the extractor!
+            fetch('/api/rescan', { method: 'POST' })
+            .then(res => res.json())
+            .then(data => {
+                alert(data.message);
+                location.reload();
+            });
+        }
+    </script>
+</body>
+</html>

@@ -148,14 +148,31 @@ def extract_concert_files(concert_path, output_dir):
                 if isinstance(parsed_json, dict):
                     # For data.plist inside patches
                     if "patch" in parsed_json and isinstance(parsed_json["patch"], dict):
+                        # 1. System patchMappings
                         patch_mappings = parsed_json["patch"].get("patchMappings")
                         if isinstance(patch_mappings, dict):
                             for map_key, map_val in patch_mappings.items():
                                 aggregate_mappings["patchMappings"].append({
                                     "sourceFile": rel_path,
                                     "mapKey": map_key,
-                                    "mapping": map_val
+                                    "mapping": map_val,
+                                    "mappingType": "System"
                                 })
+                        
+                        # 2. Audio Plugin and Screen Layout virtual mappings inside engineNode
+                        engine_node = parsed_json["patch"].get("engineNode")
+                        if isinstance(engine_node, dict):
+                            param_map = engine_node.get("parameterMappingMap")
+                            if isinstance(param_map, dict):
+                                store_dict = param_map.get("storeDict")
+                                if isinstance(store_dict, dict):
+                                    for str_key, str_val in store_dict.items():
+                                        aggregate_mappings["patchMappings"].append({
+                                            "sourceFile": rel_path,
+                                            "mapKey": str_key, # These are natively arrays of dicts instead of NUMBER: wrapper
+                                            "mapping": str_val,
+                                            "mappingType": "PluginUI"
+                                        })
                 
                 # Dump JSON representation of the file
                 out_filepath = out_dir / f"{rel_path}.json"

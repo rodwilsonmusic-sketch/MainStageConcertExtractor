@@ -1,0 +1,1433 @@
+{
+  "id": "911D071A-AC3E-4B2D-8E6B-00F8DD778787",
+  "name": "BigSky",
+  "layoutType": "paged",
+  "skin": "BigSkyPlugin",
+  "controls": [],
+  "permanentPanels": [
+    {
+      "id": "79F6B603-F81C-494C-B87D-A128D72B68B2",
+      "label": "Engine & I/O",
+      "axis": "vertical",
+      "controls": [
+        {
+          "id": "48F865B7-A702-4104-B097-E49BA3FE0C83",
+          "name": "Input",
+          "displayType": "knob",
+          "outputs": [
+            {
+              "id": "D1C8BF94-9308-419E-A88E-861200BAEB02",
+              "type": "cc",
+              "control": 2,
+              "channel": 6
+            }
+          ]
+        },
+        {
+          "id": "EB77C74B-2C19-4409-B064-94EA7F70180E",
+          "name": "Engine",
+          "displayType": "steppedKnob",
+          "color": "#33FF33",
+          "menuOptions": [
+            "Bloom",
+            "Cloud",
+            "Chorale",
+            "Swell",
+            "Shimmer"
+          ],
+          "linkedPageIds": [
+            "8B488345-12E9-4EE2-B68D-D5A3252552E5",
+            "6683E5C5-98BC-4F28-8384-6CEF277F15C9",
+            "252A49E2-5E10-44CC-9483-E27EE98452E6",
+            "9D03E603-D9A6-4C72-B870-BABB7115CAEA",
+            "8A850542-FD1F-4E9F-A8B5-CF4C3950C703"
+          ],
+          "outputs": [
+            {
+              "id": "5B8B9AA9-E8C3-411A-83AB-C68CAD49C0AC",
+              "type": "cc",
+              "control": 45,
+              "channel": 6
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "id": "8B488345-12E9-4EE2-B68D-D5A3252552E5",
+      "name": "Bloom",
+      "panels": [
+        {
+          "id": "44DB6A36-411E-4AD7-96B0-C8A26A9D949E",
+          "label": "Primary Knobs",
+          "axis": "horizontal",
+          "controls": [
+            {
+              "id": "E7686DAB-21E6-481A-B160-B1E674347BE5",
+              "name": "Decay",
+              "displayType": "knob",
+              "formatScript": "const arr=[500.0,500.0,500.0,500.0,500.0,501.0,501.0,502.0,503.0,504.0,505.0,507.0,510.0,512.0,516.0,520.0,524.0,530.0,536.0,543.0,550.0,559.0,568.0,579.0,590.0,603.0,617.0,632.0,648.0,666.0,686.0,706.0,728.0,752.0,778.0,805.0,834.0,865.0,898.0,932.0,969.0,1.008,1.049,1.092,1.138,1.186,1.237,1.289,1.345,1.403,1.464,1.527,1.594,1.663,1.735,1.810,1.889,1.971,2.055,2.144,2.235,2.331,2.429,2.531,2.637,2.747,2.860,2.977,3.099,3.225,3.353,3.487,3.625,3.768,3.913,4.065,4.221,4.382,4.545,4.715,4.891,5.068,5.254,5.444,5.639,5.837,6.043,6.254,6.471,6.691,6.919,7.153,7.392,7.634,7.886,8.143,8.406,8.673,8.847,9.231,9.519,9.811,10.11,10.42,10.74,11.05,11.38,11.72,12.06,12.41,12.76,13.13,13.50,13.88,14.26,14.66,15.05,15.46,15.88,16.31,16.74,17.18,17.63,18.09,18.55,19.02,19.51,20.00]; const m=Math.round(value*127); return arr[m]+(m<41?' ms':' s');",
+              "outputs": [
+                {
+                  "id": "72E628F9-74D8-41B6-9D7F-09996C7497CE",
+                  "type": "cc",
+                  "control": 40,
+                  "channel": 6
+                }
+              ],
+              "frameWidth": 100,
+              "frameHeight": 130
+            },
+            {
+              "id": "135A38D4-B223-4372-B8C8-7EF1379CEB98",
+              "name": "Pre - Delay",
+              "displayType": "knob",
+              "outputs": [
+                {
+                  "id": "1134748E-A209-4486-BC41-C2C3B9C1D53C",
+                  "type": "cc",
+                  "control": 41,
+                  "channel": 6
+                }
+              ],
+              "frameWidth": 100,
+              "frameHeight": 130
+            },
+            {
+              "id": "8421AF7E-971C-4A1D-9F73-3909249A0B70",
+              "name": "Tone",
+              "displayType": "knob",
+              "outputs": [
+                {
+                  "id": "0336EDA8-3BD6-4FAC-8AF8-83B347EC3CCC",
+                  "type": "cc",
+                  "control": 42,
+                  "channel": 6
+                }
+              ],
+              "frameWidth": 100,
+              "frameHeight": 130
+            },
+            {
+              "id": "5D5B86B1-F632-4459-A4E3-A4C1CF2904E6",
+              "name": "Mod",
+              "displayType": "knob",
+              "outputs": [
+                {
+                  "id": "C07331AB-ECE8-454C-A92A-4B3A1686ECBE",
+                  "type": "cc",
+                  "control": 43,
+                  "channel": 6
+                }
+              ],
+              "frameWidth": 100,
+              "frameHeight": 130
+            },
+            {
+              "id": "E5C820EC-AABC-4074-AE6B-4E90153FF57B",
+              "name": "Low End",
+              "displayType": "knob",
+              "outputs": [
+                {
+                  "id": "A6656B55-F420-4047-8D2E-57BE919CC2FA",
+                  "type": "cc",
+                  "control": 44,
+                  "channel": 6
+                }
+              ],
+              "frameWidth": 100,
+              "frameHeight": 130
+            },
+            {
+              "id": "D6297D5D-5F4C-48BC-9FCA-8AA40F841328",
+              "name": "Amount",
+              "displayType": "knob",
+              "outputs": [
+                {
+                  "id": "CFDB5B41-269E-418E-81DA-15D783E83F07",
+                  "type": "cc",
+                  "control": 48,
+                  "channel": 6
+                }
+              ],
+              "frameWidth": 100,
+              "frameHeight": 130
+            }
+          ]
+        },
+        {
+          "id": "1810AC28-F14C-423D-8405-8885C59AACC6",
+          "label": "Variations",
+          "axis": "horizontal",
+          "controls": [
+            {
+              "id": "A59226B2-ADF7-4C72-B618-5755F2BD1C67",
+              "name": "Length",
+              "displayType": "knob",
+              "outputs": [
+                {
+                  "id": "D6D5C6E6-F26E-4276-B602-321DDE73505D",
+                  "type": "cc",
+                  "control": 45,
+                  "channel": 6
+                }
+              ]
+            },
+            {
+              "id": "A1A31AC9-60BB-43D0-B9A1-8998AA2CA2C3",
+              "name": "Feedback",
+              "displayType": "knob",
+              "outputs": [
+                {
+                  "id": "20BDF22B-98A9-4ABF-BA63-0FEE3E1FCC1D",
+                  "type": "cc",
+                  "control": 46,
+                  "channel": 6
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "4C6652CC-5FD1-407C-ADBD-5B15B267AC22",
+          "label": "Inf/Freeze",
+          "axis": "vertical",
+          "clusterType": "FlipSwitch",
+          "controls": [
+            {
+              "id": "9F4685C9-7116-4317-AB25-DF1D53FAABB9",
+              "name": "INFINITE",
+              "displayType": "toggleButton",
+              "outputs": [
+                {
+                  "id": "3E8BD637-4AA7-4A83-944B-240148E21024",
+                  "type": "cc",
+                  "control": 77,
+                  "channel": 6
+                }
+              ]
+            },
+            {
+              "id": "6C5D9499-6F82-46F7-B227-E43684179460",
+              "name": "FREEZE",
+              "displayType": "toggleButton",
+              "outputs": [
+                {
+                  "id": "330466DF-5BFC-4AD0-9036-45F9B65B52D1",
+                  "type": "cc",
+                  "control": 77,
+                  "channel": 6,
+                  "isInverted": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "DB5CD213-A89F-4A31-B68C-E257619CB799",
+          "label": "Presets",
+          "axis": "horizontal",
+          "controls": [
+            {
+              "id": "0A7DD54B-717C-4830-9EFD-0B0CAD04488F",
+              "name": "1",
+              "displayType": "momentaryButton",
+              "outputs": [
+                {
+                  "id": "98671ABA-CE1F-4AA8-9438-235F143D7AB6",
+                  "type": "program_change",
+                  "channel": 6
+                }
+              ]
+            },
+            {
+              "id": "7767B3DF-BFD9-40C4-AE79-BA0B4B68918F",
+              "name": "2",
+              "displayType": "momentaryButton",
+              "outputs": [
+                {
+                  "id": "B651E321-62C0-46C8-B64F-7A5E7E5B740F",
+                  "type": "program_change",
+                  "channel": 6
+                }
+              ]
+            },
+            {
+              "id": "5071D193-CAA0-44E9-B128-30BE5B1B699C",
+              "name": "3",
+              "displayType": "momentaryButton",
+              "outputs": [
+                {
+                  "id": "CB2B2689-BB58-4B40-8EA3-65B00FF50B92",
+                  "type": "program_change",
+                  "channel": 6
+                }
+              ]
+            },
+            {
+              "id": "4ABA2082-E63B-4807-A3B2-FAC0154CBE5F",
+              "name": "4",
+              "displayType": "momentaryButton",
+              "outputs": [
+                {
+                  "id": "F0B95B80-377D-4CC1-83B6-5AD2D37AB659",
+                  "type": "program_change",
+                  "channel": 6
+                }
+              ]
+            },
+            {
+              "id": "C6D810A4-990F-4166-9431-094EED24E087",
+              "name": "5",
+              "displayType": "momentaryButton",
+              "outputs": [
+                {
+                  "id": "F1B74874-7D31-4D36-AF7D-C7B613AC3556",
+                  "type": "program_change",
+                  "channel": 6
+                }
+              ]
+            },
+            {
+              "id": "A03133E5-0907-4C5F-87AC-1DC4C76F0515",
+              "name": "6",
+              "displayType": "momentaryButton",
+              "outputs": [
+                {
+                  "id": "E7425CC4-114B-4D19-BFF5-10D2879B5478",
+                  "type": "program_change",
+                  "channel": 6
+                }
+              ]
+            },
+            {
+              "id": "A4823104-766E-4E11-9248-6BD10404AAB2",
+              "name": "7",
+              "displayType": "momentaryButton",
+              "outputs": [
+                {
+                  "id": "C1F4ED3A-368D-4329-B577-74CC286D5296",
+                  "type": "program_change",
+                  "channel": 6
+                }
+              ]
+            },
+            {
+              "id": "8E301335-50FC-486E-9C00-0DE83B042F41",
+              "name": "8",
+              "displayType": "momentaryButton",
+              "outputs": [
+                {
+                  "id": "54368106-9FA8-4C13-AC3F-50FF7DD37491",
+                  "type": "program_change",
+                  "channel": 6
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6683E5C5-98BC-4F28-8384-6CEF277F15C9",
+      "name": "Cloud",
+      "panels": [
+        {
+          "id": "0D600D27-2D4C-4D85-A5C7-01C0D07EF698",
+          "label": "Primary Knobs",
+          "axis": "horizontal",
+          "controls": [
+            {
+              "id": "8692E73C-3134-4599-AB20-EEC6C7A7D3E1",
+              "name": "Decay",
+              "displayType": "knob",
+              "formatScript": "const arr=[500.0,500.0,500.0,500.0,500.0,501.0,501.0,502.0,503.0,504.0,505.0,507.0,510.0,512.0,516.0,520.0,524.0,530.0,536.0,543.0,550.0,559.0,568.0,579.0,590.0,603.0,617.0,632.0,648.0,666.0,686.0,706.0,728.0,752.0,778.0,805.0,834.0,865.0,898.0,932.0,969.0,1.008,1.049,1.092,1.138,1.186,1.237,1.289,1.345,1.403,1.464,1.527,1.594,1.663,1.735,1.810,1.889,1.971,2.055,2.144,2.235,2.331,2.429,2.531,2.637,2.747,2.860,2.977,3.099,3.225,3.353,3.487,3.625,3.768,3.913,4.065,4.221,4.382,4.545,4.715,4.891,5.068,5.254,5.444,5.639,5.837,6.043,6.254,6.471,6.691,6.919,7.153,7.392,7.634,7.886,8.143,8.406,8.673,8.847,9.231,9.519,9.811,10.11,10.42,10.74,11.05,11.38,11.72,12.06,12.41,12.76,13.13,13.50,13.88,14.26,14.66,15.05,15.46,15.88,16.31,16.74,17.18,17.63,18.09,18.55,19.02,19.51,20.00]; const m=Math.round(value*127); return arr[m]+(m<41?' ms':' s');",
+              "outputs": [
+                {
+                  "id": "088B6A8B-C29B-443A-B28F-CAFA2CCBD7C5",
+                  "type": "cc",
+                  "control": 40,
+                  "channel": 6
+                }
+              ],
+              "frameWidth": 100,
+              "frameHeight": 130
+            },
+            {
+              "id": "48F92CEB-74F1-4D42-9037-B94F2DB23EF6",
+              "name": "Pre - Delay",
+              "displayType": "knob",
+              "outputs": [
+                {
+                  "id": "BC5AB451-B10A-408B-B931-2FF5C5C15F57",
+                  "type": "cc",
+                  "control": 41,
+                  "channel": 6
+                }
+              ],
+              "frameWidth": 100,
+              "frameHeight": 130
+            },
+            {
+              "id": "2E61FCA9-B770-4461-A14B-48CFBE590E79",
+              "name": "Tone",
+              "displayType": "knob",
+              "outputs": [
+                {
+                  "id": "617A29B9-8852-4DAA-AAFC-982F233D5147",
+                  "type": "cc",
+                  "control": 42,
+                  "channel": 6
+                }
+              ],
+              "frameWidth": 100,
+              "frameHeight": 130
+            },
+            {
+              "id": "959756F0-7D9C-4536-8520-58AF4FEBA6C8",
+              "name": "Mod",
+              "displayType": "knob",
+              "outputs": [
+                {
+                  "id": "81AC0992-10E4-43B1-88EA-8CEFADBA6763",
+                  "type": "cc",
+                  "control": 43,
+                  "channel": 6
+                }
+              ],
+              "frameWidth": 100,
+              "frameHeight": 130
+            },
+            {
+              "id": "3BB08D78-BAD7-419C-9B32-459DC485041F",
+              "name": "Low End",
+              "displayType": "knob",
+              "outputs": [
+                {
+                  "id": "0F8623AD-3EC2-479A-8FEE-083EC8A0FB6D",
+                  "type": "cc",
+                  "control": 44,
+                  "channel": 6
+                }
+              ],
+              "frameWidth": 100,
+              "frameHeight": 130
+            },
+            {
+              "id": "5A535C7F-D2D9-4991-BB10-B19D637ED3D7",
+              "name": "Amount",
+              "displayType": "knob",
+              "outputs": [
+                {
+                  "id": "90492106-9CA2-477B-81A1-341989CA559C",
+                  "type": "cc",
+                  "control": 48,
+                  "channel": 6
+                }
+              ],
+              "frameWidth": 100,
+              "frameHeight": 130
+            }
+          ]
+        },
+        {
+          "id": "33999BD0-5597-4FCB-A7A6-D210D2F0919F",
+          "label": "Variations",
+          "axis": "horizontal",
+          "controls": [
+            {
+              "id": "FB58A8ED-AB65-4462-B4A3-22FFC8FA1DEE",
+              "name": "Diffusion",
+              "displayType": "knob",
+              "outputs": [
+                {
+                  "id": "08885295-1D3B-4C23-A058-F7259788697D",
+                  "type": "cc",
+                  "control": 45,
+                  "channel": 6
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "A6914695-7BBA-4FC7-8A1A-251D2529E5C1",
+          "label": "Inf/Freeze",
+          "axis": "vertical",
+          "clusterType": "FlipSwitch",
+          "controls": [
+            {
+              "id": "E9A998BC-162F-48CD-BB9E-C153B442612D",
+              "name": "INFINITE",
+              "displayType": "toggleButton",
+              "outputs": [
+                {
+                  "id": "632433C0-05DD-4513-AD46-01D4311F2D78",
+                  "type": "cc",
+                  "control": 77,
+                  "channel": 6
+                }
+              ]
+            },
+            {
+              "id": "CA075C90-FE35-4343-B3AF-9DA1A2F08B4B",
+              "name": "FREEZE",
+              "displayType": "toggleButton",
+              "outputs": [
+                {
+                  "id": "CB573629-CF3B-4180-9477-7A94E7951B94",
+                  "type": "cc",
+                  "control": 77,
+                  "channel": 6,
+                  "isInverted": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "67217C51-C952-4B57-AC40-F76CF49B173C",
+          "label": "Presets",
+          "axis": "horizontal",
+          "controls": [
+            {
+              "id": "4C64752F-BF70-409F-A0CA-E79AF89835DA",
+              "name": "1",
+              "displayType": "momentaryButton",
+              "outputs": [
+                {
+                  "id": "ECC0FBFB-FBFD-4094-AFD1-7F58288DE8DA",
+                  "type": "program_change",
+                  "channel": 6
+                }
+              ]
+            },
+            {
+              "id": "CCFA719E-81AE-4707-A3C9-D03ACC52ADD3",
+              "name": "2",
+              "displayType": "momentaryButton",
+              "outputs": [
+                {
+                  "id": "69A55EAE-F75D-4382-8EB7-A354F330E558",
+                  "type": "program_change",
+                  "channel": 6
+                }
+              ]
+            },
+            {
+              "id": "EC75B8A6-364A-4A43-B326-0B46AD5D2373",
+              "name": "3",
+              "displayType": "momentaryButton",
+              "outputs": [
+                {
+                  "id": "9A8AFCEB-BFFC-414F-9024-3345C9CCC9AF",
+                  "type": "program_change",
+                  "channel": 6
+                }
+              ]
+            },
+            {
+              "id": "AAC253E7-15CD-44FE-93BB-5E284DB6FAA3",
+              "name": "4",
+              "displayType": "momentaryButton",
+              "outputs": [
+                {
+                  "id": "7EEC3CD2-D164-4E60-9F22-1B126019294C",
+                  "type": "program_change",
+                  "channel": 6
+                }
+              ]
+            },
+            {
+              "id": "85326EC3-949A-43BB-AB69-0118548904B4",
+              "name": "5",
+              "displayType": "momentaryButton",
+              "outputs": [
+                {
+                  "id": "548FCD28-EFE8-41C9-ABD9-90EB3CF417E8",
+                  "type": "program_change",
+                  "channel": 6
+                }
+              ]
+            },
+            {
+              "id": "8B8355FF-73AE-4939-A05F-C4393B070D9B",
+              "name": "6",
+              "displayType": "momentaryButton",
+              "outputs": [
+                {
+                  "id": "AF23F752-2F57-4CA9-9C91-5D0D1D2DE338",
+                  "type": "program_change",
+                  "channel": 6
+                }
+              ]
+            },
+            {
+              "id": "54B51CA0-8BA0-4C66-AD57-9781C8A28E30",
+              "name": "7",
+              "displayType": "momentaryButton",
+              "outputs": [
+                {
+                  "id": "A1FC9BBD-14D7-4E67-95D5-6A162A8043D7",
+                  "type": "program_change",
+                  "channel": 6
+                }
+              ]
+            },
+            {
+              "id": "2853F721-4212-48E7-B0A3-B188F3E3AE75",
+              "name": "8",
+              "displayType": "momentaryButton",
+              "outputs": [
+                {
+                  "id": "4DDD18AE-35D3-4AD7-82A4-9852C311B6E2",
+                  "type": "program_change",
+                  "channel": 6
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "252A49E2-5E10-44CC-9483-E27EE98452E6",
+      "name": "Chorale",
+      "panels": [
+        {
+          "id": "84A24D91-1F0B-47F5-A5A2-C86BF368BFB6",
+          "label": "Primary Knobs",
+          "axis": "horizontal",
+          "controls": [
+            {
+              "id": "A8D210C5-D542-41C0-B424-1A53210D2450",
+              "name": "Decay",
+              "displayType": "knob",
+              "formatScript": "const arr=[500.0,500.0,500.0,500.0,500.0,501.0,501.0,502.0,503.0,504.0,505.0,507.0,510.0,512.0,516.0,520.0,524.0,530.0,536.0,543.0,550.0,559.0,568.0,579.0,590.0,603.0,617.0,632.0,648.0,666.0,686.0,706.0,728.0,752.0,778.0,805.0,834.0,865.0,898.0,932.0,969.0,1.008,1.049,1.092,1.138,1.186,1.237,1.289,1.345,1.403,1.464,1.527,1.594,1.663,1.735,1.810,1.889,1.971,2.055,2.144,2.235,2.331,2.429,2.531,2.637,2.747,2.860,2.977,3.099,3.225,3.353,3.487,3.625,3.768,3.913,4.065,4.221,4.382,4.545,4.715,4.891,5.068,5.254,5.444,5.639,5.837,6.043,6.254,6.471,6.691,6.919,7.153,7.392,7.634,7.886,8.143,8.406,8.673,8.847,9.231,9.519,9.811,10.11,10.42,10.74,11.05,11.38,11.72,12.06,12.41,12.76,13.13,13.50,13.88,14.26,14.66,15.05,15.46,15.88,16.31,16.74,17.18,17.63,18.09,18.55,19.02,19.51,20.00]; const m=Math.round(value*127); return arr[m]+(m<41?' ms':' s');",
+              "outputs": [
+                {
+                  "id": "F4F8623C-AE06-4B13-827F-0B5211310F26",
+                  "type": "cc",
+                  "control": 40,
+                  "channel": 6
+                }
+              ],
+              "frameWidth": 100,
+              "frameHeight": 130
+            },
+            {
+              "id": "F4227B05-3BD9-457D-9B67-15F2FE017249",
+              "name": "Pre - Delay",
+              "displayType": "knob",
+              "outputs": [
+                {
+                  "id": "DE1A9C4F-9060-4460-81A8-E3CAE0AA2A71",
+                  "type": "cc",
+                  "control": 41,
+                  "channel": 6
+                }
+              ],
+              "frameWidth": 100,
+              "frameHeight": 130
+            },
+            {
+              "id": "8939D6CA-DA78-4E23-BBDF-A2A2786F48BF",
+              "name": "Tone",
+              "displayType": "knob",
+              "outputs": [
+                {
+                  "id": "05EB2A62-2A62-4102-8C2D-DD198BD49E49",
+                  "type": "cc",
+                  "control": 42,
+                  "channel": 6
+                }
+              ],
+              "frameWidth": 100,
+              "frameHeight": 130
+            },
+            {
+              "id": "0BC3617D-01F7-4E4A-A4BB-4454FB96D652",
+              "name": "Mod",
+              "displayType": "knob",
+              "outputs": [
+                {
+                  "id": "3F4B55D7-622F-4B86-95E3-57C05EBEC26E",
+                  "type": "cc",
+                  "control": 43,
+                  "channel": 6
+                }
+              ],
+              "frameWidth": 100,
+              "frameHeight": 130
+            },
+            {
+              "id": "ECA38CFC-2FB5-4FB0-8190-7C6A41262867",
+              "name": "Low End",
+              "displayType": "knob",
+              "outputs": [
+                {
+                  "id": "B4F051D0-0F43-4835-90A0-DCEBE6041446",
+                  "type": "cc",
+                  "control": 44,
+                  "channel": 6
+                }
+              ],
+              "frameWidth": 100,
+              "frameHeight": 130
+            },
+            {
+              "id": "39134560-D8C9-4881-82A5-9425EA73CBDF",
+              "name": "Amount",
+              "displayType": "knob",
+              "outputs": [
+                {
+                  "id": "D3AE0651-36E7-4BB6-9A38-78EC73716E17",
+                  "type": "cc",
+                  "control": 48,
+                  "channel": 6
+                }
+              ],
+              "frameWidth": 100,
+              "frameHeight": 130
+            }
+          ]
+        },
+        {
+          "id": "D03B93F6-5046-4904-A9FC-6B056A080FB9",
+          "label": "Variations",
+          "axis": "horizontal",
+          "controls": [
+            {
+              "id": "79F37196-D7D1-42F9-A3E9-8A1B7D6DE1F6",
+              "name": "Vowel",
+              "displayType": "steppedKnob",
+              "menuOptions": [
+                "Ah",
+                "Oh",
+                "Uh"
+              ],
+              "outputs": [
+                {
+                  "id": "31AC5021-BEF6-4F64-9DB1-164B7447F6DD",
+                  "type": "cc",
+                  "control": 45,
+                  "channel": 6
+                }
+              ]
+            },
+            {
+              "id": "21EB48A7-7A90-408A-A333-C8E7DEED555F",
+              "name": "Resonance",
+              "displayType": "knob",
+              "outputs": [
+                {
+                  "id": "D3A3EE8A-A981-4049-AA45-6868C4F86446",
+                  "type": "cc",
+                  "control": 46,
+                  "channel": 6
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "90B43348-64A0-4284-949E-C38A1D61685A",
+          "label": "Inf/Freeze",
+          "axis": "vertical",
+          "clusterType": "FlipSwitch",
+          "controls": [
+            {
+              "id": "815BAAAF-ED7E-47B1-998D-928ECB480E7E",
+              "name": "INFINITE",
+              "displayType": "toggleButton",
+              "outputs": [
+                {
+                  "id": "459F1411-6824-437C-ABB8-2936913234CA",
+                  "type": "cc",
+                  "control": 77,
+                  "channel": 6
+                }
+              ]
+            },
+            {
+              "id": "90B5E17D-60A4-423F-94A1-7299C9C7B848",
+              "name": "FREEZE",
+              "displayType": "toggleButton",
+              "outputs": [
+                {
+                  "id": "EA048783-57C5-4A7A-B023-E426845B0D49",
+                  "type": "cc",
+                  "control": 77,
+                  "channel": 6,
+                  "isInverted": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1AF2033B-77F1-4413-AAC8-B351534C89EF",
+          "label": "Presets",
+          "axis": "horizontal",
+          "controls": [
+            {
+              "id": "9656A675-8358-4218-A205-D567C00DAC6B",
+              "name": "1",
+              "displayType": "momentaryButton",
+              "outputs": [
+                {
+                  "id": "068DCF87-82BC-4355-8787-58DAB8B8F4AC",
+                  "type": "program_change",
+                  "channel": 6
+                }
+              ]
+            },
+            {
+              "id": "03EF9CF4-EBBF-4D67-BE89-74FC8857898C",
+              "name": "2",
+              "displayType": "momentaryButton",
+              "outputs": [
+                {
+                  "id": "23ED1F34-DDCC-4AFE-BB64-580D81B76DF3",
+                  "type": "program_change",
+                  "channel": 6
+                }
+              ]
+            },
+            {
+              "id": "9E491AE0-FCEE-4A7B-A9AB-6149BDF898C0",
+              "name": "3",
+              "displayType": "momentaryButton",
+              "outputs": [
+                {
+                  "id": "2FDE36E1-F624-4FA3-B7C0-E347223CB587",
+                  "type": "program_change",
+                  "channel": 6
+                }
+              ]
+            },
+            {
+              "id": "9C1A3DB5-A449-4A42-897B-1E3729DEB7B2",
+              "name": "4",
+              "displayType": "momentaryButton",
+              "outputs": [
+                {
+                  "id": "9C5A791C-B026-417C-B69E-23D7EE06FB2A",
+                  "type": "program_change",
+                  "channel": 6
+                }
+              ]
+            },
+            {
+              "id": "5ED0A187-4D8A-45C1-B566-8B67FE8C64EF",
+              "name": "5",
+              "displayType": "momentaryButton",
+              "outputs": [
+                {
+                  "id": "4AF96E22-6FBC-49F8-B5CC-28D159ACC5D4",
+                  "type": "program_change",
+                  "channel": 6
+                }
+              ]
+            },
+            {
+              "id": "145D151F-AF5B-4FA0-AA59-895A152E7C23",
+              "name": "6",
+              "displayType": "momentaryButton",
+              "outputs": [
+                {
+                  "id": "69DF7714-F354-4B7D-9F1A-43079183FE09",
+                  "type": "program_change",
+                  "channel": 6
+                }
+              ]
+            },
+            {
+              "id": "5901F00E-8312-4DF3-8A77-D76EC7235B1A",
+              "name": "7",
+              "displayType": "momentaryButton",
+              "outputs": [
+                {
+                  "id": "40766F02-4B1C-4E02-9007-544E711C5570",
+                  "type": "program_change",
+                  "channel": 6
+                }
+              ]
+            },
+            {
+              "id": "0026466A-7890-416C-86F2-C25FC32F0BFE",
+              "name": "8",
+              "displayType": "momentaryButton",
+              "outputs": [
+                {
+                  "id": "0DB1FC51-5272-406F-8680-74965C0EB499",
+                  "type": "program_change",
+                  "channel": 6
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "9D03E603-D9A6-4C72-B870-BABB7115CAEA",
+      "name": "Swell",
+      "panels": [
+        {
+          "id": "51F49A99-1BF1-4502-A9AA-EF0312613D91",
+          "label": "Primary Knobs",
+          "axis": "horizontal",
+          "controls": [
+            {
+              "id": "7D2A262E-4DD5-42F4-AA48-9AD1BB9BD2A2",
+              "name": "Decay",
+              "displayType": "knob",
+              "formatScript": "const arr=[500.0,500.0,500.0,500.0,500.0,501.0,501.0,502.0,503.0,504.0,505.0,507.0,510.0,512.0,516.0,520.0,524.0,530.0,536.0,543.0,550.0,559.0,568.0,579.0,590.0,603.0,617.0,632.0,648.0,666.0,686.0,706.0,728.0,752.0,778.0,805.0,834.0,865.0,898.0,932.0,969.0,1.008,1.049,1.092,1.138,1.186,1.237,1.289,1.345,1.403,1.464,1.527,1.594,1.663,1.735,1.810,1.889,1.971,2.055,2.144,2.235,2.331,2.429,2.531,2.637,2.747,2.860,2.977,3.099,3.225,3.353,3.487,3.625,3.768,3.913,4.065,4.221,4.382,4.545,4.715,4.891,5.068,5.254,5.444,5.639,5.837,6.043,6.254,6.471,6.691,6.919,7.153,7.392,7.634,7.886,8.143,8.406,8.673,8.847,9.231,9.519,9.811,10.11,10.42,10.74,11.05,11.38,11.72,12.06,12.41,12.76,13.13,13.50,13.88,14.26,14.66,15.05,15.46,15.88,16.31,16.74,17.18,17.63,18.09,18.55,19.02,19.51,20.00]; const m=Math.round(value*127); return arr[m]+(m<41?' ms':' s');",
+              "outputs": [
+                {
+                  "id": "FE9BC3C5-7A36-408E-963E-8CB8DAE59353",
+                  "type": "cc",
+                  "control": 40,
+                  "channel": 6
+                }
+              ],
+              "frameWidth": 100,
+              "frameHeight": 130
+            },
+            {
+              "id": "78CEA972-45F1-431D-AE4F-873F77539D69",
+              "name": "Pre - Delay",
+              "displayType": "knob",
+              "outputs": [
+                {
+                  "id": "44CBD6C3-0285-4142-912C-83801C2528CB",
+                  "type": "cc",
+                  "control": 41,
+                  "channel": 6
+                }
+              ],
+              "frameWidth": 100,
+              "frameHeight": 130
+            },
+            {
+              "id": "C57D23CF-8FFF-4686-956B-8F130B24E040",
+              "name": "Tone",
+              "displayType": "knob",
+              "outputs": [
+                {
+                  "id": "81F6D09E-3578-4C73-93C6-189AF105E2B0",
+                  "type": "cc",
+                  "control": 42,
+                  "channel": 6
+                }
+              ],
+              "frameWidth": 100,
+              "frameHeight": 130
+            },
+            {
+              "id": "76AC7969-1503-419A-BF4B-6292B9CF5B65",
+              "name": "Mod",
+              "displayType": "knob",
+              "outputs": [
+                {
+                  "id": "A06634D9-2C8D-4F44-A219-123B06013F8E",
+                  "type": "cc",
+                  "control": 43,
+                  "channel": 6
+                }
+              ],
+              "frameWidth": 100,
+              "frameHeight": 130
+            },
+            {
+              "id": "901E4492-427C-4863-9690-F974E1AF196A",
+              "name": "Low End",
+              "displayType": "knob",
+              "outputs": [
+                {
+                  "id": "68DB47FE-6AA0-4122-8CF9-BD47AAD116EE",
+                  "type": "cc",
+                  "control": 44,
+                  "channel": 6
+                }
+              ],
+              "frameWidth": 100,
+              "frameHeight": 130
+            },
+            {
+              "id": "4E6BF9A2-663A-4B1B-B7B8-094D12433F43",
+              "name": "Amount",
+              "displayType": "knob",
+              "outputs": [
+                {
+                  "id": "04FEF8D4-95BB-4B81-8F5F-CDB6F03CFB51",
+                  "type": "cc",
+                  "control": 48,
+                  "channel": 6
+                }
+              ],
+              "frameWidth": 100,
+              "frameHeight": 130
+            }
+          ]
+        },
+        {
+          "id": "5008B745-0758-48A8-A97E-CD2DB045AED6",
+          "label": "Variations",
+          "axis": "horizontal",
+          "controls": [
+            {
+              "id": "1D7344E9-F3BB-49CD-82EC-3875C8A7848C",
+              "name": "Rise Time",
+              "displayType": "knob",
+              "outputs": [
+                {
+                  "id": "25B88B8A-F6EE-4119-9C3F-12D8BE26AEC6",
+                  "type": "cc",
+                  "control": 37,
+                  "channel": 6
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "E90ADD92-FC40-4741-914D-D6C380E45A4D",
+          "label": "Inf/Freeze",
+          "axis": "vertical",
+          "clusterType": "FlipSwitch",
+          "controls": [
+            {
+              "id": "A534D6F8-E635-479C-9190-CF2491359A02",
+              "name": "INFINITE",
+              "displayType": "toggleButton",
+              "outputs": [
+                {
+                  "id": "A5592D63-660F-42F9-8DDC-72F85DB9D218",
+                  "type": "cc",
+                  "control": 77,
+                  "channel": 6
+                }
+              ]
+            },
+            {
+              "id": "4DBDB885-E029-4EF4-B2E2-970C617F7AC7",
+              "name": "FREEZE",
+              "displayType": "toggleButton",
+              "outputs": [
+                {
+                  "id": "37684432-0A4A-47E9-906B-A08BB14AE63E",
+                  "type": "cc",
+                  "control": 77,
+                  "channel": 6,
+                  "isInverted": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "3AF3C967-FA3B-4726-9C2B-37ABD96BB1DB",
+          "label": "Presets",
+          "axis": "horizontal",
+          "controls": [
+            {
+              "id": "FE3AAB4E-D83A-4602-8899-5D9851A8EFF1",
+              "name": "1",
+              "displayType": "momentaryButton",
+              "outputs": [
+                {
+                  "id": "D4C7526B-4AA5-4435-8C31-4FE3F0009890",
+                  "type": "program_change",
+                  "channel": 6
+                }
+              ]
+            },
+            {
+              "id": "7017725D-1DCA-422B-8B97-F3C7CAC5230F",
+              "name": "2",
+              "displayType": "momentaryButton",
+              "outputs": [
+                {
+                  "id": "0187A05F-2ECC-4EB7-BBF0-F81C49611BFE",
+                  "type": "program_change",
+                  "channel": 6
+                }
+              ]
+            },
+            {
+              "id": "DBDF337B-936E-48A9-B27B-D7FDF223DE48",
+              "name": "3",
+              "displayType": "momentaryButton",
+              "outputs": [
+                {
+                  "id": "E23AAE10-0A96-4B75-8BA0-3D35A8FA5F6E",
+                  "type": "program_change",
+                  "channel": 6
+                }
+              ]
+            },
+            {
+              "id": "AFA1E38A-A854-4085-9DD6-EE1FA397F58E",
+              "name": "4",
+              "displayType": "momentaryButton",
+              "outputs": [
+                {
+                  "id": "0C7937AF-4F58-49D1-8261-98DF68474B59",
+                  "type": "program_change",
+                  "channel": 6
+                }
+              ]
+            },
+            {
+              "id": "D92900E2-580A-4067-826F-0EBE081F15E7",
+              "name": "5",
+              "displayType": "momentaryButton",
+              "outputs": [
+                {
+                  "id": "1675CA4E-75BA-48B4-B037-EDB59FE42077",
+                  "type": "program_change",
+                  "channel": 6
+                }
+              ]
+            },
+            {
+              "id": "513AD66C-CA40-4783-8139-F39BC6A6B551",
+              "name": "6",
+              "displayType": "momentaryButton",
+              "outputs": [
+                {
+                  "id": "CB7DCD27-E60D-4244-BA67-64BA7734B1A8",
+                  "type": "program_change",
+                  "channel": 6
+                }
+              ]
+            },
+            {
+              "id": "F9D2F742-3AFC-402F-823D-AD56D5E0C149",
+              "name": "7",
+              "displayType": "momentaryButton",
+              "outputs": [
+                {
+                  "id": "6139ACBB-3A2E-4A75-9B33-CA27E62E5287",
+                  "type": "program_change",
+                  "channel": 6
+                }
+              ]
+            },
+            {
+              "id": "B272DACF-E67C-414E-8B1D-823FAFC2EEEB",
+              "name": "8",
+              "displayType": "momentaryButton",
+              "outputs": [
+                {
+                  "id": "D8CECCBC-7FB2-4ED7-BC2A-97CB63D5AF4C",
+                  "type": "program_change",
+                  "channel": 6
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8A850542-FD1F-4E9F-A8B5-CF4C3950C703",
+      "name": "Shimmer",
+      "panels": [
+        {
+          "id": "C58DDBEB-568F-4107-B4B0-8B7924C058F4",
+          "label": "Primary Knobs",
+          "axis": "horizontal",
+          "controls": [
+            {
+              "id": "46D73DFA-DD22-47F8-BD76-D87D7A8079FC",
+              "name": "Decay",
+              "displayType": "knob",
+              "formatScript": "const arr=[500.0,500.0,500.0,500.0,500.0,501.0,501.0,502.0,503.0,504.0,505.0,507.0,510.0,512.0,516.0,520.0,524.0,530.0,536.0,543.0,550.0,559.0,568.0,579.0,590.0,603.0,617.0,632.0,648.0,666.0,686.0,706.0,728.0,752.0,778.0,805.0,834.0,865.0,898.0,932.0,969.0,1.008,1.049,1.092,1.138,1.186,1.237,1.289,1.345,1.403,1.464,1.527,1.594,1.663,1.735,1.810,1.889,1.971,2.055,2.144,2.235,2.331,2.429,2.531,2.637,2.747,2.860,2.977,3.099,3.225,3.353,3.487,3.625,3.768,3.913,4.065,4.221,4.382,4.545,4.715,4.891,5.068,5.254,5.444,5.639,5.837,6.043,6.254,6.471,6.691,6.919,7.153,7.392,7.634,7.886,8.143,8.406,8.673,8.847,9.231,9.519,9.811,10.11,10.42,10.74,11.05,11.38,11.72,12.06,12.41,12.76,13.13,13.50,13.88,14.26,14.66,15.05,15.46,15.88,16.31,16.74,17.18,17.63,18.09,18.55,19.02,19.51,20.00]; const m=Math.round(value*127); return arr[m]+(m<41?' ms':' s');",
+              "outputs": [
+                {
+                  "id": "01257180-BCE9-40E4-9BDE-B585B347357E",
+                  "type": "cc",
+                  "control": 40,
+                  "channel": 6
+                }
+              ],
+              "frameWidth": 100,
+              "frameHeight": 130
+            },
+            {
+              "id": "F0D442BA-0DF9-4FB7-A29D-5AE0A15EA132",
+              "name": "Pre - Delay",
+              "displayType": "knob",
+              "outputs": [
+                {
+                  "id": "1A44CB1E-4BEB-48A6-9A60-3ED847272B1D",
+                  "type": "cc",
+                  "control": 41,
+                  "channel": 6
+                }
+              ],
+              "frameWidth": 100,
+              "frameHeight": 130
+            },
+            {
+              "id": "CB869A74-B360-4FA0-8B7C-EC2DE2C7A53C",
+              "name": "Tone",
+              "displayType": "knob",
+              "outputs": [
+                {
+                  "id": "80431910-C05A-49D5-836E-10C89D015CAC",
+                  "type": "cc",
+                  "control": 42,
+                  "channel": 6
+                }
+              ],
+              "frameWidth": 100,
+              "frameHeight": 130
+            },
+            {
+              "id": "C74ADE7A-ACC1-49FA-AA53-244FDE4AD345",
+              "name": "Mod",
+              "displayType": "knob",
+              "outputs": [
+                {
+                  "id": "FF0E9C10-04D4-4EB6-8F6F-8E14EEECC50F",
+                  "type": "cc",
+                  "control": 43,
+                  "channel": 6
+                }
+              ],
+              "frameWidth": 100,
+              "frameHeight": 130
+            },
+            {
+              "id": "B9C50BF7-8B5B-4A37-A2BF-D8D551127444",
+              "name": "Low End",
+              "displayType": "knob",
+              "outputs": [
+                {
+                  "id": "212402D4-7FA8-49B0-A13D-6F4E94135F24",
+                  "type": "cc",
+                  "control": 44,
+                  "channel": 6
+                }
+              ],
+              "frameWidth": 100,
+              "frameHeight": 130
+            },
+            {
+              "id": "F8AB32B4-2B24-4B16-AC1F-06988DD68D86",
+              "name": "Amount",
+              "displayType": "knob",
+              "outputs": [
+                {
+                  "id": "3E09FB12-655F-4288-9965-3EE4CA2414C7",
+                  "type": "cc",
+                  "control": 48,
+                  "channel": 6
+                }
+              ],
+              "frameWidth": 100,
+              "frameHeight": 130
+            }
+          ]
+        },
+        {
+          "id": "2CE95AE6-C614-4945-9BBB-15E553E24B5F",
+          "label": "Variations",
+          "axis": "horizontal",
+          "controls": [
+            {
+              "id": "94203988-059C-4130-9A27-83706D3819E2",
+              "name": "Shift 1",
+              "displayType": "knob",
+              "formatScript": "const s=['-OCT','-M7','-m7','-M6','-m6','-P5','-TRI','-P4','-M3','-m3','-M2','-m2','-10CEN','+10CEN','+m2','+M2','+m3','+M3','+P4','+TRI','+P5','+m6','+M6','+m7','+M7','+OCT','+OCT&5','+2 OCT']; return s[Math.min(27, Math.floor(value*28))];",
+              "outputs": [
+                {
+                  "id": "A305C522-A263-49FD-A47F-AEE37C7B5DBD",
+                  "type": "cc",
+                  "control": 46,
+                  "channel": 6
+                }
+              ]
+            },
+            {
+              "id": "C71084C8-77B5-4340-B0E3-83D70791E625",
+              "name": "Shift 2",
+              "displayType": "knob",
+              "formatScript": "const s=['OFF','-OCT','-M7','-m7','-M6','-m6','-P5','-TRI','-P4','-M3','-m3','-M2','-m2','-10CEN','+10CEN','+m2','+M2','+m3','+M3','+P4','+TRI','+P5','+m6','+M6','+m7','+M7','+OCT','+OCT&5','+2 OCT']; return s[Math.min(28, Math.floor(value*29))];",
+              "outputs": [
+                {
+                  "id": "D6997F28-268F-49EF-9B2D-0ABBF5542531",
+                  "type": "cc",
+                  "control": 47,
+                  "channel": 6
+                }
+              ]
+            },
+            {
+              "id": "2F876186-28E3-4EC6-89ED-185D9DA01C60",
+              "name": "Mode",
+              "displayType": "steppedKnob",
+              "menuOptions": [
+                "A",
+                "B",
+                "C"
+              ],
+              "outputs": [
+                {
+                  "id": "851470F1-7BC5-4DCF-BFFA-89012C4C573C",
+                  "type": "cc",
+                  "control": 76,
+                  "channel": 6
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "99F7ADCA-3FC6-46AA-A19C-08990F952ADF",
+          "label": "Inf/Freeze",
+          "axis": "vertical",
+          "clusterType": "FlipSwitch",
+          "controls": [
+            {
+              "id": "DDFB5965-E6D8-472A-8FE7-B706031AA7CA",
+              "name": "INFINITE",
+              "displayType": "toggleButton",
+              "outputs": [
+                {
+                  "id": "3FE02A84-A274-47C2-BE31-8D18DBB1358F",
+                  "type": "cc",
+                  "control": 77,
+                  "channel": 6
+                }
+              ]
+            },
+            {
+              "id": "194310D4-2C54-4F38-AA21-62248D42E82F",
+              "name": "FREEZE",
+              "displayType": "toggleButton",
+              "outputs": [
+                {
+                  "id": "44889C2F-7456-42FD-AA40-ACBA8BB98695",
+                  "type": "cc",
+                  "control": 77,
+                  "channel": 6,
+                  "isInverted": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "C8DDA60D-884B-42A2-87B4-B66AED04FE1C",
+          "label": "Presets",
+          "axis": "horizontal",
+          "controls": [
+            {
+              "id": "D6129933-241D-42CD-B08D-5763E0523480",
+              "name": "1",
+              "displayType": "momentaryButton",
+              "outputs": [
+                {
+                  "id": "790B978E-391B-414F-B434-1696B66B76B2",
+                  "type": "program_change",
+                  "channel": 6
+                }
+              ]
+            },
+            {
+              "id": "DAD74908-2E8B-4720-B82A-A498D68D4D8A",
+              "name": "2",
+              "displayType": "momentaryButton",
+              "outputs": [
+                {
+                  "id": "4289C1E8-9851-4AC7-B0D7-159C1019EF23",
+                  "type": "program_change",
+                  "channel": 6
+                }
+              ]
+            },
+            {
+              "id": "DFB131EF-3171-495C-808F-E5D6CA9ABB70",
+              "name": "3",
+              "displayType": "momentaryButton",
+              "outputs": [
+                {
+                  "id": "E83DF262-4AE2-483B-903A-47E833F2D6BE",
+                  "type": "program_change",
+                  "channel": 6
+                }
+              ]
+            },
+            {
+              "id": "613F3106-5D15-42BB-901D-C0A5BBCBC3BD",
+              "name": "4",
+              "displayType": "momentaryButton",
+              "outputs": [
+                {
+                  "id": "14F8EE40-9E29-419A-B809-3DF63EB1D446",
+                  "type": "program_change",
+                  "channel": 6
+                }
+              ]
+            },
+            {
+              "id": "737AF377-D97E-46D0-9264-BAC42FF60DC3",
+              "name": "5",
+              "displayType": "momentaryButton",
+              "outputs": [
+                {
+                  "id": "20B9B290-708F-4C32-8FB2-A3292971DEA4",
+                  "type": "program_change",
+                  "channel": 6
+                }
+              ]
+            },
+            {
+              "id": "092446EC-29C2-4B77-96CD-48781371D8EF",
+              "name": "6",
+              "displayType": "momentaryButton",
+              "outputs": [
+                {
+                  "id": "50B721C2-2539-4D05-95DD-3511BA268525",
+                  "type": "program_change",
+                  "channel": 6
+                }
+              ]
+            },
+            {
+              "id": "B201ED5E-F6C6-4C09-B10B-D71D9AF8570A",
+              "name": "7",
+              "displayType": "momentaryButton",
+              "outputs": [
+                {
+                  "id": "0FA790A1-1506-4C7B-A9C7-3EF385E9177F",
+                  "type": "program_change",
+                  "channel": 6
+                }
+              ]
+            },
+            {
+              "id": "CF78C19D-671A-4386-9087-F075F8B09B16",
+              "name": "8",
+              "displayType": "momentaryButton",
+              "outputs": [
+                {
+                  "id": "562E2A3F-6A85-42F9-90CA-D3EC55AA3CD0",
+                  "type": "program_change",
+                  "channel": 6
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

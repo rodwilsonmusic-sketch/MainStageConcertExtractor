@@ -1,0 +1,591 @@
+{
+  "id": "CDA706FE-1A51-40BD-AF27-513AAE4CF17A",
+  "name": "B3 Organ",
+  "layoutType": "paged",
+  "skin": "B3OrganPlugin",
+  "controls": [],
+  "permanentPanels": [],
+  "pages": [
+    {
+      "id": "E16AA81E-5129-4114-B1EE-E6FAA9595144",
+      "name": "B3 Organ",
+      "panels": [
+        {
+          "id": "46F54CF4-8171-4C46-B503-31527B6F32D4",
+          "label": "Modifiers",
+          "axis": "horizontal",
+          "controls": [
+            {
+              "id": "2BD1E0BE-158E-4B9C-A2E0-6C00D9D599DA",
+              "name": "Percussion",
+              "displayType": "toggleButton",
+              "outputs": [
+                {
+                  "id": "F1DFE524-566C-421A-B985-D8F5807CDD32",
+                  "type": "cc",
+                  "channel": 15,
+                  "port": "Session 1 Network",
+                  "control": 75
+                }
+              ],
+              "frameWidth": 70,
+              "frameHeight": 70
+            },
+            {
+              "id": "E6782CCF-59BE-490B-8540-197EC73B23D8",
+              "name": "2nd/3rd Perc",
+              "displayType": "toggleButton",
+              "outputs": [
+                {
+                  "id": "837DB824-517D-4469-B1CF-7BF5740560CC",
+                  "type": "cc",
+                  "channel": 15,
+                  "port": "Session 1 Network",
+                  "control": 78
+                }
+              ],
+              "frameWidth": 70,
+              "frameHeight": 70
+            },
+            {
+              "id": "028966A9-BCBF-42B4-8321-CED29CF2ACF3",
+              "name": "Perc Level",
+              "displayType": "knob",
+              "outputs": [
+                {
+                  "id": "BF3FA234-6FDA-4221-A05B-0A1D486B1469",
+                  "type": "cc",
+                  "channel": 15,
+                  "port": "Session 1 Network",
+                  "control": 76
+                }
+              ],
+              "frameWidth": 70,
+              "frameHeight": 70
+            },
+            {
+              "id": "4EC819F8-A29B-45A4-AD90-6B58F123B0C1",
+              "name": "Perc Time",
+              "displayType": "knob",
+              "outputs": [
+                {
+                  "id": "91D1912C-C106-4899-B0A9-843638150867",
+                  "type": "cc",
+                  "channel": 15,
+                  "port": "Session 1 Network",
+                  "control": 77
+                }
+              ],
+              "frameWidth": 70,
+              "frameHeight": 70
+            },
+            {
+              "id": "8C70F103-B09B-4F5C-A1F8-BFC333640D1E",
+              "name": "Balance",
+              "displayType": "knob",
+              "outputs": [
+                {
+                  "id": "C3338DAF-DB79-431E-A012-BA6AFEAA2665",
+                  "type": "cc",
+                  "channel": 15,
+                  "port": "Session 1 Network",
+                  "control": 79
+                }
+              ],
+              "frameWidth": 70,
+              "frameHeight": 70
+            },
+            {
+              "id": "8BAEE317-A16C-40EE-B543-0DEB79BBB1D6",
+              "name": "Chorus",
+              "displayType": "toggleButton",
+              "outputs": [
+                {
+                  "id": "464B37FB-F4BA-4AA7-ACD2-E1BEA61C906E",
+                  "type": "cc",
+                  "channel": 15,
+                  "port": "Session 1 Network",
+                  "control": 21
+                }
+              ],
+              "frameWidth": 70,
+              "frameHeight": 70
+            },
+            {
+              "id": "7EA528BA-5E59-46C0-970D-390710400D76",
+              "name": "Distortion",
+              "displayType": "knob",
+              "outputs": [
+                {
+                  "id": "7B7D6A3A-EF7C-44DD-B76C-4076E5D7C341",
+                  "type": "cc",
+                  "channel": 15,
+                  "port": "Session 1 Network",
+                  "control": 22
+                }
+              ],
+              "frameWidth": 70,
+              "frameHeight": 70
+            },
+            {
+              "id": "C4815D02-4BFB-4BA7-88E8-5FC06EAE9429",
+              "name": "Reverb",
+              "displayType": "knob",
+              "outputs": [
+                {
+                  "id": "105318EF-DE2C-4B37-B01A-59BB2ABD519E",
+                  "type": "cc",
+                  "channel": 15,
+                  "port": "Session 1 Network",
+                  "control": 73
+                }
+              ],
+              "frameWidth": 70,
+              "frameHeight": 70
+            },
+            {
+              "id": "456CAB41-AAD1-49AA-8A3A-A0E4B4304BFE",
+              "name": "Octave Shift Up",
+              "displayType": "toggleButton",
+              "outputs": [
+                {
+                  "id": "E90BF8D6-41FD-4B5A-B695-A58B4B6C8A2A",
+                  "type": "cc",
+                  "channel": 15,
+                  "port": "Session 1 Network",
+                  "control": 72
+                }
+              ],
+              "frameWidth": 70,
+              "frameHeight": 70
+            }
+          ]
+        },
+        {
+          "id": "A55D3B48-614C-4E7A-9820-A6E072830A82",
+          "label": "Organ Engine",
+          "axis": "horizontal",
+          "controls": [
+            {
+              "id": "95861463-8119-4216-95BA-2975D35D69F7",
+              "name": "Vibrato/Chorus",
+              "displayType": "steppedKnob",
+              "menuOptions": [
+                "V1",
+                "C1",
+                "V2",
+                "C2",
+                "V3",
+                "C3",
+                "OFF"
+              ],
+              "outputs": [
+                {
+                  "id": "D8226E44-A533-4EF4-A3A3-725E9F60AB73",
+                  "type": "cc",
+                  "channel": 15,
+                  "port": "Session 1 Network",
+                  "control": 10
+                }
+              ],
+              "frameWidth": 120,
+              "frameHeight": 120
+            },
+            {
+              "id": "99601E83-C0EB-4F71-9B88-EA122B4A79EB",
+              "name": "16'",
+              "displayType": "drawbar",
+              "color": "#8B4513",
+              "defaultValue": 0.5,
+              "formatScript": "return Math.round(value * 8).toString();",
+              "outputs": [
+                {
+                  "id": "60F163CD-3314-4196-82DF-021DF6D9CF93",
+                  "type": "cc",
+                  "channel": 15,
+                  "port": "Session 1 Network",
+                  "control": 80
+                }
+              ]
+            },
+            {
+              "id": "55D9900A-2C47-4C03-8C27-46CFF85FCCF3",
+              "name": "5 1/3'",
+              "displayType": "drawbar",
+              "color": "#8B4513",
+              "defaultValue": 0.5,
+              "formatScript": "return Math.round(value * 8).toString();",
+              "outputs": [
+                {
+                  "id": "8BDB0DF1-FD32-476E-8206-D567AA22500D",
+                  "type": "cc",
+                  "channel": 15,
+                  "port": "Session 1 Network",
+                  "control": 81
+                }
+              ]
+            },
+            {
+              "id": "ECF3097D-61D0-447E-B41C-B4E7B1EE912F",
+              "name": "8'",
+              "displayType": "drawbar",
+              "color": "#FFFFFF",
+              "defaultValue": 0.5,
+              "formatScript": "return Math.round(value * 8).toString();",
+              "outputs": [
+                {
+                  "id": "B0CF8D84-8A26-4C4E-9CCC-39F4183177CB",
+                  "type": "cc",
+                  "channel": 15,
+                  "port": "Session 1 Network",
+                  "control": 82
+                }
+              ]
+            },
+            {
+              "id": "E0AA59A5-B0C7-4BDD-8035-06207479692C",
+              "name": "4'",
+              "displayType": "drawbar",
+              "color": "#FFFFFF",
+              "defaultValue": 0.5,
+              "formatScript": "return Math.round(value * 8).toString();",
+              "outputs": [
+                {
+                  "id": "A28D8B5F-4069-4F63-8B7B-C919643D27E7",
+                  "type": "cc",
+                  "channel": 15,
+                  "port": "Session 1 Network",
+                  "control": 83
+                }
+              ]
+            },
+            {
+              "id": "334A06A9-38FB-4513-8A9E-10BC3825D7EB",
+              "name": "2 2/3'",
+              "displayType": "drawbar",
+              "color": "#000000",
+              "defaultValue": 0.5,
+              "formatScript": "return Math.round(value * 8).toString();",
+              "outputs": [
+                {
+                  "id": "2FB05F3C-A7E3-4144-8507-D2E41D3C94DD",
+                  "type": "cc",
+                  "channel": 15,
+                  "port": "Session 1 Network",
+                  "control": 84
+                }
+              ]
+            },
+            {
+              "id": "155FA915-AC3C-43E5-89B0-930E95F8C147",
+              "name": "2'",
+              "displayType": "drawbar",
+              "color": "#FFFFFF",
+              "defaultValue": 0.5,
+              "formatScript": "return Math.round(value * 8).toString();",
+              "outputs": [
+                {
+                  "id": "AFB7EF5C-E892-4E55-AB6C-54BFA83B896F",
+                  "type": "cc",
+                  "channel": 15,
+                  "port": "Session 1 Network",
+                  "control": 85
+                }
+              ]
+            },
+            {
+              "id": "A16DA6C0-2A6E-4B39-8147-7BD3875CECF7",
+              "name": "1 3/5'",
+              "displayType": "drawbar",
+              "color": "#000000",
+              "defaultValue": 0.5,
+              "formatScript": "return Math.round(value * 8).toString();",
+              "outputs": [
+                {
+                  "id": "C42F30D3-AAFD-4695-93F2-62154FF8494E",
+                  "type": "cc",
+                  "channel": 15,
+                  "port": "Session 1 Network",
+                  "control": 86
+                }
+              ]
+            },
+            {
+              "id": "E3C908AE-0641-4E6C-8B86-1F552D23A1C9",
+              "name": "1 1/3'",
+              "displayType": "drawbar",
+              "color": "#000000",
+              "defaultValue": 0.5,
+              "formatScript": "return Math.round(value * 8).toString();",
+              "outputs": [
+                {
+                  "id": "E47DF62D-1BD1-40C2-930F-81CBE0AC6131",
+                  "type": "cc",
+                  "channel": 15,
+                  "port": "Session 1 Network",
+                  "control": 87
+                }
+              ]
+            },
+            {
+              "id": "76D88852-2CAF-4145-B9F3-886B5691A61A",
+              "name": "1'",
+              "displayType": "drawbar",
+              "color": "#FFFFFF",
+              "defaultValue": 0.5,
+              "formatScript": "return Math.round(value * 8).toString();",
+              "outputs": [
+                {
+                  "id": "E71FC0DC-4B6A-43D6-8B1D-B9E4EDE4DEAB",
+                  "type": "cc",
+                  "channel": 15,
+                  "port": "Session 1 Network",
+                  "control": 88
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "5EAE5976-E41E-42EE-B160-DF9771959C0A",
+          "label": "Performance",
+          "axis": "horizontal",
+          "subPanels": [
+            {
+              "id": "3354CA11-CC90-42C1-97B5-1ECD8962BF00",
+              "label": "Preset Grid",
+              "axis": "vertical",
+              "subPanels": [
+                {
+                  "id": "CF99D7F8-4BBB-4E70-BCC3-DBF52449A946",
+                  "label": "Row A",
+                  "axis": "horizontal",
+                  "controls": [
+                    {
+                      "id": "04336661-9891-4DB3-A742-EC21392192B9",
+                      "name": "Preset 1",
+                      "displayType": "momentaryButton",
+                      "outputs": [
+                        {
+                          "id": "3CAE33F0-3EC8-4863-94A2-85A3CC21E5E8",
+                          "type": "note",
+                          "channel": 15,
+                          "port": "Session 1 Network",
+                          "noteNumber": 24
+                        }
+                      ],
+                      "frameWidth": 60,
+                      "frameHeight": 40
+                    },
+                    {
+                      "id": "9E4899F6-4EFA-4844-8250-75363A3EE416",
+                      "name": "Preset 2",
+                      "displayType": "momentaryButton",
+                      "outputs": [
+                        {
+                          "id": "3180B7D9-9BD3-4CE7-B8B6-6C451FEBC622",
+                          "type": "note",
+                          "channel": 15,
+                          "port": "Session 1 Network",
+                          "noteNumber": 25
+                        }
+                      ],
+                      "frameWidth": 60,
+                      "frameHeight": 40
+                    },
+                    {
+                      "id": "31A503C1-92AE-4A31-887E-C89965786502",
+                      "name": "Preset 3",
+                      "displayType": "momentaryButton",
+                      "outputs": [
+                        {
+                          "id": "EE2E5DB5-97BD-4EDD-9C9C-814B592D1579",
+                          "type": "note",
+                          "channel": 15,
+                          "port": "Session 1 Network",
+                          "noteNumber": 26
+                        }
+                      ],
+                      "frameWidth": 60,
+                      "frameHeight": 40
+                    },
+                    {
+                      "id": "545A103F-8C35-49DA-9AA1-D4C91F2A2C05",
+                      "name": "Preset 4",
+                      "displayType": "momentaryButton",
+                      "outputs": [
+                        {
+                          "id": "B1D56224-56AB-4E8C-8EFF-CE4343EB65D1",
+                          "type": "note",
+                          "channel": 15,
+                          "port": "Session 1 Network",
+                          "noteNumber": 27
+                        }
+                      ],
+                      "frameWidth": 60,
+                      "frameHeight": 40
+                    },
+                    {
+                      "id": "40281469-0E87-47C0-AFEE-1F46E19CE9C6",
+                      "name": "Preset 5",
+                      "displayType": "momentaryButton",
+                      "outputs": [
+                        {
+                          "id": "62789E11-2874-451B-8548-BC8382D90D22",
+                          "type": "note",
+                          "channel": 15,
+                          "port": "Session 1 Network",
+                          "noteNumber": 28
+                        }
+                      ],
+                      "frameWidth": 60,
+                      "frameHeight": 40
+                    },
+                    {
+                      "id": "88CD3776-86AF-4A69-B1BE-CE403FECBCFF",
+                      "name": "Preset 6",
+                      "displayType": "momentaryButton",
+                      "outputs": [
+                        {
+                          "id": "92C185CE-9198-4F49-98D1-3A54CE738006",
+                          "type": "note",
+                          "channel": 15,
+                          "port": "Session 1 Network",
+                          "noteNumber": 29
+                        }
+                      ],
+                      "frameWidth": 60,
+                      "frameHeight": 40
+                    }
+                  ]
+                },
+                {
+                  "id": "E20DD055-F385-47B6-860E-ED4DC87D723C",
+                  "label": "Row B",
+                  "axis": "horizontal",
+                  "controls": [
+                    {
+                      "id": "ECF33F02-A2E9-44BC-8912-1ACBC71CE025",
+                      "name": "Preset 7",
+                      "displayType": "momentaryButton",
+                      "outputs": [
+                        {
+                          "id": "EEE7DD1E-4949-4C1C-B8A4-2074C2F1C49C",
+                          "type": "note",
+                          "channel": 15,
+                          "port": "Session 1 Network",
+                          "noteNumber": 30
+                        }
+                      ],
+                      "frameWidth": 60,
+                      "frameHeight": 40
+                    },
+                    {
+                      "id": "AC4F8100-2C24-4AC4-8BA1-EA72E7DC8032",
+                      "name": "Preset 8",
+                      "displayType": "momentaryButton",
+                      "outputs": [
+                        {
+                          "id": "D88E77AF-BCAC-4FF7-92D0-3BF3462821E8",
+                          "type": "note",
+                          "channel": 15,
+                          "port": "Session 1 Network",
+                          "noteNumber": 31
+                        }
+                      ],
+                      "frameWidth": 60,
+                      "frameHeight": 40
+                    },
+                    {
+                      "id": "12330CE4-DC3B-45D7-AD74-820DD3714D42",
+                      "name": "Preset 9",
+                      "displayType": "momentaryButton",
+                      "outputs": [
+                        {
+                          "id": "55BCDCAE-D8E1-4C78-B16A-9F2B5010E279",
+                          "type": "note",
+                          "channel": 15,
+                          "port": "Session 1 Network",
+                          "noteNumber": 32
+                        }
+                      ],
+                      "frameWidth": 60,
+                      "frameHeight": 40
+                    },
+                    {
+                      "id": "6E3294BA-9D2A-44D9-B80C-FEEF7C9BE30C",
+                      "name": "Preset 10",
+                      "displayType": "momentaryButton",
+                      "outputs": [
+                        {
+                          "id": "35794EC6-5054-453E-8833-6EB136566359",
+                          "type": "note",
+                          "channel": 15,
+                          "port": "Session 1 Network",
+                          "noteNumber": 33
+                        }
+                      ],
+                      "frameWidth": 60,
+                      "frameHeight": 40
+                    },
+                    {
+                      "id": "40D386B5-3DBA-4E95-B2B1-D102534437A0",
+                      "name": "Preset 11",
+                      "displayType": "momentaryButton",
+                      "outputs": [
+                        {
+                          "id": "E665AEAF-6C25-4603-B0F5-0DC7BEE98FCD",
+                          "type": "note",
+                          "channel": 15,
+                          "port": "Session 1 Network",
+                          "noteNumber": 34
+                        }
+                      ],
+                      "frameWidth": 60,
+                      "frameHeight": 40
+                    },
+                    {
+                      "id": "6F865ED3-526B-4B9C-BDF6-0BCB875516D6",
+                      "name": "Preset 12",
+                      "displayType": "momentaryButton",
+                      "outputs": [
+                        {
+                          "id": "6517649A-37D0-4625-8BE6-4259F191D727",
+                          "type": "note",
+                          "channel": 15,
+                          "port": "Session 1 Network",
+                          "noteNumber": 35
+                        }
+                      ],
+                      "frameWidth": 60,
+                      "frameHeight": 40
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "controls": [
+            {
+              "id": "545F80D6-5E22-4234-9BFF-E8EC99E13E8E",
+              "name": "Leslie Fast/Slow",
+              "displayType": "toggleButton",
+              "outputs": [
+                {
+                  "id": "2F8740D4-71F6-47C7-AA2D-56591AD31D2C",
+                  "type": "cc",
+                  "channel": 15,
+                  "port": "Session 1 Network",
+                  "control": 19
+                }
+              ],
+              "frameWidth": 80,
+              "frameHeight": 90,
+              "color": "#FF2222"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

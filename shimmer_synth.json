@@ -1,0 +1,271 @@
+{
+  "name": "Shimmer",
+  "layoutType": "paged",
+  "panels": [
+    {
+      "id": "A1B2C3D4-E5F6-4A1B-8C9D-E0F1A2B3C4D5",
+      "label": "Top Row",
+      "axis": "horizontal",
+      "controls": [
+        {
+          "id": "00000000-0000-0000-0000-000000000001",
+          "name": "Decay",
+          "displayType": "knob",
+          "outputs": [
+            {
+              "id": "8C1A2B3C-4D5E-6F7G-8H9I-0J1K2L3M4N5O",
+              "type": "cc",
+              "control": 40,
+              "channel": 6
+            }
+          ],
+          "formatScript": "const decayArray=[500.0, 500.0, 500.0, 500.0, 500.0, 501.0, 501.0, 502.0, 503.0, 504.0, 505.0, 507.0, 510.0, 512.0, 516.0, 520.0, 524.0, 530.0, 536.0, 543.0, 550.0, 559.0, 568.0, 579.0, 590.0, 603.0, 617.0, 632.0, 648.0, 666.0, 686.0, 706.0, 728.0, 752.0, 778.0, 805.0, 834.0, 865.0, 898.0, 932.0, 969.0, 1.008, 1.049, 1.092, 1.138, 1.186, 1.237, 1.289, 1.345, 1.403, 1.464, 1.527, 1.594, 1.663, 1.735, 1.810, 1.889, 1.971, 2.055, 2.144, 2.235, 2.331, 2.429, 2.531, 2.637, 2.747, 2.860, 2.977, 3.099, 3.225, 3.353, 3.487, 3.625, 3.768, 3.913, 4.065, 4.221, 4.382, 4.545, 4.715, 4.891, 5.068, 5.254, 5.444, 5.639, 5.837, 6.043, 6.254, 6.471, 6.691, 6.919, 7.153, 7.392, 7.634, 7.886, 8.143, 8.406, 8.673, 8.847, 9.231, 9.519, 9.811, 10.11, 10.42, 10.74, 11.05, 11.38, 11.72, 12.06, 12.41, 12.76, 13.13, 13.50, 13.88, 14.26, 14.66, 15.05, 15.46, 15.88, 16.31, 16.74, 17.18, 17.63, 18.09, 18.55, 19.02, 19.51, 20.00]; const m = Math.round(value*127); return decayArray[m] + (m<41?' ms':' s');"
+        },
+        {
+          "id": "00000000-0000-0000-0000-000000000002",
+          "name": "Pre - Delay",
+          "displayType": "knob",
+          "outputs": [
+            {
+              "id": "OUT-2",
+              "type": "cc",
+              "control": 41,
+              "channel": 6
+            }
+          ]
+        },
+        {
+          "id": "00000000-0000-0000-0000-000000000003",
+          "name": "Tone",
+          "displayType": "knob",
+          "outputs": [
+            {
+              "id": "OUT-3",
+              "type": "cc",
+              "control": 42,
+              "channel": 6
+            }
+          ]
+        },
+        {
+          "id": "00000000-0000-0000-0000-000000000004",
+          "name": "Mod",
+          "displayType": "knob",
+          "outputs": [
+            {
+              "id": "OUT-4",
+              "type": "cc",
+              "control": 43,
+              "channel": 6
+            }
+          ]
+        },
+        {
+          "id": "00000000-0000-0000-0000-000000000005",
+          "name": "Low End",
+          "displayType": "knob",
+          "outputs": [
+            {
+              "id": "OUT-5",
+              "type": "cc",
+              "control": 44,
+              "channel": 6
+            }
+          ]
+        },
+        {
+          "id": "00000000-0000-0000-0000-000000000006",
+          "name": "Amount",
+          "displayType": "knob",
+          "outputs": [
+            {
+              "id": "OUT-6",
+              "type": "cc",
+              "control": 48,
+              "channel": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A1B2C3D4-E5F6-4A1B-8C9D-E0F1A2B3C4D6",
+      "label": "Bottom Row",
+      "axis": "horizontal",
+      "controls": [
+        {
+          "id": "00000000-0000-0000-0000-000000000007",
+          "name": "Shift 1",
+          "displayType": "knob",
+          "outputs": [
+            {
+              "id": "OUT-7",
+              "type": "cc",
+              "control": 46,
+              "channel": 6
+            }
+          ],
+          "formatScript": "const s=['-OCT','-M7','-m7','-M6','-m6','-P5','-TRI','-P4','-M3','-m3','-M2','-m2','-10CEN','+10CEN','+m2','+M2','+m3','+M3','+P4','+TRI','+P5','+m6','+M6','+m7','+M7','+OCT','+OCT&5','+2 OCT']; return s[Math.min(27, Math.floor(value*28))];"
+        },
+        {
+          "id": "00000000-0000-0000-0000-000000000008",
+          "name": "Shift 2",
+          "displayType": "knob",
+          "outputs": [
+            {
+              "id": "OUT-8",
+              "type": "cc",
+              "control": 47,
+              "channel": 6
+            }
+          ],
+          "formatScript": "const s=['OFF','-OCT','-M7','-m7','-M6','-m6','-P5','-TRI','-P4','-M3','-m3','-M2','-m2','-10CEN','+10CEN','+m2','+M2','+m3','+M3','+P4','+TRI','+P5','+m6','+M6','+m7','+M7','+OCT','+OCT&5','+2 OCT']; return s[Math.min(28, Math.floor(value*29))];"
+        },
+        {
+          "id": "00000000-0000-0000-0000-000000000009",
+          "name": "Mode",
+          "displayType": "toggleButton",
+          "outputs": [
+            {
+              "id": "OUT-9",
+              "type": "cc",
+              "control": 76,
+              "channel": 6
+            }
+          ]
+        },
+        {
+          "id": "00000000-0000-0000-0000-00000000000A",
+          "name": "INFINITE",
+          "displayType": "toggleButton",
+          "outputs": [
+            {
+              "id": "OUT-10",
+              "type": "cc",
+              "control": 77,
+              "channel": 6
+            }
+          ]
+        },
+        {
+          "id": "00000000-0000-0000-0000-00000000000B",
+          "name": "HOLD",
+          "displayType": "momentaryButton",
+          "outputs": [
+            {
+              "id": "OUT-11",
+              "type": "cc",
+              "control": 49,
+              "channel": 6
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "permanentPanels": [
+    {
+      "id": "A1B2C3D4-E5F6-4A1B-8C9D-E0F1A2B3C4D7",
+      "label": "Presets",
+      "axis": "horizontal",
+      "controls": [
+        {
+          "id": "00000000-0000-0000-0000-100000000001",
+          "name": "1",
+          "displayType": "toggleButton",
+          "outputs": [
+            {
+              "id": "OUT-P1",
+              "type": "program_change",
+              "channel": 6
+            }
+          ]
+        },
+        {
+          "id": "00000000-0000-0000-0000-100000000002",
+          "name": "2",
+          "displayType": "toggleButton",
+          "outputs": [
+            {
+              "id": "OUT-P2",
+              "type": "program_change",
+              "channel": 6
+            }
+          ]
+        },
+        {
+          "id": "00000000-0000-0000-0000-100000000003",
+          "name": "3",
+          "displayType": "toggleButton",
+          "outputs": [
+            {
+              "id": "OUT-P3",
+              "type": "program_change",
+              "channel": 6
+            }
+          ]
+        },
+        {
+          "id": "00000000-0000-0000-0000-100000000004",
+          "name": "4",
+          "displayType": "toggleButton",
+          "outputs": [
+            {
+              "id": "OUT-P4",
+              "type": "program_change",
+              "channel": 6
+            }
+          ]
+        },
+        {
+          "id": "00000000-0000-0000-0000-100000000005",
+          "name": "5",
+          "displayType": "toggleButton",
+          "outputs": [
+            {
+              "id": "OUT-P5",
+              "type": "program_change",
+              "channel": 6
+            }
+          ]
+        },
+        {
+          "id": "00000000-0000-0000-0000-100000000006",
+          "name": "6",
+          "displayType": "toggleButton",
+          "outputs": [
+            {
+              "id": "OUT-P6",
+              "type": "program_change",
+              "channel": 6
+            }
+          ]
+        },
+        {
+          "id": "00000000-0000-0000-0000-100000000007",
+          "name": "7",
+          "displayType": "toggleButton",
+          "outputs": [
+            {
+              "id": "OUT-P7",
+              "type": "program_change",
+              "channel": 6
+            }
+          ]
+        },
+        {
+          "id": "00000000-0000-0000-0000-100000000008",
+          "name": "8",
+          "displayType": "toggleButton",
+          "outputs": [
+            {
+              "id": "OUT-P8",
+              "type": "program_change",
+              "channel": 6
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

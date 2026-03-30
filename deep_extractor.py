@@ -7,8 +7,16 @@ concert_dir = "MainStage Concert/MasterMapping March 21-2026.concert"
 total_mappings = 0
 mapping_types = set()
 
-def scan_dict_for_bplists(d, current_path=""):
+def scan_dict_for_bplists(d, current_path="", visited=None):
     global total_mappings, mapping_types
+    if visited is None:
+        visited = set()
+    
+    obj_id = id(d)
+    if obj_id in visited:
+        return
+    visited.add(obj_id)
+    
     if isinstance(d, dict):
         for k, v in d.items():
             if isinstance(v, bytes) and v.startswith(b"bplist00"):
@@ -31,13 +39,13 @@ def scan_dict_for_bplists(d, current_path=""):
                 except Exception as e:
                     pass
             elif isinstance(v, dict):
-                scan_dict_for_bplists(v, current_path + "." + str(k))
+                scan_dict_for_bplists(v, current_path + "." + str(k), visited)
             elif isinstance(v, list):
                 for item in v:
-                    scan_dict_for_bplists(item, current_path + "." + str(k) + "[]")
+                    scan_dict_for_bplists(item, current_path + "." + str(k) + "[]", visited)
     elif isinstance(d, list):
         for item in d:
-            scan_dict_for_bplists(item, current_path + "[]")
+            scan_dict_for_bplists(item, current_path + "[]", visited)
 
 for root, _, files in os.walk(concert_dir):
     for filename in files:

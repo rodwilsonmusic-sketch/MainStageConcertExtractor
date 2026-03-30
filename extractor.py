@@ -35,6 +35,9 @@ def parse_nskeyed(obj):
         objects = obj.get('$objects', [])
         top = obj.get('$top', {}).get('root', None)
         
+        resolved_cache = {}
+        resolving_set = set()
+        
         def resolve(uid):
             if isinstance(uid, dict) and isinstance(uid.get('CF$UID'), int):
                 idx = uid['CF$UID']
@@ -46,15 +49,22 @@ def parse_nskeyed(obj):
                 
             if idx >= len(objects):
                 return f"<Invalid UID: {idx}>"
-                
+            
+            # Cycle Breaking and Memoization
+            if idx in resolved_cache:
+                return resolved_cache[idx]
+            if idx in resolving_set:
+                return f"<CircularReference UID:{idx}>"
+            
+            resolving_set.add(idx)
             val = objects[idx]
+            result = None
             
             if val == '$null':
-                return None
-            if isinstance(val, (str, int, float, bool, bytes)):
-                return parse_nskeyed(val)
-
-            if isinstance(val, dict):
+                result = None
+            elif isinstance(val, (str, int, float, bool, bytes)):
+                result = parse_nskeyed(val)
+            elif isinstance(val, dict):
                 res = {}
                 if '$class' in val:
                     cls_ref = val['$class']
@@ -68,24 +78,27 @@ def parse_nskeyed(obj):
                 classname = res.get('$classname')
                 if classname in ['NSArray', 'NSMutableArray']:
                     items = val.get('NS.objects', [])
-                    return [resolve(x) for x in items]
-                if classname in ['NSDictionary', 'NSMutableDictionary']:
+                    result = [resolve(x) for x in items]
+                elif classname in ['NSDictionary', 'NSMutableDictionary']:
                     keys = val.get('NS.keys', [])
                     vals = val.get('NS.objects', [])
-                    return {str(resolve(k)): resolve(v) for k, v in zip(keys, vals)}
-                if classname in ['NSMutableString', 'NSString']:
-                    return resolve(val.get('NS.string', val.get('NS.bytes', '')))
-                
-                # Custom objects
-                for k, v in val.items():
-                    if k not in ('$class',):
-                        res[k] = resolve(v)
-                return res
+                    result = {str(resolve(k)): resolve(v) for k, v in zip(keys, vals)}
+                elif classname in ['NSMutableString', 'NSString']:
+                    result = resolve(val.get('NS.string', val.get('NS.bytes', '')))
+                else:
+                    # Custom objects
+                    for k, v in val.items():
+                        if k not in ('$class',):
+                            res[k] = resolve(v)
+                    result = res
+            elif isinstance(val, list):
+                result = [resolve(x) for x in val]
+            else:
+                result = val
             
-            if isinstance(val, list):
-                return [resolve(x) for x in val]
-                
-            return val
+            resolving_set.discard(idx)
+            resolved_cache[idx] = result
+            return result
             
         if top is not None:
             return resolve(top)

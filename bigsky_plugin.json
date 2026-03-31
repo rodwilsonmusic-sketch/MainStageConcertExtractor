@@ -1,1677 +1,1088 @@
 {
-  "id": "6C3520AF-BD35-450B-86B4-99F3C49A56B4",
-  "name": "BigSky",
-  "layoutType": "paged",
-  "skin": "BigSkyPlugin",
-  "controls": [],
-  "permanentPanels": [
+  "subScreens": [
     {
-      "id": "43730132-148C-4BB1-AFE5-8F9091AFA7F3",
-      "label": "Engine & I/O",
-      "axis": "vertical",
-      "controls": [
-        {
-          "id": "D9A3BB34-F8F8-49DE-9559-452C8AA8FE28",
-          "name": "Input",
-          "displayType": "knob",
-          "outputs": [
-            {
-              "id": "6D860519-E063-4073-9882-0953F0C71073",
-              "type": "cc",
-              "control": 2,
-              "channel": 6
-            }
-          ]
-        },
-        {
-          "id": "A1008124-FDAD-4133-9B4B-518319EB7D25",
-          "name": "Engine",
-          "displayType": "steppedKnob",
-          "color": "#33FF33",
-          "menuOptions": [
-            "Bloom",
-            "Cloud",
-            "Chorale",
-            "Swell",
-            "Shimmer"
-          ],
-          "linkedPageIds": [
-            "A309A468-2DD1-4460-9A24-032DB8D3692C",
-            "A6FA2821-980F-4FBA-872C-648CC21FC48E",
-            "2E2DAACF-CADE-47A8-88E0-4BF4C023226B",
-            "EC45A917-239F-4100-8471-B7CE72891B48",
-            "C69712E1-46A8-4B00-AE15-570D5DE0A15D"
-          ],
-          "outputs": [
-            {
-              "id": "0D3C09E6-370F-4B0C-9F31-B9AA6E5CAFC7",
-              "type": "cc",
-              "control": 45,
-              "channel": 6
-            }
-          ]
-        }
-      ]
-    }
-  ],
-  "pages": [
-    {
-      "id": "A309A468-2DD1-4460-9A24-032DB8D3692C",
-      "name": "Bloom",
+      "id": "15FD42E7-3E47-4AE1-924B-FF36C0F333B2",
+      "name": "BigSky Bloom Editor",
+      "layoutType": "dynamic",
+      "controls": [],
       "panels": [
         {
-          "id": "FCF7D525-CD3E-45B9-BDEF-70F605B2823D",
-          "label": "Top Row",
-          "axis": "horizontal",
-          "controls": [
-            {
-              "id": "311C13D9-9F44-413C-ABDC-9EBD41937672",
-              "name": "Decay",
-              "displayType": "knob",
-              "formatScript": "const decayArray = [500.0, 500.0, 500.0, 500.0, 500.0, 501.0, 501.0, 502.0, 503.0, 504.0, 505.0, 507.0, 510.0, 512.0, 516.0, 520.0, 524.0, 530.0, 536.0, 543.0, 550.0, 559.0, 568.0, 579.0, 590.0, 603.0, 617.0, 632.0, 648.0, 666.0, 686.0, 706.0, 728.0, 752.0, 778.0, 805.0, 834.0, 865.0, 898.0, 932.0, 969.0, 1.008, 1.049, 1.092, 1.138, 1.186, 1.237, 1.289, 1.345, 1.403, 1.464, 1.527, 1.594, 1.663, 1.735, 1.810, 1.889, 1.971, 2.055, 2.144, 2.235, 2.331, 2.429, 2.531, 2.637, 2.747, 2.860, 2.977, 3.099, 3.225, 3.353, 3.487, 3.625, 3.768, 3.913, 4.065, 4.221, 4.382, 4.545, 4.715, 4.891, 5.068, 5.254, 5.444, 5.639, 5.837, 6.043, 6.254, 6.471, 6.691, 6.919, 7.153, 7.392, 7.634, 7.886, 8.143, 8.406, 8.673, 8.847, 9.231, 9.519, 9.811, 10.11, 10.42, 10.74, 11.05, 11.38, 11.72, 12.06, 12.41, 12.76, 13.13, 13.50, 13.88, 14.26, 14.66, 15.05, 15.46, 15.88, 16.31, 16.74, 17.18, 17.63, 18.09, 18.55, 19.02, 19.51, 20.00];\nconst m = Math.round(value*127);\nreturn decayArray[m] + (m<41?' ms':' s');",
-              "outputs": [
-                {
-                  "id": "9810C734-C31A-4378-B6D2-9F32C071A5B3",
-                  "type": "cc",
-                  "control": 40,
-                  "channel": 6
-                }
-              ],
-              "frameWidth": 100,
-              "frameHeight": 130
-            },
-            {
-              "id": "9E79B3A7-4199-4E49-A853-13A36AF059E5",
-              "name": "Pre - Delay",
-              "displayType": "knob",
-              "outputs": [
-                {
-                  "id": "FE6C231B-EF1F-40CE-B339-AA8C881981B5",
-                  "type": "cc",
-                  "control": 41,
-                  "channel": 6
-                }
-              ],
-              "frameWidth": 100,
-              "frameHeight": 130
-            },
-            {
-              "id": "637F52C1-4AF5-458A-8254-49FB851AEB25",
-              "name": "Tone",
-              "displayType": "knob",
-              "outputs": [
-                {
-                  "id": "39F97AD0-B4D0-402E-9269-659B8975B8A7",
-                  "type": "cc",
-                  "control": 42,
-                  "channel": 6
-                }
-              ],
-              "frameWidth": 100,
-              "frameHeight": 130
-            },
-            {
-              "id": "E83F4BBD-F4CE-4D0B-8F39-40AA267A3FFE",
-              "name": "Mod",
-              "displayType": "knob",
-              "outputs": [
-                {
-                  "id": "425655C4-76D2-4588-8A25-2576FC210C45",
-                  "type": "cc",
-                  "control": 43,
-                  "channel": 6
-                }
-              ],
-              "frameWidth": 100,
-              "frameHeight": 130
-            },
-            {
-              "id": "B1163A61-5D08-4E44-BB0D-FDC0D9383C29",
-              "name": "Low End",
-              "displayType": "knob",
-              "outputs": [
-                {
-                  "id": "FFA79E50-A3C3-44AC-BEE3-E7589BCC1840",
-                  "type": "cc",
-                  "control": 44,
-                  "channel": 6
-                }
-              ],
-              "frameWidth": 100,
-              "frameHeight": 130
-            },
-            {
-              "id": "438D17BF-9CAA-4589-A55B-890BA1EC6B1D",
-              "name": "Mix",
-              "displayType": "knob",
-              "outputs": [
-                {
-                  "id": "4C329774-3FA5-4EBF-B755-964DFE50A42A",
-                  "type": "cc",
-                  "control": 48,
-                  "channel": 6
-                }
-              ],
-              "frameWidth": 100,
-              "frameHeight": 130
-            }
-          ]
-        },
-        {
-          "id": "8FC1842E-04E1-49B5-A612-FBD1DD139855",
-          "label": "Variations",
-          "axis": "horizontal",
-          "controls": [
-            {
-              "id": "E3B934C1-BEE7-4A4B-95BB-9EDBD5116024",
-              "name": "Length",
-              "displayType": "knob",
-              "outputs": [
-                {
-                  "id": "9957A8FB-C1E3-4D14-B429-379560B7E5F3",
-                  "type": "cc",
-                  "control": 45,
-                  "channel": 6
-                }
-              ],
-              "frameWidth": 100,
-              "frameHeight": 130
-            },
-            {
-              "id": "8BF0261B-06A1-49DD-BA4E-1C75A1CA5237",
-              "name": "Feedback",
-              "displayType": "knob",
-              "outputs": [
-                {
-                  "id": "0E9D493E-FF55-4265-9D33-537E842674DB",
-                  "type": "cc",
-                  "control": 46,
-                  "channel": 6
-                }
-              ],
-              "frameWidth": 100,
-              "frameHeight": 130
-            },
-            {
-              "id": "E94FD30A-4550-457D-A47E-D651B6D71E0D",
-              "name": "HOLD",
-              "displayType": "momentaryButton",
-              "outputs": [
-                {
-                  "id": "793F9194-AA09-4B1A-8587-749D805DBC0A",
-                  "type": "cc",
-                  "control": 49,
-                  "channel": 6
-                }
-              ],
-              "frameWidth": 100,
-              "frameHeight": 130
-            }
-          ],
+          "id": "9633CDBB-DF47-4B19-A295-FE150EF4E258",
+          "axis": "vertical",
+          "controls": [],
           "subPanels": [
             {
-              "id": "D6C0AECA-33BD-417A-B0AE-C0AC184955B6",
-              "label": "Inf/Freeze",
+              "id": "61A3232B-D40C-401B-820C-339859AB035A",
               "axis": "horizontal",
-              "clusterType": "FlipSwitch",
               "controls": [
                 {
-                  "id": "0707298C-5727-40FF-B4CF-F60A105F7712",
-                  "name": "INFINITE",
-                  "displayType": "toggleButton",
-                  "outputs": [
-                    {
-                      "id": "89FE6282-38E5-4AE3-A0D3-5A826B4486AC",
-                      "type": "cc",
-                      "control": 77,
-                      "channel": 6
-                    }
-                  ]
+                  "id": "A15C3339-6178-4444-9028-765923542952",
+                  "name": "Decay",
+                  "displayType": "knob",
+                  "formatScript": "const decayArray = [500.0, 500.0, 500.0, 500.0, 500.0, 501.0, 501.0, 502.0, 503.0, 504.0, 505.0, 507.0, 510.0, 512.0, 516.0, 520.0, 524.0, 530.0, 536.0, 543.0, 550.0, 559.0, 568.0, 579.0, 590.0, 603.0, 617.0, 632.0, 648.0, 666.0, 686.0, 706.0, 728.0, 752.0, 778.0, 805.0, 834.0, 865.0, 898.0, 932.0, 969.0, 1.008, 1.049, 1.092, 1.138, 1.186, 1.237, 1.289, 1.345, 1.403, 1.464, 1.527, 1.594, 1.663, 1.735, 1.810, 1.889, 1.971, 2.055, 2.144, 2.235, 2.331, 2.429, 2.531, 2.637, 2.747, 2.860, 2.977, 3.099, 3.225, 3.353, 3.487, 3.625, 3.768, 3.913, 4.065, 4.221, 4.382, 4.545, 4.715, 4.891, 5.068, 5.254, 5.444, 5.639, 5.837, 6.043, 6.254, 6.471, 6.691, 6.919, 7.153, 7.392, 7.634, 7.886, 8.143, 8.406, 8.673, 8.847, 9.231, 9.519, 9.811, 10.11, 10.42, 10.74, 11.05, 11.38, 11.72, 12.06, 12.41, 12.76, 13.13, 13.50, 13.88, 14.26, 14.66, 15.05, 15.46, 15.88, 16.31, 16.74, 17.18, 17.63, 18.09, 18.55, 19.02, 19.51, 20.00];\nconst m = Math.round(value*127);\nreturn decayArray[m] + (m<41?' ms':' s');",
+                  "namespace": "BigSky Bloom > Decay",
+                  "outputs": [],
+                  "frameWidth": 100,
+                  "frameHeight": 130
                 },
                 {
-                  "id": "470AF6EB-0245-457B-913A-03673AE49E1D",
-                  "name": "FREEZE",
-                  "displayType": "toggleButton",
-                  "outputs": [
+                  "id": "2A0A0157-E8C5-40A5-AD53-13C9BB9389A7",
+                  "name": "Pre-Delay",
+                  "displayType": "knob",
+                  "namespace": "BigSky Bloom > PreDelay",
+                  "outputs": [],
+                  "frameWidth": 100,
+                  "frameHeight": 130
+                },
+                {
+                  "id": "E442E0A2-32EA-4F93-A90B-6F647453387D",
+                  "name": "Tone",
+                  "displayType": "knob",
+                  "namespace": "BigSky Bloom > Tone",
+                  "outputs": [],
+                  "frameWidth": 100,
+                  "frameHeight": 130
+                },
+                {
+                  "id": "59B43084-12CA-4647-AD0F-1D340F9B012F",
+                  "name": "Mod",
+                  "displayType": "knob",
+                  "namespace": "BigSky Bloom > Mod",
+                  "outputs": [],
+                  "frameWidth": 100,
+                  "frameHeight": 130
+                },
+                {
+                  "id": "19820AD5-952F-4C79-935E-7FAA34A47A1B",
+                  "name": "Low End",
+                  "displayType": "knob",
+                  "namespace": "BigSky Bloom > Low End",
+                  "outputs": [],
+                  "frameWidth": 100,
+                  "frameHeight": 130
+                },
+                {
+                  "id": "728019BF-1178-4A7E-A704-95D2F408FF1D",
+                  "name": "Mix",
+                  "displayType": "knob",
+                  "namespace": "BigSky Bloom > Mix",
+                  "outputs": [],
+                  "frameWidth": 100,
+                  "frameHeight": 130
+                }
+              ],
+              "subPanels": []
+            },
+            {
+              "id": "003B12D2-AD17-49F2-B893-E3664A0E2CE5",
+              "axis": "horizontal",
+              "controls": [
+                {
+                  "id": "E72DAA33-A4BC-4C7D-BBC7-83F734717F7A",
+                  "name": "Length",
+                  "displayType": "knob",
+                  "namespace": "BigSky Bloom > Length",
+                  "outputs": [],
+                  "frameWidth": 100,
+                  "frameHeight": 130
+                },
+                {
+                  "id": "8E5C3233-FB1D-4FB5-9FDC-7D63F2399A62",
+                  "name": "Feedback",
+                  "displayType": "knob",
+                  "namespace": "BigSky Bloom > Feedback",
+                  "outputs": [],
+                  "frameWidth": 100,
+                  "frameHeight": 130
+                },
+                {
+                  "id": "8354C62D-6A03-4BBB-85C8-12D0FADC6EC0",
+                  "name": "HOLD",
+                  "displayType": "momentaryButton",
+                  "namespace": "BigSky Bloom > Hold",
+                  "outputs": [],
+                  "frameWidth": 100,
+                  "frameHeight": 130
+                }
+              ],
+              "subPanels": [
+                {
+                  "id": "47D9CE42-3A49-4CF5-8A2E-ED5CA5CE2DE6",
+                  "axis": "horizontal",
+                  "controls": [
                     {
-                      "id": "D5EBBB51-3E53-47A6-8D0A-E1FFE5F0EBE0",
-                      "type": "cc",
-                      "control": 77,
-                      "channel": 6,
-                      "isInverted": true
+                      "id": "236FA093-2EDE-4191-9CF8-A219D2F7F0E6",
+                      "name": "INFINITE",
+                      "displayType": "toggleButton",
+                      "namespace": "BigSky Bloom > Infinite",
+                      "outputs": []
+                    },
+                    {
+                      "id": "51B85351-9E0B-4924-8DAC-83FAE0FBD0D5",
+                      "name": "FREEZE",
+                      "displayType": "toggleButton",
+                      "namespace": "BigSky Bloom > Freeze",
+                      "outputs": []
                     }
                   ]
                 }
               ]
-            }
-          ]
-        },
-        {
-          "id": "E034343C-109E-4C3D-9ECD-C651302D0BFB",
-          "label": "Preset Row",
-          "axis": "horizontal",
-          "controls": [
-            {
-              "id": "7154512B-B005-4940-951C-93DD3B2AF1FC",
-              "name": "1",
-              "displayType": "momentaryButton",
-              "outputs": [
-                {
-                  "id": "0AFC03C0-B384-4BB1-B933-452A1BFB02FA",
-                  "type": "program_change",
-                  "channel": 6
-                }
-              ]
             },
             {
-              "id": "A434C4D5-F0FB-41DB-B1E2-DC3B53EDE9A4",
-              "name": "2",
-              "displayType": "momentaryButton",
-              "outputs": [
+              "id": "28804408-C23B-4C7F-B733-1FFD9A90187F",
+              "axis": "horizontal",
+              "controls": [
                 {
-                  "id": "E4534343-7EBE-42E8-B968-9C46D54A0181",
-                  "type": "program_change",
-                  "channel": 6
-                }
-              ]
-            },
-            {
-              "id": "095F9AD0-9B0E-40B8-94F1-AC30E44D2DAC",
-              "name": "3",
-              "displayType": "momentaryButton",
-              "outputs": [
+                  "id": "8801EB99-C1DA-415D-A11F-52C5D5E39E56",
+                  "name": "1",
+                  "displayType": "momentaryButton",
+                  "namespace": "BigSky Presets > 1",
+                  "outputs": []
+                },
                 {
-                  "id": "D07439B9-8974-45B9-B09C-63934B48217C",
-                  "type": "program_change",
-                  "channel": 6
-                }
-              ]
-            },
-            {
-              "id": "CD9AAC8B-EC5B-4729-8898-ACF55830FA7B",
-              "name": "4",
-              "displayType": "momentaryButton",
-              "outputs": [
+                  "id": "FC67D470-0240-4E11-9D78-9B7F66FF11DD",
+                  "name": "2",
+                  "displayType": "momentaryButton",
+                  "namespace": "BigSky Presets > 2",
+                  "outputs": []
+                },
                 {
-                  "id": "EE9317FE-F06C-4BDD-8ADB-6A444EE08BB1",
-                  "type": "program_change",
-                  "channel": 6
-                }
-              ]
-            },
-            {
-              "id": "B8DEFF1D-0751-4BB2-9629-6132C4C9B3B6",
-              "name": "5",
-              "displayType": "momentaryButton",
-              "outputs": [
+                  "id": "BD5E546D-C031-4117-953B-CB53E387C815",
+                  "name": "3",
+                  "displayType": "momentaryButton",
+                  "namespace": "BigSky Presets > 3",
+                  "outputs": []
+                },
                 {
-                  "id": "4FA10C53-884D-44AF-958E-C64824031F50",
-                  "type": "program_change",
-                  "channel": 6
-                }
-              ]
-            },
-            {
-              "id": "F8E168EC-5ED7-4BAE-8A6B-0E1533C8C13C",
-              "name": "6",
-              "displayType": "momentaryButton",
-              "outputs": [
+                  "id": "2BC07C5D-7376-4F37-AF45-59481E4111C8",
+                  "name": "4",
+                  "displayType": "momentaryButton",
+                  "namespace": "BigSky Presets > 4",
+                  "outputs": []
+                },
                 {
-                  "id": "C3D1FB6A-D697-4C77-B849-D3348F0B5D6A",
-                  "type": "program_change",
-                  "channel": 6
-                }
-              ]
-            },
-            {
-              "id": "B9C7061F-CC37-4CE9-B0C3-1F7FAC7EFBAC",
-              "name": "7",
-              "displayType": "momentaryButton",
-              "outputs": [
+                  "id": "BA8F7C80-3004-4B0B-97D8-A200320D9ABB",
+                  "name": "5",
+                  "displayType": "momentaryButton",
+                  "namespace": "BigSky Presets > 5",
+                  "outputs": []
+                },
                 {
-                  "id": "02A9218A-EAB8-45D8-B2CE-91B9ABA63704",
-                  "type": "program_change",
-                  "channel": 6
-                }
-              ]
-            },
-            {
-              "id": "6BE26BF3-68DB-440D-9BFF-E3E6473E32CD",
-              "name": "8",
-              "displayType": "momentaryButton",
-              "outputs": [
+                  "id": "2A230EEE-5228-455E-83F2-B9A70BBC7017",
+                  "name": "6",
+                  "displayType": "momentaryButton",
+                  "namespace": "BigSky Presets > 6",
+                  "outputs": []
+                },
                 {
-                  "id": "E51F0CF5-B16E-40A4-81E2-16381D9404CC",
-                  "type": "program_change",
-                  "channel": 6
+                  "id": "E0B0D33C-889A-446F-BAD5-586CBDC3558F",
+                  "name": "7",
+                  "displayType": "momentaryButton",
+                  "namespace": "BigSky Presets > 7",
+                  "outputs": []
+                },
+                {
+                  "id": "0E36DB29-117F-42F3-912E-0CA72A15EB0E",
+                  "name": "8",
+                  "displayType": "momentaryButton",
+                  "namespace": "BigSky Presets > 8",
+                  "outputs": []
                 }
-              ]
+              ],
+              "subPanels": []
             }
           ]
         }
       ]
     },
     {
-      "id": "A6FA2821-980F-4FBA-872C-648CC21FC48E",
-      "name": "Cloud",
+      "id": "89E99C06-75AB-4BBA-824C-6DB32332AAC6",
+      "name": "BigSky Cloud Editor",
+      "layoutType": "dynamic",
+      "controls": [],
       "panels": [
         {
-          "id": "FF70B0D4-9B0A-429E-9FCB-C437D9F9432C",
-          "label": "Top Row",
-          "axis": "horizontal",
-          "controls": [
-            {
-              "id": "0A7B236A-13D6-4556-B471-A8DE8A48FDAD",
-              "name": "Decay",
-              "displayType": "knob",
-              "formatScript": "const decayArray = [500.0, 500.0, 500.0, 500.0, 500.0, 501.0, 501.0, 502.0, 503.0, 504.0, 505.0, 507.0, 510.0, 512.0, 516.0, 520.0, 524.0, 530.0, 536.0, 543.0, 550.0, 559.0, 568.0, 579.0, 590.0, 603.0, 617.0, 632.0, 648.0, 666.0, 686.0, 706.0, 728.0, 752.0, 778.0, 805.0, 834.0, 865.0, 898.0, 932.0, 969.0, 1.008, 1.049, 1.092, 1.138, 1.186, 1.237, 1.289, 1.345, 1.403, 1.464, 1.527, 1.594, 1.663, 1.735, 1.810, 1.889, 1.971, 2.055, 2.144, 2.235, 2.331, 2.429, 2.531, 2.637, 2.747, 2.860, 2.977, 3.099, 3.225, 3.353, 3.487, 3.625, 3.768, 3.913, 4.065, 4.221, 4.382, 4.545, 4.715, 4.891, 5.068, 5.254, 5.444, 5.639, 5.837, 6.043, 6.254, 6.471, 6.691, 6.919, 7.153, 7.392, 7.634, 7.886, 8.143, 8.406, 8.673, 8.847, 9.231, 9.519, 9.811, 10.11, 10.42, 10.74, 11.05, 11.38, 11.72, 12.06, 12.41, 12.76, 13.13, 13.50, 13.88, 14.26, 14.66, 15.05, 15.46, 15.88, 16.31, 16.74, 17.18, 17.63, 18.09, 18.55, 19.02, 19.51, 20.00];\nconst m = Math.round(value*127);\nreturn decayArray[m] + (m<41?' ms':' s');",
-              "outputs": [
-                {
-                  "id": "FA38B90B-C4B5-403E-A5CD-98E09C65CB63",
-                  "type": "cc",
-                  "control": 40,
-                  "channel": 6
-                }
-              ],
-              "frameWidth": 100,
-              "frameHeight": 130
-            },
-            {
-              "id": "3F222AEB-D860-4106-964B-C59CF1F546D9",
-              "name": "Pre - Delay",
-              "displayType": "knob",
-              "outputs": [
-                {
-                  "id": "66408E75-2B25-4BF8-BA6A-CA7A64E45DEC",
-                  "type": "cc",
-                  "control": 41,
-                  "channel": 6
-                }
-              ],
-              "frameWidth": 100,
-              "frameHeight": 130
-            },
-            {
-              "id": "06B569BF-D036-4D5C-A715-4908DDA8B9E8",
-              "name": "Tone",
-              "displayType": "knob",
-              "outputs": [
-                {
-                  "id": "60E66122-20EC-4B7B-8C8B-852B297D19A1",
-                  "type": "cc",
-                  "control": 42,
-                  "channel": 6
-                }
-              ],
-              "frameWidth": 100,
-              "frameHeight": 130
-            },
-            {
-              "id": "64C1C3EB-15C6-4A00-8CFF-8CDB2C318D27",
-              "name": "Mod",
-              "displayType": "knob",
-              "outputs": [
-                {
-                  "id": "A572CC82-5447-4C9E-921B-4FCC80A8E502",
-                  "type": "cc",
-                  "control": 43,
-                  "channel": 6
-                }
-              ],
-              "frameWidth": 100,
-              "frameHeight": 130
-            },
-            {
-              "id": "C515CA75-6BE7-4247-9080-757C180AA2C9",
-              "name": "Low End",
-              "displayType": "knob",
-              "outputs": [
-                {
-                  "id": "9DE86F51-D233-4167-B9DC-DAFA0E5FCED9",
-                  "type": "cc",
-                  "control": 44,
-                  "channel": 6
-                }
-              ],
-              "frameWidth": 100,
-              "frameHeight": 130
-            },
-            {
-              "id": "438D17BF-9CAA-4589-A55B-890BA1EC6B1D",
-              "name": "Mix",
-              "displayType": "knob",
-              "outputs": [
-                {
-                  "id": "D94441B9-CF48-4B07-8A9B-6BF50A422CC4",
-                  "type": "cc",
-                  "control": 48,
-                  "channel": 6
-                }
-              ],
-              "frameWidth": 100,
-              "frameHeight": 130
-            }
-          ]
-        },
-        {
-          "id": "70A1EDB9-12E6-4F8D-A3EA-C177455E1229",
-          "label": "Variations",
-          "axis": "horizontal",
-          "controls": [
-            {
-              "id": "571F9AD9-AE5D-49E4-AD01-D64272D44A8D",
-              "name": "Diffusion",
-              "displayType": "knob",
-              "outputs": [
-                {
-                  "id": "B9E7CB8F-AD85-4927-8E3F-A4E4231FABDC",
-                  "type": "cc",
-                  "control": 45,
-                  "channel": 6
-                }
-              ],
-              "frameWidth": 100,
-              "frameHeight": 130
-            },
-            {
-              "id": "75DF83A7-9638-4981-A71E-0D2D25E35F35",
-              "name": "HOLD",
-              "displayType": "momentaryButton",
-              "outputs": [
-                {
-                  "id": "DE2A40F5-2F17-43BB-BC15-AE980C26FFCE",
-                  "type": "cc",
-                  "control": 49,
-                  "channel": 6
-                }
-              ],
-              "frameWidth": 100,
-              "frameHeight": 130
-            }
-          ],
+          "id": "9D1150E9-BF66-4CC5-9947-B5F26415D1B2",
+          "axis": "vertical",
+          "controls": [],
           "subPanels": [
             {
-              "id": "E53766C5-3AB7-4DFB-AD8A-9D17AF837CFB",
-              "label": "Inf/Freeze",
+              "id": "EB7562D5-4B8D-4C46-9BD1-E68FECC39EF9",
               "axis": "horizontal",
-              "clusterType": "FlipSwitch",
               "controls": [
                 {
-                  "id": "5F59C8EA-3E44-4B46-BD54-AE7750E800AF",
-                  "name": "INFINITE",
-                  "displayType": "toggleButton",
-                  "outputs": [
-                    {
-                      "id": "1FCCCEF8-3B2F-4F89-83D6-5E67CF69583D",
-                      "type": "cc",
-                      "control": 77,
-                      "channel": 6
-                    }
-                  ]
+                  "id": "8171B2FB-0602-4E31-A641-50BDA60066A9",
+                  "name": "Decay",
+                  "displayType": "knob",
+                  "formatScript": "const decayArray = [500.0, 500.0, 500.0, 500.0, 500.0, 501.0, 501.0, 502.0, 503.0, 504.0, 505.0, 507.0, 510.0, 512.0, 516.0, 520.0, 524.0, 530.0, 536.0, 543.0, 550.0, 559.0, 568.0, 579.0, 590.0, 603.0, 617.0, 632.0, 648.0, 666.0, 686.0, 706.0, 728.0, 752.0, 778.0, 805.0, 834.0, 865.0, 898.0, 932.0, 969.0, 1.008, 1.049, 1.092, 1.138, 1.186, 1.237, 1.289, 1.345, 1.403, 1.464, 1.527, 1.594, 1.663, 1.735, 1.810, 1.889, 1.971, 2.055, 2.144, 2.235, 2.331, 2.429, 2.531, 2.637, 2.747, 2.860, 2.977, 3.099, 3.225, 3.353, 3.487, 3.625, 3.768, 3.913, 4.065, 4.221, 4.382, 4.545, 4.715, 4.891, 5.068, 5.254, 5.444, 5.639, 5.837, 6.043, 6.254, 6.471, 6.691, 6.919, 7.153, 7.392, 7.634, 7.886, 8.143, 8.406, 8.673, 8.847, 9.231, 9.519, 9.811, 10.11, 10.42, 10.74, 11.05, 11.38, 11.72, 12.06, 12.41, 12.76, 13.13, 13.50, 13.88, 14.26, 14.66, 15.05, 15.46, 15.88, 16.31, 16.74, 17.18, 17.63, 18.09, 18.55, 19.02, 19.51, 20.00];\nconst m = Math.round(value*127);\nreturn decayArray[m] + (m<41?' ms':' s');",
+                  "namespace": "BigSky Cloud > Decay",
+                  "outputs": [],
+                  "frameWidth": 100,
+                  "frameHeight": 130
                 },
                 {
-                  "id": "B9141E0A-3C4A-4E3E-936A-AB85716C9236",
-                  "name": "FREEZE",
-                  "displayType": "toggleButton",
-                  "outputs": [
+                  "id": "905D1EDA-4AD0-4067-8DEC-89E16CF7F378",
+                  "name": "Pre-Delay",
+                  "displayType": "knob",
+                  "namespace": "BigSky Cloud > PreDelay",
+                  "outputs": [],
+                  "frameWidth": 100,
+                  "frameHeight": 130
+                },
+                {
+                  "id": "BD38258E-FA3F-4BD2-98C6-C379CC07F74C",
+                  "name": "Tone",
+                  "displayType": "knob",
+                  "namespace": "BigSky Cloud > Tone",
+                  "outputs": [],
+                  "frameWidth": 100,
+                  "frameHeight": 130
+                },
+                {
+                  "id": "50589285-9290-49E8-8BD9-3CB8D365F226",
+                  "name": "Mod",
+                  "displayType": "knob",
+                  "namespace": "BigSky Cloud > Mod",
+                  "outputs": [],
+                  "frameWidth": 100,
+                  "frameHeight": 130
+                },
+                {
+                  "id": "10A772CD-16D3-4F61-88B1-D934B15B8324",
+                  "name": "Low End",
+                  "displayType": "knob",
+                  "namespace": "BigSky Cloud > Low End",
+                  "outputs": [],
+                  "frameWidth": 100,
+                  "frameHeight": 130
+                },
+                {
+                  "id": "29F0328D-029A-44AE-B29A-A92D19F54BBD",
+                  "name": "Mix",
+                  "displayType": "knob",
+                  "namespace": "BigSky Cloud > Mix",
+                  "outputs": [],
+                  "frameWidth": 100,
+                  "frameHeight": 130
+                }
+              ],
+              "subPanels": []
+            },
+            {
+              "id": "6E9E3D65-DA4F-4380-940E-7FDA349BF290",
+              "axis": "horizontal",
+              "controls": [
+                {
+                  "id": "B36620C3-D56C-47B7-B28C-F2A7F2B40C19",
+                  "name": "Diffusion",
+                  "displayType": "knob",
+                  "namespace": "BigSky Cloud > Diffusion",
+                  "outputs": [],
+                  "frameWidth": 100,
+                  "frameHeight": 130
+                },
+                {
+                  "id": "B0C61408-AFA9-4EB3-A45A-2E294C647806",
+                  "name": "HOLD",
+                  "displayType": "momentaryButton",
+                  "namespace": "BigSky Cloud > Hold",
+                  "outputs": [],
+                  "frameWidth": 100,
+                  "frameHeight": 130
+                }
+              ],
+              "subPanels": [
+                {
+                  "id": "1AE23FCB-D34E-405A-B9F6-AFD202985CB5",
+                  "axis": "horizontal",
+                  "controls": [
                     {
-                      "id": "CF68AFA0-663F-4BA3-BC8F-BF279B4DD286",
-                      "type": "cc",
-                      "control": 77,
-                      "channel": 6,
-                      "isInverted": true
+                      "id": "950E762C-FA14-4EFE-9018-D4713189D8B0",
+                      "name": "INFINITE",
+                      "displayType": "toggleButton",
+                      "namespace": "BigSky Cloud > Infinite",
+                      "outputs": []
+                    },
+                    {
+                      "id": "E4960E57-9A8B-4EC3-8686-1F5BDC3D0E9C",
+                      "name": "FREEZE",
+                      "displayType": "toggleButton",
+                      "namespace": "BigSky Cloud > Freeze",
+                      "outputs": []
                     }
                   ]
                 }
               ]
-            }
-          ]
-        },
-        {
-          "id": "AD2CE86C-59A3-42BB-868C-DB0F21D132AC",
-          "label": "Preset Row",
-          "axis": "horizontal",
-          "controls": [
-            {
-              "id": "2DB7880E-CC2F-4FED-9599-D98A8A29DC25",
-              "name": "1",
-              "displayType": "momentaryButton",
-              "outputs": [
-                {
-                  "id": "ACAE020E-AB07-49E7-A5FE-6F62B2B17200",
-                  "type": "program_change",
-                  "channel": 6
-                }
-              ]
             },
             {
-              "id": "0AD3804F-89E8-4A34-963B-18101E9BDDF6",
-              "name": "2",
-              "displayType": "momentaryButton",
-              "outputs": [
+              "id": "C65D735D-D085-4547-B96A-099423A7AB3B",
+              "axis": "horizontal",
+              "controls": [
                 {
-                  "id": "57C669A0-8FF8-4EA6-A63C-7F541B5C142F",
-                  "type": "program_change",
-                  "channel": 6
-                }
-              ]
-            },
-            {
-              "id": "F4017623-5DF0-4199-93B1-6DD7C2ACE78C",
-              "name": "3",
-              "displayType": "momentaryButton",
-              "outputs": [
+                  "id": "4D539E2D-EC5C-41D2-AA08-3B744ECDC014",
+                  "name": "1",
+                  "displayType": "momentaryButton",
+                  "namespace": "BigSky Presets > 1",
+                  "outputs": []
+                },
                 {
-                  "id": "F9926FE5-23EC-4E85-AE1A-BECBA5B6A053",
-                  "type": "program_change",
-                  "channel": 6
-                }
-              ]
-            },
-            {
-              "id": "584E61E7-06DF-4981-82CF-B24BFF4D41FC",
-              "name": "4",
-              "displayType": "momentaryButton",
-              "outputs": [
+                  "id": "9EBA47E6-A891-4463-96B3-AC7DC1688BD2",
+                  "name": "2",
+                  "displayType": "momentaryButton",
+                  "namespace": "BigSky Presets > 2",
+                  "outputs": []
+                },
                 {
-                  "id": "6332DC5E-FD86-416E-9BE5-20F246890C62",
-                  "type": "program_change",
-                  "channel": 6
-                }
-              ]
-            },
-            {
-              "id": "EE0B653E-3F57-4167-A953-77F4685583CD",
-              "name": "5",
-              "displayType": "momentaryButton",
-              "outputs": [
+                  "id": "223E34A2-6C11-4B72-AD16-F3CD9D5992B2",
+                  "name": "3",
+                  "displayType": "momentaryButton",
+                  "namespace": "BigSky Presets > 3",
+                  "outputs": []
+                },
                 {
-                  "id": "A569ECAB-F6A5-471A-9EDA-A59200C339F3",
-                  "type": "program_change",
-                  "channel": 6
-                }
-              ]
-            },
-            {
-              "id": "E85B7458-A765-4599-9A3D-1C7BC4953E54",
-              "name": "6",
-              "displayType": "momentaryButton",
-              "outputs": [
+                  "id": "408D0733-4C47-4D69-A318-D4F0A12741E2",
+                  "name": "4",
+                  "displayType": "momentaryButton",
+                  "namespace": "BigSky Presets > 4",
+                  "outputs": []
+                },
                 {
-                  "id": "409504A4-6E0C-4244-AAF4-1617F41C7199",
-                  "type": "program_change",
-                  "channel": 6
-                }
-              ]
-            },
-            {
-              "id": "B77774D2-1E5F-4F00-8824-979AFD9C68E1",
-              "name": "7",
-              "displayType": "momentaryButton",
-              "outputs": [
+                  "id": "4A68A486-C986-47CE-B310-EDC44211CC83",
+                  "name": "5",
+                  "displayType": "momentaryButton",
+                  "namespace": "BigSky Presets > 5",
+                  "outputs": []
+                },
                 {
-                  "id": "A7C4C749-5E59-4307-96F0-0E217C23BDBF",
-                  "type": "program_change",
-                  "channel": 6
-                }
-              ]
-            },
-            {
-              "id": "149EADB3-E63B-42F5-B7FA-C8F55733C672",
-              "name": "8",
-              "displayType": "momentaryButton",
-              "outputs": [
+                  "id": "CAC5BACF-3283-425A-9A04-A66D5B1C54AF",
+                  "name": "6",
+                  "displayType": "momentaryButton",
+                  "namespace": "BigSky Presets > 6",
+                  "outputs": []
+                },
                 {
-                  "id": "0EC742A8-A81C-40DF-B163-E028CD9A8F21",
-                  "type": "program_change",
-                  "channel": 6
+                  "id": "DB5FED83-E3CC-4B33-BBC7-857212018A90",
+                  "name": "7",
+                  "displayType": "momentaryButton",
+                  "namespace": "BigSky Presets > 7",
+                  "outputs": []
+                },
+                {
+                  "id": "9D5F53FA-174A-4E43-B11C-F99F9A441934",
+                  "name": "8",
+                  "displayType": "momentaryButton",
+                  "namespace": "BigSky Presets > 8",
+                  "outputs": []
                 }
-              ]
+              ],
+              "subPanels": []
             }
           ]
         }
       ]
     },
     {
-      "id": "2E2DAACF-CADE-47A8-88E0-4BF4C023226B",
-      "name": "Chorale",
+      "id": "F809783C-A174-4190-9907-9CF84F241AB5",
+      "name": "BigSky Chorale Editor",
+      "layoutType": "dynamic",
+      "controls": [],
       "panels": [
         {
-          "id": "DAF53572-1E36-43AF-9203-EDC873A2D18A",
-          "label": "Top Row",
-          "axis": "horizontal",
-          "controls": [
-            {
-              "id": "A69E78CF-4262-41A3-8867-63251EFB56D9",
-              "name": "Decay",
-              "displayType": "knob",
-              "formatScript": "const decayArray = [500.0, 500.0, 500.0, 500.0, 500.0, 501.0, 501.0, 502.0, 503.0, 504.0, 505.0, 507.0, 510.0, 512.0, 516.0, 520.0, 524.0, 530.0, 536.0, 543.0, 550.0, 559.0, 568.0, 579.0, 590.0, 603.0, 617.0, 632.0, 648.0, 666.0, 686.0, 706.0, 728.0, 752.0, 778.0, 805.0, 834.0, 865.0, 898.0, 932.0, 969.0, 1.008, 1.049, 1.092, 1.138, 1.186, 1.237, 1.289, 1.345, 1.403, 1.464, 1.527, 1.594, 1.663, 1.735, 1.810, 1.889, 1.971, 2.055, 2.144, 2.235, 2.331, 2.429, 2.531, 2.637, 2.747, 2.860, 2.977, 3.099, 3.225, 3.353, 3.487, 3.625, 3.768, 3.913, 4.065, 4.221, 4.382, 4.545, 4.715, 4.891, 5.068, 5.254, 5.444, 5.639, 5.837, 6.043, 6.254, 6.471, 6.691, 6.919, 7.153, 7.392, 7.634, 7.886, 8.143, 8.406, 8.673, 8.847, 9.231, 9.519, 9.811, 10.11, 10.42, 10.74, 11.05, 11.38, 11.72, 12.06, 12.41, 12.76, 13.13, 13.50, 13.88, 14.26, 14.66, 15.05, 15.46, 15.88, 16.31, 16.74, 17.18, 17.63, 18.09, 18.55, 19.02, 19.51, 20.00];\nconst m = Math.round(value*127);\nreturn decayArray[m] + (m<41?' ms':' s');",
-              "outputs": [
-                {
-                  "id": "D1A8615F-49D7-4981-8020-0911F76799E1",
-                  "type": "cc",
-                  "control": 40,
-                  "channel": 6
-                }
-              ],
-              "frameWidth": 100,
-              "frameHeight": 130
-            },
-            {
-              "id": "1DA7432B-7E54-4BC3-B65E-3604C0F9EBCE",
-              "name": "Pre - Delay",
-              "displayType": "knob",
-              "outputs": [
-                {
-                  "id": "D74831D5-EE4E-484D-90C7-B6A50D800365",
-                  "type": "cc",
-                  "control": 41,
-                  "channel": 6
-                }
-              ],
-              "frameWidth": 100,
-              "frameHeight": 130
-            },
-            {
-              "id": "AEFDF17F-F831-44F0-9B94-9DF89D0713DE",
-              "name": "Tone",
-              "displayType": "knob",
-              "outputs": [
-                {
-                  "id": "70D24989-3789-4CC3-B867-A918C3409A48",
-                  "type": "cc",
-                  "control": 42,
-                  "channel": 6
-                }
-              ],
-              "frameWidth": 100,
-              "frameHeight": 130
-            },
-            {
-              "id": "E15C1C9C-9FF7-4876-8A23-166AD1B71268",
-              "name": "Mod",
-              "displayType": "knob",
-              "outputs": [
-                {
-                  "id": "22B2D44E-8641-4E91-BD50-89FDA0854584",
-                  "type": "cc",
-                  "control": 43,
-                  "channel": 6
-                }
-              ],
-              "frameWidth": 100,
-              "frameHeight": 130
-            },
-            {
-              "id": "96294891-FA1D-44F3-B7BE-A6D1AE8832EE",
-              "name": "Low End",
-              "displayType": "knob",
-              "outputs": [
-                {
-                  "id": "88EC5ED7-ED28-47F6-9E95-FC3C767D1103",
-                  "type": "cc",
-                  "control": 44,
-                  "channel": 6
-                }
-              ],
-              "frameWidth": 100,
-              "frameHeight": 130
-            },
-            {
-              "id": "438D17BF-9CAA-4589-A55B-890BA1EC6B1D",
-              "name": "Mix",
-              "displayType": "knob",
-              "outputs": [
-                {
-                  "id": "C1FCF6FB-D643-443D-834D-5D39285408AC",
-                  "type": "cc",
-                  "control": 48,
-                  "channel": 6
-                }
-              ],
-              "frameWidth": 100,
-              "frameHeight": 130
-            }
-          ]
-        },
-        {
-          "id": "935E544C-7A57-44AE-94A8-6CD14796BF2B",
-          "label": "Variations",
-          "axis": "horizontal",
-          "controls": [
-            {
-              "id": "666F25CC-9F83-4B94-9954-4801E46765F4",
-              "name": "Vowel",
-              "displayType": "steppedKnob",
-              "menuOptions": [
-                "AAHHOO",
-                "AAHH",
-                "AAHOH",
-                "OH",
-                "OOOHOH",
-                "OOOO",
-                "RANDOM"
-              ],
-              "outputs": [
-                {
-                  "id": "9FF01673-C04C-4462-9AAF-0DB0B751A6F1",
-                  "type": "cc",
-                  "control": 45,
-                  "channel": 6
-                }
-              ],
-              "frameWidth": 100,
-              "frameHeight": 130
-            },
-            {
-              "id": "FB03BBBA-52C5-4EA5-BB4F-4B4C227906EC",
-              "name": "Resonance",
-              "displayType": "knob",
-              "outputs": [
-                {
-                  "id": "5BE4BA18-FC9D-4A10-9578-614CBA348D44",
-                  "type": "cc",
-                  "control": 46,
-                  "channel": 6
-                }
-              ],
-              "frameWidth": 100,
-              "frameHeight": 130
-            },
-            {
-              "id": "15060A71-3B0D-48BF-986E-68206D95C25D",
-              "name": "HOLD",
-              "displayType": "momentaryButton",
-              "outputs": [
-                {
-                  "id": "090CAFF9-6603-4DF2-9861-4F705928260B",
-                  "type": "cc",
-                  "control": 49,
-                  "channel": 6
-                }
-              ],
-              "frameWidth": 100,
-              "frameHeight": 130
-            }
-          ],
+          "id": "06488CE2-7F15-49F9-A369-A32E90DB6AA2",
+          "axis": "vertical",
+          "controls": [],
           "subPanels": [
             {
-              "id": "34C723A5-65C1-4C74-8F02-336412C4023D",
-              "label": "Filter",
+              "id": "DD6E554A-C18B-425D-B0AF-4CE85CC8D2A1",
               "axis": "horizontal",
-              "clusterType": "FlipSwitch",
               "controls": [
                 {
-                  "id": "C669B507-0F0C-43BD-B690-79645E843B7D",
-                  "name": "HIGH",
-                  "displayType": "toggleButton",
-                  "outputs": [
-                    {
-                      "id": "06A643D6-273B-4BB0-9635-EBD9CE46A20B",
-                      "type": "cc",
-                      "control": 75,
-                      "channel": 6
-                    }
-                  ]
+                  "id": "16E70E56-4FE1-44CE-B72F-AA433B272AD6",
+                  "name": "Decay",
+                  "displayType": "knob",
+                  "formatScript": "const decayArray = [500.0, 500.0, 500.0, 500.0, 500.0, 501.0, 501.0, 502.0, 503.0, 504.0, 505.0, 507.0, 510.0, 512.0, 516.0, 520.0, 524.0, 530.0, 536.0, 543.0, 550.0, 559.0, 568.0, 579.0, 590.0, 603.0, 617.0, 632.0, 648.0, 666.0, 686.0, 706.0, 728.0, 752.0, 778.0, 805.0, 834.0, 865.0, 898.0, 932.0, 969.0, 1.008, 1.049, 1.092, 1.138, 1.186, 1.237, 1.289, 1.345, 1.403, 1.464, 1.527, 1.594, 1.663, 1.735, 1.810, 1.889, 1.971, 2.055, 2.144, 2.235, 2.331, 2.429, 2.531, 2.637, 2.747, 2.860, 2.977, 3.099, 3.225, 3.353, 3.487, 3.625, 3.768, 3.913, 4.065, 4.221, 4.382, 4.545, 4.715, 4.891, 5.068, 5.254, 5.444, 5.639, 5.837, 6.043, 6.254, 6.471, 6.691, 6.919, 7.153, 7.392, 7.634, 7.886, 8.143, 8.406, 8.673, 8.847, 9.231, 9.519, 9.811, 10.11, 10.42, 10.74, 11.05, 11.38, 11.72, 12.06, 12.41, 12.76, 13.13, 13.50, 13.88, 14.26, 14.66, 15.05, 15.46, 15.88, 16.31, 16.74, 17.18, 17.63, 18.09, 18.55, 19.02, 19.51, 20.00];\nconst m = Math.round(value*127);\nreturn decayArray[m] + (m<41?' ms':' s');",
+                  "namespace": "BigSky Chorale > Decay",
+                  "outputs": [],
+                  "frameWidth": 100,
+                  "frameHeight": 130
                 },
                 {
-                  "id": "82CD605D-AD50-4E87-B062-EA3833089ADE",
-                  "name": "MEDIUM",
-                  "displayType": "toggleButton",
-                  "outputs": [
-                    {
-                      "id": "A226E552-67BB-489E-8434-D5E3667DBE16",
-                      "type": "cc",
-                      "control": 75,
-                      "channel": 6
-                    }
-                  ]
+                  "id": "001372AB-6396-49C3-8EE4-624FA6C31796",
+                  "name": "Pre-Delay",
+                  "displayType": "knob",
+                  "namespace": "BigSky Chorale > PreDelay",
+                  "outputs": [],
+                  "frameWidth": 100,
+                  "frameHeight": 130
                 },
                 {
-                  "id": "33E475BB-5A6B-405B-B6FE-454DDB486B15",
-                  "name": "MILD",
-                  "displayType": "toggleButton",
-                  "outputs": [
-                    {
-                      "id": "301B3B1C-2F5C-413D-ABE3-A506ABCE90A8",
-                      "type": "cc",
-                      "control": 75,
-                      "channel": 6
-                    }
-                  ]
+                  "id": "3F55093B-6CEE-4B09-B96C-C03452D63B02",
+                  "name": "Tone",
+                  "displayType": "knob",
+                  "namespace": "BigSky Chorale > Tone",
+                  "outputs": [],
+                  "frameWidth": 100,
+                  "frameHeight": 130
+                },
+                {
+                  "id": "F7A83E4B-4515-45C8-848D-3BC5B3BE41E0",
+                  "name": "Mod",
+                  "displayType": "knob",
+                  "namespace": "BigSky Chorale > Mod",
+                  "outputs": [],
+                  "frameWidth": 100,
+                  "frameHeight": 130
+                },
+                {
+                  "id": "B2DE02EC-5BCD-4484-8A83-FD4D08314DBA",
+                  "name": "Low End",
+                  "displayType": "knob",
+                  "namespace": "BigSky Chorale > Low End",
+                  "outputs": [],
+                  "frameWidth": 100,
+                  "frameHeight": 130
+                },
+                {
+                  "id": "95030544-39B7-4918-BFBF-5AC704846A90",
+                  "name": "Mix",
+                  "displayType": "knob",
+                  "namespace": "BigSky Chorale > Mix",
+                  "outputs": [],
+                  "frameWidth": 100,
+                  "frameHeight": 130
                 }
-              ]
+              ],
+              "subPanels": []
             },
             {
-              "id": "BD92BAC6-B99D-4893-B03A-862D87D554F1",
-              "label": "Inf/Freeze",
+              "id": "09BC2C20-AEEB-4D33-9B6B-523DBBE6697C",
               "axis": "horizontal",
-              "clusterType": "FlipSwitch",
               "controls": [
                 {
-                  "id": "A98C52D1-0644-4A1F-AC9B-DBDFA08E9938",
-                  "name": "INFINITE",
-                  "displayType": "toggleButton",
-                  "outputs": [
+                  "id": "7CFF2A2C-38C0-4DF3-B09F-74BC9CFE16DB",
+                  "name": "Vowel",
+                  "displayType": "steppedKnob",
+                  "menuOptions": [
+                    "AAHHOO",
+                    "AAHH",
+                    "AAHOH",
+                    "OH",
+                    "OOOHOH",
+                    "OOOO",
+                    "RANDOM"
+                  ],
+                  "namespace": "BigSky Chorale > Vowel",
+                  "outputs": [],
+                  "frameWidth": 100,
+                  "frameHeight": 130
+                },
+                {
+                  "id": "9F05D0F1-2585-423D-BEC4-3FF48640D6A6",
+                  "name": "Resonance",
+                  "displayType": "knob",
+                  "namespace": "BigSky Chorale > Resonance",
+                  "outputs": [],
+                  "frameWidth": 100,
+                  "frameHeight": 130
+                },
+                {
+                  "id": "C25B39C7-D6BF-4A5C-868D-E0A1883D5D4E",
+                  "name": "HOLD",
+                  "displayType": "momentaryButton",
+                  "namespace": "BigSky Chorale > Hold",
+                  "outputs": [],
+                  "frameWidth": 100,
+                  "frameHeight": 130
+                }
+              ],
+              "subPanels": [
+                {
+                  "id": "44A57578-6D2C-4A3A-BBA1-C607712AE08F",
+                  "axis": "horizontal",
+                  "controls": [
                     {
-                      "id": "6ECD5CDF-97B0-46E5-AEAC-2AF1BB2CBACA",
-                      "type": "cc",
-                      "control": 77,
-                      "channel": 6
+                      "id": "3E38A685-4DD6-4477-8B86-4635720BD012",
+                      "name": "HIGH",
+                      "displayType": "toggleButton",
+                      "namespace": "BigSky Chorale > Filter High",
+                      "outputs": []
+                    },
+                    {
+                      "id": "7716B60F-E69D-4B05-811E-38F02353D7B4",
+                      "name": "MEDIUM",
+                      "displayType": "toggleButton",
+                      "namespace": "BigSky Chorale > Filter Med",
+                      "outputs": []
+                    },
+                    {
+                      "id": "B68B0997-3AD5-482E-AD56-01872703379D",
+                      "name": "MILD",
+                      "displayType": "toggleButton",
+                      "namespace": "BigSky Chorale > Filter Mild",
+                      "outputs": []
                     }
                   ]
                 },
                 {
-                  "id": "E9E559EF-477D-42D2-B134-83D3BDBA6A3E",
-                  "name": "FREEZE",
-                  "displayType": "toggleButton",
-                  "outputs": [
+                  "id": "8D3A5923-85DF-4586-9DAB-8E6CF418910C",
+                  "axis": "horizontal",
+                  "controls": [
                     {
-                      "id": "5974F422-3045-4646-BE3B-7D8EE12BED7B",
-                      "type": "cc",
-                      "control": 77,
-                      "channel": 6,
-                      "isInverted": true
+                      "id": "A6E1B663-F089-4A02-A101-8421D9067088",
+                      "name": "INFINITE",
+                      "displayType": "toggleButton",
+                      "namespace": "BigSky Chorale > Infinite",
+                      "outputs": []
+                    },
+                    {
+                      "id": "9B5B772D-7B4D-47CD-889F-FDD970D4D5A7",
+                      "name": "FREEZE",
+                      "displayType": "toggleButton",
+                      "namespace": "BigSky Chorale > Freeze",
+                      "outputs": []
                     }
                   ]
                 }
               ]
-            }
-          ]
-        },
-        {
-          "id": "85C2B325-7509-42CB-96D2-4656A2324CB3",
-          "label": "Preset Row",
-          "axis": "horizontal",
-          "controls": [
-            {
-              "id": "E9D42213-5DA3-47B1-B6CB-CDFC17ED1F26",
-              "name": "1",
-              "displayType": "momentaryButton",
-              "outputs": [
-                {
-                  "id": "7C9A7EFA-55DF-43A6-BAE4-6AFE90D825E2",
-                  "type": "program_change",
-                  "channel": 6
-                }
-              ]
             },
             {
-              "id": "E3991148-0B6B-4CF9-BB35-99DB9036826A",
-              "name": "2",
-              "displayType": "momentaryButton",
-              "outputs": [
+              "id": "F2931648-9C53-4BE3-B1FE-A47014597DD4",
+              "axis": "horizontal",
+              "controls": [
                 {
-                  "id": "4A4CD0D0-0567-4DBF-918F-64E810280974",
-                  "type": "program_change",
-                  "channel": 6
-                }
-              ]
-            },
-            {
-              "id": "F5A2FFE5-8223-4F22-A56C-B63E20356CFB",
-              "name": "3",
-              "displayType": "momentaryButton",
-              "outputs": [
+                  "id": "78C9F2BA-02C2-409C-9708-4116D3090714",
+                  "name": "1",
+                  "displayType": "momentaryButton",
+                  "namespace": "BigSky Presets > 1",
+                  "outputs": []
+                },
                 {
-                  "id": "CDCC743A-B3BC-43EC-86FC-D143D569FF7E",
-                  "type": "program_change",
-                  "channel": 6
-                }
-              ]
-            },
-            {
-              "id": "3ADECA7B-1815-4D0C-827B-6795CCFF8014",
-              "name": "4",
-              "displayType": "momentaryButton",
-              "outputs": [
+                  "id": "17088EF6-B7DB-43FA-846A-538ECD0349E0",
+                  "name": "2",
+                  "displayType": "momentaryButton",
+                  "namespace": "BigSky Presets > 2",
+                  "outputs": []
+                },
                 {
-                  "id": "7C0EF670-DD46-4502-A190-F3CF2491FDDC",
-                  "type": "program_change",
-                  "channel": 6
-                }
-              ]
-            },
-            {
-              "id": "93E29410-4A72-4ABE-9269-6AE1CB4B02AD",
-              "name": "5",
-              "displayType": "momentaryButton",
-              "outputs": [
+                  "id": "DD95FB0B-8896-4E9D-B66D-941980747C44",
+                  "name": "3",
+                  "displayType": "momentaryButton",
+                  "namespace": "BigSky Presets > 3",
+                  "outputs": []
+                },
                 {
-                  "id": "37371133-0CCE-4817-BF55-38184F831A08",
-                  "type": "program_change",
-                  "channel": 6
-                }
-              ]
-            },
-            {
-              "id": "0A7F88FC-EE05-4ED1-A2BC-FC39C4F9CFE3",
-              "name": "6",
-              "displayType": "momentaryButton",
-              "outputs": [
+                  "id": "77205870-A4C5-41A4-A5EA-4A5BB6D23959",
+                  "name": "4",
+                  "displayType": "momentaryButton",
+                  "namespace": "BigSky Presets > 4",
+                  "outputs": []
+                },
                 {
-                  "id": "019ECA99-B595-4945-AAC4-CE1DA5A58387",
-                  "type": "program_change",
-                  "channel": 6
-                }
-              ]
-            },
-            {
-              "id": "CA285BC7-0190-4222-BC88-240685FAB7C7",
-              "name": "7",
-              "displayType": "momentaryButton",
-              "outputs": [
+                  "id": "0F482607-0032-4BB5-BFA1-481EF62571AA",
+                  "name": "5",
+                  "displayType": "momentaryButton",
+                  "namespace": "BigSky Presets > 5",
+                  "outputs": []
+                },
                 {
-                  "id": "E492E013-ABD7-427D-B055-957D1D5F0A29",
-                  "type": "program_change",
-                  "channel": 6
-                }
-              ]
-            },
-            {
-              "id": "A9C55E77-5D4C-4850-ACDB-1AFC79D3A935",
-              "name": "8",
-              "displayType": "momentaryButton",
-              "outputs": [
+                  "id": "0ADEAC1E-B236-495F-BFB4-2D630DCBB345",
+                  "name": "6",
+                  "displayType": "momentaryButton",
+                  "namespace": "BigSky Presets > 6",
+                  "outputs": []
+                },
                 {
-                  "id": "E76180C6-E137-4CA7-A367-AC280D05B6B0",
-                  "type": "program_change",
-                  "channel": 6
+                  "id": "12AAF886-C94F-459E-9FF2-1025632CC75F",
+                  "name": "7",
+                  "displayType": "momentaryButton",
+                  "namespace": "BigSky Presets > 7",
+                  "outputs": []
+                },
+                {
+                  "id": "F8BC9624-E36C-4051-8A42-F4B355E18462",
+                  "name": "8",
+                  "displayType": "momentaryButton",
+                  "namespace": "BigSky Presets > 8",
+                  "outputs": []
                 }
-              ]
+              ],
+              "subPanels": []
             }
           ]
         }
       ]
     },
     {
-      "id": "EC45A917-239F-4100-8471-B7CE72891B48",
-      "name": "Swell",
+      "id": "2D322449-AC12-43F3-A611-C6769A8FA5A8",
+      "name": "BigSky Swell Editor",
+      "layoutType": "dynamic",
+      "controls": [],
       "panels": [
         {
-          "id": "BCE7227C-463D-4A5B-BABA-E8D85442D457",
-          "label": "Top Row",
-          "axis": "horizontal",
-          "controls": [
-            {
-              "id": "261D6D3B-59BC-4A14-80B8-739C48D3A4D5",
-              "name": "Decay",
-              "displayType": "knob",
-              "formatScript": "const decayArray = [500.0, 500.0, 500.0, 500.0, 500.0, 501.0, 501.0, 502.0, 503.0, 504.0, 505.0, 507.0, 510.0, 512.0, 516.0, 520.0, 524.0, 530.0, 536.0, 543.0, 550.0, 559.0, 568.0, 579.0, 590.0, 603.0, 617.0, 632.0, 648.0, 666.0, 686.0, 706.0, 728.0, 752.0, 778.0, 805.0, 834.0, 865.0, 898.0, 932.0, 969.0, 1.008, 1.049, 1.092, 1.138, 1.186, 1.237, 1.289, 1.345, 1.403, 1.464, 1.527, 1.594, 1.663, 1.735, 1.810, 1.889, 1.971, 2.055, 2.144, 2.235, 2.331, 2.429, 2.531, 2.637, 2.747, 2.860, 2.977, 3.099, 3.225, 3.353, 3.487, 3.625, 3.768, 3.913, 4.065, 4.221, 4.382, 4.545, 4.715, 4.891, 5.068, 5.254, 5.444, 5.639, 5.837, 6.043, 6.254, 6.471, 6.691, 6.919, 7.153, 7.392, 7.634, 7.886, 8.143, 8.406, 8.673, 8.847, 9.231, 9.519, 9.811, 10.11, 10.42, 10.74, 11.05, 11.38, 11.72, 12.06, 12.41, 12.76, 13.13, 13.50, 13.88, 14.26, 14.66, 15.05, 15.46, 15.88, 16.31, 16.74, 17.18, 17.63, 18.09, 18.55, 19.02, 19.51, 20.00];\nconst m = Math.round(value*127);\nreturn decayArray[m] + (m<41?' ms':' s');",
-              "outputs": [
-                {
-                  "id": "FDAEBE32-7ECC-44A2-B286-3B61DEEE632F",
-                  "type": "cc",
-                  "control": 40,
-                  "channel": 6
-                }
-              ],
-              "frameWidth": 100,
-              "frameHeight": 130
-            },
-            {
-              "id": "51AF8F4A-FE27-44DD-AAA7-5E5898B53412",
-              "name": "Pre - Delay",
-              "displayType": "knob",
-              "outputs": [
-                {
-                  "id": "35A76660-72F5-447B-80A9-69B56FE6FFCD",
-                  "type": "cc",
-                  "control": 41,
-                  "channel": 6
-                }
-              ],
-              "frameWidth": 100,
-              "frameHeight": 130
-            },
-            {
-              "id": "34D75A14-3B93-40E2-B923-3E47A5F25645",
-              "name": "Tone",
-              "displayType": "knob",
-              "outputs": [
-                {
-                  "id": "142AA626-509A-4097-A5A2-8DB941EF77D8",
-                  "type": "cc",
-                  "control": 42,
-                  "channel": 6
-                }
-              ],
-              "frameWidth": 100,
-              "frameHeight": 130
-            },
-            {
-              "id": "C871A62D-3995-47D5-BDF7-41569DF0C682",
-              "name": "Mod",
-              "displayType": "knob",
-              "outputs": [
-                {
-                  "id": "6DA00A87-A87F-42EE-94BB-FB10C605B9DA",
-                  "type": "cc",
-                  "control": 43,
-                  "channel": 6
-                }
-              ],
-              "frameWidth": 100,
-              "frameHeight": 130
-            },
-            {
-              "id": "69DF9745-E627-4C4B-8A76-ED2B794098F0",
-              "name": "Low End",
-              "displayType": "knob",
-              "outputs": [
-                {
-                  "id": "F05F5046-132B-4D02-8B6A-3F8DE2C6BF8D",
-                  "type": "cc",
-                  "control": 44,
-                  "channel": 6
-                }
-              ],
-              "frameWidth": 100,
-              "frameHeight": 130
-            },
-            {
-              "id": "438D17BF-9CAA-4589-A55B-890BA1EC6B1D",
-              "name": "Mix",
-              "displayType": "knob",
-              "outputs": [
-                {
-                  "id": "EB03BD56-D95D-4078-BD32-7C00CF52A8B5",
-                  "type": "cc",
-                  "control": 48,
-                  "channel": 6
-                }
-              ],
-              "frameWidth": 100,
-              "frameHeight": 130
-            }
-          ]
-        },
-        {
-          "id": "0FA5B2ED-48A0-464E-BFF3-AC5B18F0853E",
-          "label": "Variations",
-          "axis": "horizontal",
-          "controls": [
-            {
-              "id": "5A0AB8BA-36DD-4343-9C97-98C349403C44",
-              "name": "Rise Time",
-              "displayType": "knob",
-              "outputs": [
-                {
-                  "id": "848AF370-E9D5-4270-9C4B-757F485A58CB",
-                  "type": "cc",
-                  "control": 37,
-                  "channel": 6
-                }
-              ],
-              "frameWidth": 100,
-              "frameHeight": 130
-            },
-            {
-              "id": "3CDDD347-2EB6-438F-8E1C-17E26EC0D73B",
-              "name": "HOLD",
-              "displayType": "momentaryButton",
-              "outputs": [
-                {
-                  "id": "6F2F76C0-C1C8-4F1C-A73F-5A070E81BFF3",
-                  "type": "cc",
-                  "control": 49,
-                  "channel": 6
-                }
-              ],
-              "frameWidth": 100,
-              "frameHeight": 130
-            }
-          ],
+          "id": "44B48682-728A-4BA3-AF60-E430927502A2",
+          "axis": "vertical",
+          "controls": [],
           "subPanels": [
             {
-              "id": "68BBAEB1-2112-449C-8CE5-383F952E1C55",
-              "label": "Wet/Dry",
+              "id": "03C5C156-0330-47FE-A805-145AD1D48D0F",
               "axis": "horizontal",
-              "clusterType": "FlipSwitch",
               "controls": [
                 {
-                  "id": "7235E89B-0404-4ADA-9269-EDD6171E9E79",
-                  "name": "WET",
-                  "displayType": "toggleButton",
-                  "outputs": [
+                  "id": "98C4927C-6771-4555-AC92-095FA9EFC95D",
+                  "name": "Decay",
+                  "displayType": "knob",
+                  "formatScript": "const decayArray = [500.0, 500.0, 500.0, 500.0, 500.0, 501.0, 501.0, 502.0, 503.0, 504.0, 505.0, 507.0, 510.0, 512.0, 516.0, 520.0, 524.0, 530.0, 536.0, 543.0, 550.0, 559.0, 568.0, 579.0, 590.0, 603.0, 617.0, 632.0, 648.0, 666.0, 686.0, 706.0, 728.0, 752.0, 778.0, 805.0, 834.0, 865.0, 898.0, 932.0, 969.0, 1.008, 1.049, 1.092, 1.138, 1.186, 1.237, 1.289, 1.345, 1.403, 1.464, 1.527, 1.594, 1.663, 1.735, 1.810, 1.889, 1.971, 2.055, 2.144, 2.235, 2.331, 2.429, 2.531, 2.637, 2.747, 2.860, 2.977, 3.099, 3.225, 3.353, 3.487, 3.625, 3.768, 3.913, 4.065, 4.221, 4.382, 4.545, 4.715, 4.891, 5.068, 5.254, 5.444, 5.639, 5.837, 6.043, 6.254, 6.471, 6.691, 6.919, 7.153, 7.392, 7.634, 7.886, 8.143, 8.406, 8.673, 8.847, 9.231, 9.519, 9.811, 10.11, 10.42, 10.74, 11.05, 11.38, 11.72, 12.06, 12.41, 12.76, 13.13, 13.50, 13.88, 14.26, 14.66, 15.05, 15.46, 15.88, 16.31, 16.74, 17.18, 17.63, 18.09, 18.55, 19.02, 19.51, 20.00];\nconst m = Math.round(value*127);\nreturn decayArray[m] + (m<41?' ms':' s');",
+                  "namespace": "BigSky Swell > Decay",
+                  "outputs": [],
+                  "frameWidth": 100,
+                  "frameHeight": 130
+                },
+                {
+                  "id": "AA413402-D33A-4581-A170-3F3437F5B74B",
+                  "name": "Pre-Delay",
+                  "displayType": "knob",
+                  "namespace": "BigSky Swell > PreDelay",
+                  "outputs": [],
+                  "frameWidth": 100,
+                  "frameHeight": 130
+                },
+                {
+                  "id": "80931B20-624D-46D9-A497-A811BFC4FD9C",
+                  "name": "Tone",
+                  "displayType": "knob",
+                  "namespace": "BigSky Swell > Tone",
+                  "outputs": [],
+                  "frameWidth": 100,
+                  "frameHeight": 130
+                },
+                {
+                  "id": "9E1F4C72-46EF-43AC-998F-2C494C0F59C7",
+                  "name": "Mod",
+                  "displayType": "knob",
+                  "namespace": "BigSky Swell > Mod",
+                  "outputs": [],
+                  "frameWidth": 100,
+                  "frameHeight": 130
+                },
+                {
+                  "id": "0288B691-9538-4EB9-AD2B-7B21385CEEB6",
+                  "name": "Low End",
+                  "displayType": "knob",
+                  "namespace": "BigSky Swell > Low End",
+                  "outputs": [],
+                  "frameWidth": 100,
+                  "frameHeight": 130
+                },
+                {
+                  "id": "230CB92A-1C84-483B-BF2A-A26542316E80",
+                  "name": "Mix",
+                  "displayType": "knob",
+                  "namespace": "BigSky Swell > Mix",
+                  "outputs": [],
+                  "frameWidth": 100,
+                  "frameHeight": 130
+                }
+              ],
+              "subPanels": []
+            },
+            {
+              "id": "743B9CAC-7096-41B4-9326-3491EAA120C2",
+              "axis": "horizontal",
+              "controls": [
+                {
+                  "id": "EE9B3B87-18D8-44E8-AAF5-EF3F2E2CC917",
+                  "name": "Rise Time",
+                  "displayType": "knob",
+                  "namespace": "BigSky Swell > Rise Time",
+                  "outputs": [],
+                  "frameWidth": 100,
+                  "frameHeight": 130
+                },
+                {
+                  "id": "9CB7EBD8-0694-4B7C-9E4A-8B9FC3FA091B",
+                  "name": "HOLD",
+                  "displayType": "momentaryButton",
+                  "namespace": "BigSky Swell > Hold",
+                  "outputs": [],
+                  "frameWidth": 100,
+                  "frameHeight": 130
+                }
+              ],
+              "subPanels": [
+                {
+                  "id": "5CDDE708-D9BA-4181-BC46-A36522877701",
+                  "axis": "horizontal",
+                  "controls": [
                     {
-                      "id": "98857160-41D3-4784-BC18-979553FE7CC3",
-                      "type": "cc",
-                      "control": 78,
-                      "channel": 6
+                      "id": "DA88C7D6-F051-4497-955E-82CBDB4CD17F",
+                      "name": "WET",
+                      "displayType": "toggleButton",
+                      "namespace": "BigSky Swell > WetMix",
+                      "outputs": []
+                    },
+                    {
+                      "id": "1476929E-26EC-4E18-94B8-210F15C9CFC0",
+                      "name": "DRY",
+                      "displayType": "toggleButton",
+                      "namespace": "BigSky Swell > DryMix",
+                      "outputs": []
                     }
                   ]
                 },
                 {
-                  "id": "1F414AB1-0E8F-42BD-AFA0-CD41875EAE40",
-                  "name": "DRY",
-                  "displayType": "toggleButton",
-                  "outputs": [
+                  "id": "267B8E6E-5BED-42CC-BF2A-30DAE2DA4A7C",
+                  "axis": "horizontal",
+                  "controls": [
                     {
-                      "id": "ADDD3FD6-A316-440B-81BD-0E1E5DEEF1D3",
-                      "type": "cc",
-                      "control": 78,
-                      "channel": 6,
-                      "isInverted": true
+                      "id": "E5B39DDC-A1CD-432F-8D5C-A52EAA944783",
+                      "name": "INFINITE",
+                      "displayType": "toggleButton",
+                      "namespace": "BigSky Swell > Infinite",
+                      "outputs": []
+                    },
+                    {
+                      "id": "D5C1371E-9011-4E8F-AA49-9B3452DF6C7E",
+                      "name": "FREEZE",
+                      "displayType": "toggleButton",
+                      "namespace": "BigSky Swell > Freeze",
+                      "outputs": []
                     }
                   ]
                 }
               ]
             },
             {
-              "id": "6B955972-4844-43E8-BC39-FA7C71FE059C",
-              "label": "Inf/Freeze",
+              "id": "89288B0B-D8E0-4208-8BF7-CE2608A4DDF3",
               "axis": "horizontal",
-              "clusterType": "FlipSwitch",
               "controls": [
                 {
-                  "id": "2ECAB38E-34AF-4293-9CA2-A9840479750A",
-                  "name": "INFINITE",
-                  "displayType": "toggleButton",
-                  "outputs": [
-                    {
-                      "id": "0A114B5E-CAC9-447F-B7A8-7613DBE403E1",
-                      "type": "cc",
-                      "control": 77,
-                      "channel": 6
-                    }
-                  ]
+                  "id": "71FEF077-F661-4BA2-A4B6-20E3FF8BE2A0",
+                  "name": "1",
+                  "displayType": "momentaryButton",
+                  "namespace": "BigSky Presets > 1",
+                  "outputs": []
                 },
                 {
-                  "id": "FF71CB6B-FD25-45B9-A099-678D5E63A9EF",
-                  "name": "FREEZE",
-                  "displayType": "toggleButton",
-                  "outputs": [
-                    {
-                      "id": "0C929968-52B4-42EB-AA0E-EA7F9634D751",
-                      "type": "cc",
-                      "control": 77,
-                      "channel": 6,
-                      "isInverted": true
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "8AA653E9-E24A-45CA-9258-81DA471C2BBF",
-          "label": "Preset Row",
-          "axis": "horizontal",
-          "controls": [
-            {
-              "id": "148E5033-0249-41BB-A3E3-D820B2883B5F",
-              "name": "1",
-              "displayType": "momentaryButton",
-              "outputs": [
+                  "id": "E35368A3-658B-4CD1-92CC-305F8F02D8DB",
+                  "name": "2",
+                  "displayType": "momentaryButton",
+                  "namespace": "BigSky Presets > 2",
+                  "outputs": []
+                },
                 {
-                  "id": "F737EBC9-CE2D-4055-95D0-9EA5D7219CDE",
-                  "type": "program_change",
-                  "channel": 6
-                }
-              ]
-            },
-            {
-              "id": "A5492C72-1752-4FB1-946B-A5C71B968D13",
-              "name": "2",
-              "displayType": "momentaryButton",
-              "outputs": [
+                  "id": "8CE2D7CD-F783-4791-9942-618607FB9A33",
+                  "name": "3",
+                  "displayType": "momentaryButton",
+                  "namespace": "BigSky Presets > 3",
+                  "outputs": []
+                },
                 {
-                  "id": "5C48F3CD-C7A6-42D6-BBD8-46EC6D4FA4F2",
-                  "type": "program_change",
-                  "channel": 6
-                }
-              ]
-            },
-            {
-              "id": "D6501305-2BB1-44B5-B847-D214EE2BE393",
-              "name": "3",
-              "displayType": "momentaryButton",
-              "outputs": [
+                  "id": "D715EAA7-2158-456E-87CE-60C48A12F767",
+                  "name": "4",
+                  "displayType": "momentaryButton",
+                  "namespace": "BigSky Presets > 4",
+                  "outputs": []
+                },
                 {
-                  "id": "63D361A1-1045-45F3-B33C-B395D89B8509",
-                  "type": "program_change",
-                  "channel": 6
-                }
-              ]
-            },
-            {
-              "id": "C0044CF9-6093-421E-9377-EA131151F67A",
-              "name": "4",
-              "displayType": "momentaryButton",
-              "outputs": [
+                  "id": "2BCDB386-D938-48F6-90D9-2A2AB0E2C3C9",
+                  "name": "5",
+                  "displayType": "momentaryButton",
+                  "namespace": "BigSky Presets > 5",
+                  "outputs": []
+                },
                 {
-                  "id": "C6D3F265-E7C1-4029-9CD1-08B2AC09076E",
-                  "type": "program_change",
-                  "channel": 6
-                }
-              ]
-            },
-            {
-              "id": "938CE915-D8D5-4F14-98E3-2438CB1806DF",
-              "name": "5",
-              "displayType": "momentaryButton",
-              "outputs": [
+                  "id": "C6BA7AF2-46CC-49F6-98C0-A0A9816A7F5A",
+                  "name": "6",
+                  "displayType": "momentaryButton",
+                  "namespace": "BigSky Presets > 6",
+                  "outputs": []
+                },
                 {
-                  "id": "054FF6B6-960B-403A-A6B3-6FF0496649E5",
-                  "type": "program_change",
-                  "channel": 6
-                }
-              ]
-            },
-            {
-              "id": "7AC8AFB2-2A68-479B-A520-4249567D7DB8",
-              "name": "6",
-              "displayType": "momentaryButton",
-              "outputs": [
+                  "id": "DA6FB64E-F59F-4DB7-94EB-BC2F821328DB",
+                  "name": "7",
+                  "displayType": "momentaryButton",
+                  "namespace": "BigSky Presets > 7",
+                  "outputs": []
+                },
                 {
-                  "id": "7B9726A4-9AE6-4563-9EE8-D01901330CAD",
-                  "type": "program_change",
-                  "channel": 6
+                  "id": "87CFAC73-1526-454A-B988-EE7C1B3BDED4",
+                  "name": "8",
+                  "displayType": "momentaryButton",
+                  "namespace": "BigSky Presets > 8",
+                  "outputs": []
                 }
-              ]
-            },
-            {
-              "id": "CB8A4DD4-2EF5-4AE7-AF84-A9D54D23E13B",
-              "name": "7",
-              "displayType": "momentaryButton",
-              "outputs": [
-                {
-                  "id": "2E86FDC4-7F53-4FC7-877D-CB891F9FB4C2",
-                  "type": "program_change",
-                  "channel": 6
-                }
-              ]
-            },
-            {
-              "id": "BC52279E-0808-4F12-87B2-D5078F77DEDE",
-              "name": "8",
-              "displayType": "momentaryButton",
-              "outputs": [
-                {
-                  "id": "0522B87B-3813-45C3-8A17-98B82840CD36",
-                  "type": "program_change",
-                  "channel": 6
-                }
-              ]
+              ],
+              "subPanels": []
             }
           ]
         }
       ]
     },
     {
-      "id": "C69712E1-46A8-4B00-AE15-570D5DE0A15D",
-      "name": "Shimmer",
+      "id": "A65914DA-975F-463B-96BF-ECB48371A57D",
+      "name": "BigSky Shimmer Editor",
+      "layoutType": "dynamic",
+      "controls": [],
       "panels": [
         {
-          "id": "3C0FD4BA-39EF-46AA-8E31-E3E1F5B4C10A",
-          "label": "Top Row",
-          "axis": "horizontal",
-          "controls": [
-            {
-              "id": "56B4D5D2-AFB7-40F7-961A-C63913C7FE3F",
-              "name": "Decay",
-              "displayType": "knob",
-              "formatScript": "const decayArray = [500.0, 500.0, 500.0, 500.0, 500.0, 501.0, 501.0, 502.0, 503.0, 504.0, 505.0, 507.0, 510.0, 512.0, 516.0, 520.0, 524.0, 530.0, 536.0, 543.0, 550.0, 559.0, 568.0, 579.0, 590.0, 603.0, 617.0, 632.0, 648.0, 666.0, 686.0, 706.0, 728.0, 752.0, 778.0, 805.0, 834.0, 865.0, 898.0, 932.0, 969.0, 1.008, 1.049, 1.092, 1.138, 1.186, 1.237, 1.289, 1.345, 1.403, 1.464, 1.527, 1.594, 1.663, 1.735, 1.810, 1.889, 1.971, 2.055, 2.144, 2.235, 2.331, 2.429, 2.531, 2.637, 2.747, 2.860, 2.977, 3.099, 3.225, 3.353, 3.487, 3.625, 3.768, 3.913, 4.065, 4.221, 4.382, 4.545, 4.715, 4.891, 5.068, 5.254, 5.444, 5.639, 5.837, 6.043, 6.254, 6.471, 6.691, 6.919, 7.153, 7.392, 7.634, 7.886, 8.143, 8.406, 8.673, 8.847, 9.231, 9.519, 9.811, 10.11, 10.42, 10.74, 11.05, 11.38, 11.72, 12.06, 12.41, 12.76, 13.13, 13.50, 13.88, 14.26, 14.66, 15.05, 15.46, 15.88, 16.31, 16.74, 17.18, 17.63, 18.09, 18.55, 19.02, 19.51, 20.00];\nconst m = Math.round(value*127);\nreturn decayArray[m] + (m<41?' ms':' s');",
-              "outputs": [
-                {
-                  "id": "43F42076-4D00-4A5F-AAE5-D34D50991497",
-                  "type": "cc",
-                  "control": 40,
-                  "channel": 6
-                }
-              ],
-              "frameWidth": 100,
-              "frameHeight": 130
-            },
-            {
-              "id": "BC5CE6BF-9C78-4ECF-9B93-562C227DED3F",
-              "name": "Pre - Delay",
-              "displayType": "knob",
-              "outputs": [
-                {
-                  "id": "1857C311-7038-491A-A8AC-6B82AD06126F",
-                  "type": "cc",
-                  "control": 41,
-                  "channel": 6
-                }
-              ],
-              "frameWidth": 100,
-              "frameHeight": 130
-            },
-            {
-              "id": "EE9783FB-10E8-49DA-BD46-13C7C4F19192",
-              "name": "Tone",
-              "displayType": "knob",
-              "outputs": [
-                {
-                  "id": "644AD353-7C0C-4D8C-A8B5-7E594070E645",
-                  "type": "cc",
-                  "control": 42,
-                  "channel": 6
-                }
-              ],
-              "frameWidth": 100,
-              "frameHeight": 130
-            },
-            {
-              "id": "8BF65873-EA6C-4E10-A463-5B698EC78A4A",
-              "name": "Mod",
-              "displayType": "knob",
-              "outputs": [
-                {
-                  "id": "E6BDAA3E-0700-4B7C-A3A7-8C2AE5156EDC",
-                  "type": "cc",
-                  "control": 43,
-                  "channel": 6
-                }
-              ],
-              "frameWidth": 100,
-              "frameHeight": 130
-            },
-            {
-              "id": "4486FB3D-1412-4F38-AE2B-7941E29E19FC",
-              "name": "Low End",
-              "displayType": "knob",
-              "outputs": [
-                {
-                  "id": "D0E62093-9B12-4EAD-94E0-4416D4C3A4B8",
-                  "type": "cc",
-                  "control": 44,
-                  "channel": 6
-                }
-              ],
-              "frameWidth": 100,
-              "frameHeight": 130
-            },
-            {
-              "id": "438D17BF-9CAA-4589-A55B-890BA1EC6B1D",
-              "name": "Mix",
-              "displayType": "knob",
-              "outputs": [
-                {
-                  "id": "D36ABE17-09D0-4662-9DE4-A76AC0AB3DD6",
-                  "type": "cc",
-                  "control": 48,
-                  "channel": 6
-                }
-              ],
-              "frameWidth": 100,
-              "frameHeight": 130
-            }
-          ]
-        },
-        {
-          "id": "07D73FB9-00AD-485E-B898-8E2ACA7B8F8D",
-          "label": "Variations",
-          "axis": "horizontal",
-          "controls": [
-            {
-              "id": "DF3E4F14-9382-4841-8B47-674437BFA4D1",
-              "name": "Shift 1",
-              "displayType": "steppedKnob",
-              "menuOptions": [
-                "-OCT",
-                "-M7",
-                "-m7",
-                "-M6",
-                "-m6",
-                "-P5",
-                "-TRI",
-                "-P4",
-                "-M3",
-                "-m3",
-                "-M2",
-                "-m2",
-                "-10CEN",
-                "+10CEN",
-                "+m2",
-                "+M2",
-                "+m3",
-                "+M3",
-                "+P4",
-                "+TRI",
-                "+P5",
-                "+m6",
-                "+M6",
-                "+m7",
-                "+M7",
-                "+OCT",
-                "+OCT&5",
-                "+2 OCT"
-              ],
-              "outputs": [
-                {
-                  "id": "9B0F1D1F-2E41-4FB9-8E17-675792D931B1",
-                  "type": "cc",
-                  "control": 46,
-                  "channel": 6
-                }
-              ],
-              "frameWidth": 100,
-              "frameHeight": 130
-            },
-            {
-              "id": "94A211A9-8A52-48E3-923F-424B79B3C05D",
-              "name": "Shift 2",
-              "displayType": "steppedKnob",
-              "menuOptions": [
-                "OFF",
-                "-OCT",
-                "-M7",
-                "-m7",
-                "-M6",
-                "-m6",
-                "-P5",
-                "-TRI",
-                "-P4",
-                "-M3",
-                "-m3",
-                "-M2",
-                "-m2",
-                "-10CEN",
-                "+10CEN",
-                "+m2",
-                "+M2",
-                "+m3",
-                "+M3",
-                "+P4",
-                "+TRI",
-                "+P5",
-                "+m6",
-                "+M6",
-                "+m7",
-                "+M7",
-                "+OCT",
-                "+OCT&5",
-                "+2 OCT"
-              ],
-              "outputs": [
-                {
-                  "id": "F1717E86-A430-4917-8408-19BD670307CF",
-                  "type": "cc",
-                  "control": 47,
-                  "channel": 6
-                }
-              ],
-              "frameWidth": 100,
-              "frameHeight": 130
-            },
-            {
-              "id": "6A74D3E6-41ED-4492-8BF4-A7B8E0810941",
-              "name": "Mode",
-              "displayType": "steppedKnob",
-              "menuOptions": [
-                "Input",
-                "Regen",
-                "Input + Regen"
-              ],
-              "outputs": [
-                {
-                  "id": "2CD80A4D-068E-4FAD-9E77-33B0E206D909",
-                  "type": "cc",
-                  "control": 76,
-                  "channel": 6
-                }
-              ],
-              "frameWidth": 100,
-              "frameHeight": 130
-            },
-            {
-              "id": "5C33E591-6351-4680-A2CB-89472C768A3D",
-              "name": "HOLD",
-              "displayType": "momentaryButton",
-              "outputs": [
-                {
-                  "id": "3430F30B-0436-4BC5-B339-A154B1A5A7AD",
-                  "type": "cc",
-                  "control": 49,
-                  "channel": 6
-                }
-              ],
-              "frameWidth": 100,
-              "frameHeight": 130
-            }
-          ],
+          "id": "B6953D13-F126-4565-931D-5A73640D1E8B",
+          "axis": "vertical",
+          "controls": [],
           "subPanels": [
             {
-              "id": "C17491EC-5B40-430D-985F-DDC7E3B6EC8D",
-              "label": "Inf/Freeze",
+              "id": "CAD22CED-DBDF-4C2E-B0DB-EDF8BCFCC834",
               "axis": "horizontal",
-              "clusterType": "FlipSwitch",
               "controls": [
                 {
-                  "id": "E1EC0CE4-6AD7-4441-B4DE-400A9EAD1351",
-                  "name": "INFINITE",
-                  "displayType": "toggleButton",
-                  "outputs": [
-                    {
-                      "id": "7F185B2E-0051-474C-8E7D-D52F3725B8EB",
-                      "type": "cc",
-                      "control": 77,
-                      "channel": 6
-                    }
-                  ]
+                  "id": "F4709B17-543C-4BB2-887F-0029865C9F44",
+                  "name": "Decay",
+                  "displayType": "knob",
+                  "formatScript": "const decayArray = [500.0, 500.0, 500.0, 500.0, 500.0, 501.0, 501.0, 502.0, 503.0, 504.0, 505.0, 507.0, 510.0, 512.0, 516.0, 520.0, 524.0, 530.0, 536.0, 543.0, 550.0, 559.0, 568.0, 579.0, 590.0, 603.0, 617.0, 632.0, 648.0, 666.0, 686.0, 706.0, 728.0, 752.0, 778.0, 805.0, 834.0, 865.0, 898.0, 932.0, 969.0, 1.008, 1.049, 1.092, 1.138, 1.186, 1.237, 1.289, 1.345, 1.403, 1.464, 1.527, 1.594, 1.663, 1.735, 1.810, 1.889, 1.971, 2.055, 2.144, 2.235, 2.331, 2.429, 2.531, 2.637, 2.747, 2.860, 2.977, 3.099, 3.225, 3.353, 3.487, 3.625, 3.768, 3.913, 4.065, 4.221, 4.382, 4.545, 4.715, 4.891, 5.068, 5.254, 5.444, 5.639, 5.837, 6.043, 6.254, 6.471, 6.691, 6.919, 7.153, 7.392, 7.634, 7.886, 8.143, 8.406, 8.673, 8.847, 9.231, 9.519, 9.811, 10.11, 10.42, 10.74, 11.05, 11.38, 11.72, 12.06, 12.41, 12.76, 13.13, 13.50, 13.88, 14.26, 14.66, 15.05, 15.46, 15.88, 16.31, 16.74, 17.18, 17.63, 18.09, 18.55, 19.02, 19.51, 20.00];\nconst m = Math.round(value*127);\nreturn decayArray[m] + (m<41?' ms':' s');",
+                  "namespace": "BigSky Shimmer > Decay",
+                  "outputs": [],
+                  "frameWidth": 100,
+                  "frameHeight": 130
                 },
                 {
-                  "id": "7CCCAF2E-5EE5-4850-B117-8CF6F2468F08",
-                  "name": "FREEZE",
-                  "displayType": "toggleButton",
-                  "outputs": [
+                  "id": "38A8730E-C455-43B9-A360-35E06758A299",
+                  "name": "Pre-Delay",
+                  "displayType": "knob",
+                  "namespace": "BigSky Shimmer > PreDelay",
+                  "outputs": [],
+                  "frameWidth": 100,
+                  "frameHeight": 130
+                },
+                {
+                  "id": "47DF8109-46D2-4592-BDED-685AC13FB4EC",
+                  "name": "Tone",
+                  "displayType": "knob",
+                  "namespace": "BigSky Shimmer > Tone",
+                  "outputs": [],
+                  "frameWidth": 100,
+                  "frameHeight": 130
+                },
+                {
+                  "id": "9ED816FC-7CC1-42C0-A2E1-4707E0448FE8",
+                  "name": "Mod",
+                  "displayType": "knob",
+                  "namespace": "BigSky Shimmer > Mod",
+                  "outputs": [],
+                  "frameWidth": 100,
+                  "frameHeight": 130
+                },
+                {
+                  "id": "C7FDFFB1-67CA-4B48-8EE2-62C254956C29",
+                  "name": "Low End",
+                  "displayType": "knob",
+                  "namespace": "BigSky Shimmer > Low End",
+                  "outputs": [],
+                  "frameWidth": 100,
+                  "frameHeight": 130
+                },
+                {
+                  "id": "A2B8BDFE-9982-4972-BB9F-B11966B17F28",
+                  "name": "Mix",
+                  "displayType": "knob",
+                  "namespace": "BigSky Shimmer > Mix",
+                  "outputs": [],
+                  "frameWidth": 100,
+                  "frameHeight": 130
+                }
+              ],
+              "subPanels": []
+            },
+            {
+              "id": "D7221C26-0264-49BB-81C4-B473D1FA355D",
+              "axis": "horizontal",
+              "controls": [
+                {
+                  "id": "E479CC77-A1B2-41D7-BDA3-0AE730DE8F37",
+                  "name": "Shift 1",
+                  "displayType": "steppedKnob",
+                  "menuOptions": [
+                    "-OCT",
+                    "-M7",
+                    "-m7",
+                    "-M6",
+                    "-m6",
+                    "-P5",
+                    "-TRI",
+                    "-P4",
+                    "-M3",
+                    "-m3",
+                    "-M2",
+                    "-m2",
+                    "-10CEN",
+                    "+10CEN",
+                    "+m2",
+                    "+M2",
+                    "+m3",
+                    "+M3",
+                    "+P4",
+                    "+TRI",
+                    "+P5",
+                    "+m6",
+                    "+M6",
+                    "+m7",
+                    "+M7",
+                    "+OCT",
+                    "+OCT&5",
+                    "+2 OCT"
+                  ],
+                  "namespace": "BigSky Shimmer > Shift 1",
+                  "outputs": [],
+                  "frameWidth": 100,
+                  "frameHeight": 130
+                },
+                {
+                  "id": "B6BC0868-B9B3-4F2B-AC5C-F4CC4B3E3F0C",
+                  "name": "Shift 2",
+                  "displayType": "steppedKnob",
+                  "menuOptions": [
+                    "OFF",
+                    "-OCT",
+                    "-M7",
+                    "-m7",
+                    "-M6",
+                    "-m6",
+                    "-P5",
+                    "-TRI",
+                    "-P4",
+                    "-M3",
+                    "-m3",
+                    "-M2",
+                    "-m2",
+                    "-10CEN",
+                    "+10CEN",
+                    "+m2",
+                    "+M2",
+                    "+m3",
+                    "+M3",
+                    "+P4",
+                    "+TRI",
+                    "+P5",
+                    "+m6",
+                    "+M6",
+                    "+m7",
+                    "+M7",
+                    "+OCT",
+                    "+OCT&5",
+                    "+2 OCT"
+                  ],
+                  "namespace": "BigSky Shimmer > Shift 2",
+                  "outputs": [],
+                  "frameWidth": 100,
+                  "frameHeight": 130
+                },
+                {
+                  "id": "E6BA3266-428C-42DB-8642-DE1B21644827",
+                  "name": "Mode",
+                  "displayType": "steppedKnob",
+                  "menuOptions": [
+                    "Input",
+                    "Regen",
+                    "Input + Regen"
+                  ],
+                  "namespace": "BigSky Shimmer > Mode",
+                  "outputs": [],
+                  "frameWidth": 100,
+                  "frameHeight": 130
+                },
+                {
+                  "id": "9C66C451-E2E2-451A-8D7C-F11889C9759E",
+                  "name": "HOLD",
+                  "displayType": "momentaryButton",
+                  "namespace": "BigSky Shimmer > Hold",
+                  "outputs": [],
+                  "frameWidth": 100,
+                  "frameHeight": 130
+                }
+              ],
+              "subPanels": [
+                {
+                  "id": "582FDA2B-175A-4EF1-8003-4E1E64FAFDA2",
+                  "axis": "horizontal",
+                  "controls": [
                     {
-                      "id": "14649FFB-6A48-45BE-871A-EB502BDFB9B2",
-                      "type": "cc",
-                      "control": 77,
-                      "channel": 6,
-                      "isInverted": true
+                      "id": "7A46ADA7-6DB1-468D-99DB-14E6515983C3",
+                      "name": "INFINITE",
+                      "displayType": "toggleButton",
+                      "namespace": "BigSky Shimmer > Infinite",
+                      "outputs": []
+                    },
+                    {
+                      "id": "CD07A02F-BEA1-4D42-B350-7A3963199FB9",
+                      "name": "FREEZE",
+                      "displayType": "toggleButton",
+                      "namespace": "BigSky Shimmer > Freeze",
+                      "outputs": []
                     }
                   ]
                 }
               ]
-            }
-          ]
-        },
-        {
-          "id": "6A6457A5-CFF6-4FC0-A47D-D7BD506F10C8",
-          "label": "Preset Row",
-          "axis": "horizontal",
-          "controls": [
-            {
-              "id": "3EB2BD92-6F0C-4DA1-A2C1-66894340A1C6",
-              "name": "1",
-              "displayType": "momentaryButton",
-              "outputs": [
-                {
-                  "id": "45A581D4-3CF7-4E37-A01D-376755324F9D",
-                  "type": "program_change",
-                  "channel": 6
-                }
-              ]
             },
             {
-              "id": "14A3C1DD-5B3C-432C-AFD0-DE40E8120167",
-              "name": "2",
-              "displayType": "momentaryButton",
-              "outputs": [
+              "id": "1F0504BA-2E11-4668-9DF1-CEB6BEAE7A10",
+              "axis": "horizontal",
+              "controls": [
                 {
-                  "id": "4A76D46C-38F6-4269-AA0D-13CA596B08DF",
-                  "type": "program_change",
-                  "channel": 6
-                }
-              ]
-            },
-            {
-              "id": "B2F3C358-3728-43C9-BB8E-A5A3F21AD94F",
-              "name": "3",
-              "displayType": "momentaryButton",
-              "outputs": [
+                  "id": "67285F1C-2BA9-4335-8A5D-4C6A8A2ADE0C",
+                  "name": "1",
+                  "displayType": "momentaryButton",
+                  "namespace": "BigSky Presets > 1",
+                  "outputs": []
+                },
                 {
-                  "id": "27ABF270-1646-43DB-8CA4-37B1789B623A",
-                  "type": "program_change",
-                  "channel": 6
-                }
-              ]
-            },
-            {
-              "id": "51D65A66-F62A-482A-8C76-52CBF98720EB",
-              "name": "4",
-              "displayType": "momentaryButton",
-              "outputs": [
+                  "id": "8C25AC77-D13D-450B-A606-B07F21242933",
+                  "name": "2",
+                  "displayType": "momentaryButton",
+                  "namespace": "BigSky Presets > 2",
+                  "outputs": []
+                },
                 {
-                  "id": "B7D9FE08-F798-4A63-BABA-E538184F2519",
-                  "type": "program_change",
-                  "channel": 6
-                }
-              ]
-            },
-            {
-              "id": "68FFD087-0591-493D-9A12-AB3376E58590",
-              "name": "5",
-              "displayType": "momentaryButton",
-              "outputs": [
+                  "id": "D174E818-1D5B-4EBE-BCFF-B29A5B7999D3",
+                  "name": "3",
+                  "displayType": "momentaryButton",
+                  "namespace": "BigSky Presets > 3",
+                  "outputs": []
+                },
                 {
-                  "id": "4FDFFB4A-D977-48F3-8FC8-BA014529E7B9",
-                  "type": "program_change",
-                  "channel": 6
-                }
-              ]
-            },
-            {
-              "id": "04394C3F-609B-46EC-ADE1-FC940A03A1B2",
-              "name": "6",
-              "displayType": "momentaryButton",
-              "outputs": [
+                  "id": "F564A0D1-813C-44F6-9B1A-E86BC680680F",
+                  "name": "4",
+                  "displayType": "momentaryButton",
+                  "namespace": "BigSky Presets > 4",
+                  "outputs": []
+                },
                 {
-                  "id": "BB51846E-ED65-4D08-B956-5F6307672060",
-                  "type": "program_change",
-                  "channel": 6
-                }
-              ]
-            },
-            {
-              "id": "22D316D0-5E21-4B02-A764-85BF87346CC5",
-              "name": "7",
-              "displayType": "momentaryButton",
-              "outputs": [
+                  "id": "4E82AF89-F4C4-4534-92FC-9942D7512807",
+                  "name": "5",
+                  "displayType": "momentaryButton",
+                  "namespace": "BigSky Presets > 5",
+                  "outputs": []
+                },
                 {
-                  "id": "DD9EF34D-EC42-4A98-A054-51958D3AA701",
-                  "type": "program_change",
-                  "channel": 6
-                }
-              ]
-            },
-            {
-              "id": "C1CB332C-579E-4831-99FC-8057B4F6CEEE",
-              "name": "8",
-              "displayType": "momentaryButton",
-              "outputs": [
+                  "id": "4953E16D-2526-4B42-8395-DBE71B1C2F4F",
+                  "name": "6",
+                  "displayType": "momentaryButton",
+                  "namespace": "BigSky Presets > 6",
+                  "outputs": []
+                },
                 {
-                  "id": "B662511A-CDE5-4723-ADE7-848D48148E29",
-                  "type": "program_change",
-                  "channel": 6
+                  "id": "45E5BDB6-9332-4B71-A5D3-C2A9A166A901",
+                  "name": "7",
+                  "displayType": "momentaryButton",
+                  "namespace": "BigSky Presets > 7",
+                  "outputs": []
+                },
+                {
+                  "id": "13E62B9C-83C3-47F4-B091-AF804699BF60",
+                  "name": "8",
+                  "displayType": "momentaryButton",
+                  "namespace": "BigSky Presets > 8",
+                  "outputs": []
                 }
-              ]
+              ],
+              "subPanels": []
             }
           ]
         }

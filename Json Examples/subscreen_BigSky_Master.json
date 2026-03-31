@@ -1,0 +1,770 @@
+{
+  "id": "46D8C6A5-B2D0-4AD9-B57B-7BFA3D858857",
+  "name": "BigSky Master",
+  "layoutType": "dynamic",
+  "panels": [
+    {
+      "id": "49A361E8-7DBD-48E1-8CFE-5055B2E521FD",
+      "label": "Main",
+      "axis": "vertical",
+      "controls": [
+        {
+          "id": "88C46D63-F4E8-449C-925C-D387F9C9E8EF",
+          "name": "Type",
+          "displayType": "knob",
+          "channelType": "instrument",
+          "outputs": [
+            {
+              "id": "2C466E65-DF89-4C9F-9BC9-0F5B7628E061",
+              "type": "cc",
+              "control": 1,
+              "channel": 4,
+              "outputPort": "Session 1 Network"
+            }
+          ]
+        },
+        {
+          "id": "77FCEB6E-4020-472E-9B53-91602DF9B48D",
+          "name": "Mix",
+          "displayType": "knob",
+          "channelType": "instrument",
+          "outputs": [
+            {
+              "id": "1C60823E-138B-4064-8094-D4FFD2961B24",
+              "type": "cc",
+              "control": 2,
+              "channel": 4,
+              "outputPort": "Session 1 Network"
+            }
+          ]
+        },
+        {
+          "id": "B710DDF3-A5EB-42BB-9FC8-1C3FC089767D",
+          "name": "Bypass",
+          "displayType": "toggleButton",
+          "channelType": "instrument",
+          "outputs": [
+            {
+              "id": "6928B1AB-9EAC-4956-A662-6B2B4571A9CE",
+              "type": "cc",
+              "control": 3,
+              "channel": 4,
+              "outputPort": "Session 1 Network"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4145F2B6-449C-40C8-8B06-976456E9CC53",
+      "label": "Bloom",
+      "axis": "vertical",
+      "controls": [
+        {
+          "id": "193E0617-683A-4AEA-9718-47988A96486B",
+          "name": "Decay",
+          "displayType": "knob",
+          "channelType": "instrument",
+          "outputs": [
+            {
+              "id": "3C0D3C27-2F3F-4C24-8F99-BE28F223CFBF",
+              "type": "cc",
+              "control": 6,
+              "channel": 4,
+              "outputPort": "Session 1 Network"
+            }
+          ]
+        },
+        {
+          "id": "CFFB0E67-287B-4F30-A01D-AB85DB55868C",
+          "name": "PreDelay",
+          "displayType": "knob",
+          "channelType": "instrument",
+          "outputs": [
+            {
+              "id": "5E7B9E71-5E25-4FD0-9300-91E376B029C3",
+              "type": "cc",
+              "control": 7,
+              "channel": 4,
+              "outputPort": "Session 1 Network"
+            }
+          ]
+        },
+        {
+          "id": "1A9B17EC-D5BC-4420-AC42-9F693A1AB4C5",
+          "name": "Tone",
+          "displayType": "knob",
+          "channelType": "instrument",
+          "outputs": [
+            {
+              "id": "7C3FA6D6-466E-46DE-95AA-2C0952A74938",
+              "type": "cc",
+              "control": 8,
+              "channel": 4,
+              "outputPort": "Session 1 Network"
+            }
+          ]
+        },
+        {
+          "id": "5A981ABB-6780-41E0-A46E-6B923938759F",
+          "name": "Mod",
+          "displayType": "knob",
+          "channelType": "instrument",
+          "outputs": [
+            {
+              "id": "1755AD7A-61C6-487C-A530-C65602A553B6",
+              "type": "cc",
+              "control": 9,
+              "channel": 4,
+              "outputPort": "Session 1 Network"
+            }
+          ]
+        },
+        {
+          "id": "6ECD05B8-528E-4DF3-9F2A-0733DAD45EDC",
+          "name": "LowEnd",
+          "displayType": "knob",
+          "channelType": "instrument",
+          "outputs": [
+            {
+              "id": "54C0928D-58BA-4EF5-BC72-E32CA309332B",
+              "type": "cc",
+              "control": 10,
+              "channel": 4,
+              "outputPort": "Session 1 Network"
+            }
+          ]
+        },
+        {
+          "id": "9C0B836E-82F7-4277-96B3-FB8423F2C164",
+          "name": "Length",
+          "displayType": "knob",
+          "channelType": "instrument",
+          "outputs": [
+            {
+              "id": "5D1D3B9A-2217-4927-B752-1DF1DFCD5021",
+              "type": "cc",
+              "control": 11,
+              "channel": 4,
+              "outputPort": "Session 1 Network"
+            }
+          ]
+        },
+        {
+          "id": "47D66EEB-67B3-4390-BFBF-ECBF01495416",
+          "name": "Feedback",
+          "displayType": "knob",
+          "channelType": "instrument",
+          "outputs": [
+            {
+              "id": "532F6F16-5DE9-4387-BEF8-380565A65C90",
+              "type": "cc",
+              "control": 12,
+              "channel": 4,
+              "outputPort": "Session 1 Network"
+            }
+          ]
+        },
+        {
+          "id": "1C4B106D-1FEC-4F2F-82D3-8A677DC42899",
+          "name": "Hold",
+          "displayType": "momentaryButton",
+          "channelType": "instrument",
+          "outputs": [
+            {
+              "id": "3410C2C4-DDD2-45C2-BF0C-CF2AED9A8FBD",
+              "type": "cc",
+              "control": 13,
+              "channel": 4,
+              "outputPort": "Session 1 Network"
+            }
+          ]
+        },
+        {
+          "id": "FAFD6691-756E-4182-BC89-CE460EA39871",
+          "name": "Freeze",
+          "displayType": "toggleButton",
+          "channelType": "instrument",
+          "outputs": [
+            {
+              "id": "18E67877-F90E-4432-A2A2-87159BA54206",
+              "type": "cc",
+              "control": 14,
+              "channel": 4,
+              "outputPort": "Session 1 Network"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "E3386B7A-2541-4BB9-8240-D640870E08CD",
+      "label": "Cloud",
+      "axis": "vertical",
+      "controls": [
+        {
+          "id": "50BAB29A-C8E5-42F5-BD1D-AD2AB4962544",
+          "name": "Decay",
+          "displayType": "knob",
+          "channelType": "instrument",
+          "outputs": [
+            {
+              "id": "82B11098-77B3-4CDE-9825-BAEDB699935F",
+              "type": "cc",
+              "control": 15,
+              "channel": 4,
+              "outputPort": "Session 1 Network"
+            }
+          ]
+        },
+        {
+          "id": "CEC0B811-6B6A-4BB2-9745-6B33A947744A",
+          "name": "PreDelay",
+          "displayType": "knob",
+          "channelType": "instrument",
+          "outputs": [
+            {
+              "id": "89C08034-376C-4994-B5C9-1386F3B6D5D4",
+              "type": "cc",
+              "control": 16,
+              "channel": 4,
+              "outputPort": "Session 1 Network"
+            }
+          ]
+        },
+        {
+          "id": "2F46FB7B-AF18-49ED-8EA0-E39D1E3DA211",
+          "name": "Tone",
+          "displayType": "knob",
+          "channelType": "instrument",
+          "outputs": [
+            {
+              "id": "4DFEDA62-8F7C-4FE8-9C08-F33F233092A3",
+              "type": "cc",
+              "control": 17,
+              "channel": 4,
+              "outputPort": "Session 1 Network"
+            }
+          ]
+        },
+        {
+          "id": "770C1683-0C64-4295-B02C-40203B92F11F",
+          "name": "Mod",
+          "displayType": "knob",
+          "channelType": "instrument",
+          "outputs": [
+            {
+              "id": "87C5CBAF-A9B7-45FB-AAA8-9A98B52E70EB",
+              "type": "cc",
+              "control": 18,
+              "channel": 4,
+              "outputPort": "Session 1 Network"
+            }
+          ]
+        },
+        {
+          "id": "3D4993CB-F937-49F9-B8EA-B0F2C3D54E39",
+          "name": "LowEnd",
+          "displayType": "knob",
+          "channelType": "instrument",
+          "outputs": [
+            {
+              "id": "B570B4E8-DAD9-426E-97F5-6B1A5F732DB3",
+              "type": "cc",
+              "control": 19,
+              "channel": 4,
+              "outputPort": "Session 1 Network"
+            }
+          ]
+        },
+        {
+          "id": "CCC2967C-535A-4254-BCD6-134B1F49D20F",
+          "name": "Diff",
+          "displayType": "knob",
+          "channelType": "instrument",
+          "outputs": [
+            {
+              "id": "7DF5A9B0-2AC6-45F7-AA35-B82F99736218",
+              "type": "cc",
+              "control": 20,
+              "channel": 4,
+              "outputPort": "Session 1 Network"
+            }
+          ]
+        },
+        {
+          "id": "DD16F96C-C966-4ECC-8E05-1284D24A8E30",
+          "name": "Hold",
+          "displayType": "momentaryButton",
+          "channelType": "instrument",
+          "outputs": [
+            {
+              "id": "16A84F1F-D081-477F-B987-8998C08D4AFA",
+              "type": "cc",
+              "control": 21,
+              "channel": 4,
+              "outputPort": "Session 1 Network"
+            }
+          ]
+        },
+        {
+          "id": "829BD228-6284-4802-9215-702F76A95E8E",
+          "name": "Freeze",
+          "displayType": "toggleButton",
+          "channelType": "instrument",
+          "outputs": [
+            {
+              "id": "11F61D5D-B67B-428C-B001-ECDE273C9DEC",
+              "type": "cc",
+              "control": 22,
+              "channel": 4,
+              "outputPort": "Session 1 Network"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8A472900-095C-4250-BB56-9C091FE86866",
+      "label": "Chorale",
+      "axis": "vertical",
+      "controls": [
+        {
+          "id": "2F11E606-5233-4171-9C3E-D042B3ED28B2",
+          "name": "Decay",
+          "displayType": "knob",
+          "channelType": "instrument",
+          "outputs": [
+            {
+              "id": "D667387C-97A4-4CFD-BE7F-1A59CD0D3A3E",
+              "type": "cc",
+              "control": 23,
+              "channel": 4,
+              "outputPort": "Session 1 Network"
+            }
+          ]
+        },
+        {
+          "id": "6C74F59E-9BD6-41AA-B663-420283F4DEC2",
+          "name": "PreDelay",
+          "displayType": "knob",
+          "channelType": "instrument",
+          "outputs": [
+            {
+              "id": "74C48887-2A5A-4317-BB7E-65D9AAF6B5C6",
+              "type": "cc",
+              "control": 24,
+              "channel": 4,
+              "outputPort": "Session 1 Network"
+            }
+          ]
+        },
+        {
+          "id": "7FBE7DA3-77BD-4492-8DDA-6251B10120D9",
+          "name": "Tone",
+          "displayType": "knob",
+          "channelType": "instrument",
+          "outputs": [
+            {
+              "id": "928A4738-9F25-43F4-99F2-0F04C984B632",
+              "type": "cc",
+              "control": 25,
+              "channel": 4,
+              "outputPort": "Session 1 Network"
+            }
+          ]
+        },
+        {
+          "id": "50929894-DCBE-4B56-A57D-CBDB2EDD83BF",
+          "name": "Mod",
+          "displayType": "knob",
+          "channelType": "instrument",
+          "outputs": [
+            {
+              "id": "2D4FC4B6-1513-4887-BBEB-029D83661E12",
+              "type": "cc",
+              "control": 26,
+              "channel": 4,
+              "outputPort": "Session 1 Network"
+            }
+          ]
+        },
+        {
+          "id": "6D13A446-04DB-4177-B37D-EA1C72AAD04F",
+          "name": "Res",
+          "displayType": "knob",
+          "channelType": "instrument",
+          "outputs": [
+            {
+              "id": "2AC41654-37BA-44A9-B6F1-97B661F24E2E",
+              "type": "cc",
+              "control": 27,
+              "channel": 4,
+              "outputPort": "Session 1 Network"
+            }
+          ]
+        },
+        {
+          "id": "292133BF-513E-4126-8D10-34747447FD12",
+          "name": "Vowel",
+          "displayType": "knob",
+          "channelType": "instrument",
+          "outputs": [
+            {
+              "id": "3661A3EE-1A0A-491C-B957-6ADAF69A84F8",
+              "type": "cc",
+              "control": 28,
+              "channel": 4,
+              "outputPort": "Session 1 Network"
+            }
+          ]
+        },
+        {
+          "id": "E261E69B-6536-4766-8D6F-EC9431A8C810",
+          "name": "Hold",
+          "displayType": "momentaryButton",
+          "channelType": "instrument",
+          "outputs": [
+            {
+              "id": "13F5D723-A180-49A9-A58E-6AA22AE1FDE2",
+              "type": "cc",
+              "control": 29,
+              "channel": 4,
+              "outputPort": "Session 1 Network"
+            }
+          ]
+        },
+        {
+          "id": "6840A149-03FE-4CAA-BB79-8C59F271ABB0",
+          "name": "Freeze",
+          "displayType": "toggleButton",
+          "channelType": "instrument",
+          "outputs": [
+            {
+              "id": "BBC9AD5C-6728-4372-8611-F169F8BE438E",
+              "type": "cc",
+              "control": 30,
+              "channel": 4,
+              "outputPort": "Session 1 Network"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "D157FDAF-0C75-41AB-8770-C23A160447CF",
+      "label": "Swell",
+      "axis": "vertical",
+      "controls": [
+        {
+          "id": "DC711FBA-4DAB-4345-8AE6-9883EDB1C0E6",
+          "name": "Decay",
+          "displayType": "knob",
+          "channelType": "instrument",
+          "outputs": [
+            {
+              "id": "961C76F9-0251-4EEE-9AF4-6D8B34840A7C",
+              "type": "cc",
+              "control": 31,
+              "channel": 4,
+              "outputPort": "Session 1 Network"
+            }
+          ]
+        },
+        {
+          "id": "2773F71A-F851-4E0C-8DDC-46D5B671723B",
+          "name": "PreDelay",
+          "displayType": "knob",
+          "channelType": "instrument",
+          "outputs": [
+            {
+              "id": "1185CF0F-F528-464C-B186-9EFCFC386EA5",
+              "type": "cc",
+              "control": 32,
+              "channel": 4,
+              "outputPort": "Session 1 Network"
+            }
+          ]
+        },
+        {
+          "id": "E379A954-23EC-4A4E-B6B3-5D68983D3428",
+          "name": "Tone",
+          "displayType": "knob",
+          "channelType": "instrument",
+          "outputs": [
+            {
+              "id": "992A5724-CEED-48B6-BCD8-DF26422BA45D",
+              "type": "cc",
+              "control": 33,
+              "channel": 4,
+              "outputPort": "Session 1 Network"
+            }
+          ]
+        },
+        {
+          "id": "71C9DBDB-C124-4041-974D-B9C7B715EE11",
+          "name": "Mod",
+          "displayType": "knob",
+          "channelType": "instrument",
+          "outputs": [
+            {
+              "id": "2E4D689F-6897-43CC-8675-76F9ADDCA491",
+              "type": "cc",
+              "control": 34,
+              "channel": 4,
+              "outputPort": "Session 1 Network"
+            }
+          ]
+        },
+        {
+          "id": "9737E9BC-27FA-4261-BBB3-BDA6B3B24AB5",
+          "name": "LowEnd",
+          "displayType": "knob",
+          "channelType": "instrument",
+          "outputs": [
+            {
+              "id": "7144A821-F88A-4EC3-BF86-B157A9B22BD6",
+              "type": "cc",
+              "control": 35,
+              "channel": 4,
+              "outputPort": "Session 1 Network"
+            }
+          ]
+        },
+        {
+          "id": "C495AF8B-DB19-4CAD-9799-F8090F25D319",
+          "name": "Mode",
+          "displayType": "knob",
+          "channelType": "instrument",
+          "outputs": [
+            {
+              "id": "F857E3AF-0CC0-4875-8758-C9B097815AC2",
+              "type": "cc",
+              "control": 36,
+              "channel": 4,
+              "outputPort": "Session 1 Network"
+            }
+          ]
+        },
+        {
+          "id": "BF94E1F9-C252-4BF1-B1E3-2C93351519BF",
+          "name": "Rise",
+          "displayType": "knob",
+          "channelType": "instrument",
+          "outputs": [
+            {
+              "id": "98A583AE-B59D-4D84-B209-9B646686EACB",
+              "type": "cc",
+              "control": 37,
+              "channel": 4,
+              "outputPort": "Session 1 Network"
+            }
+          ]
+        },
+        {
+          "id": "51603C48-2102-48AD-B5FF-0E4405867E63",
+          "name": "Hold",
+          "displayType": "momentaryButton",
+          "channelType": "instrument",
+          "outputs": [
+            {
+              "id": "C866048E-C994-4FC0-B982-959D97D78333",
+              "type": "cc",
+              "control": 38,
+              "channel": 4,
+              "outputPort": "Session 1 Network"
+            }
+          ]
+        },
+        {
+          "id": "E4E3DF11-5388-4986-8579-95CD354366CB",
+          "name": "Freeze",
+          "displayType": "toggleButton",
+          "channelType": "instrument",
+          "outputs": [
+            {
+              "id": "85F4BC3F-22D8-4BA6-82A8-467A80DE0FEC",
+              "type": "cc",
+              "control": 39,
+              "channel": 4,
+              "outputPort": "Session 1 Network"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "F05301E1-F0EA-4D64-9A0E-C3B83F4A39C4",
+      "label": "Shimmer",
+      "axis": "vertical",
+      "controls": [
+        {
+          "id": "563701CD-E901-471B-A388-47AA14F292E2",
+          "name": "Decay",
+          "displayType": "knob",
+          "channelType": "instrument",
+          "outputs": [
+            {
+              "id": "D7ED95D1-F0BF-4EBF-92E9-BD148539C74F",
+              "type": "cc",
+              "control": 40,
+              "channel": 4,
+              "outputPort": "Session 1 Network"
+            }
+          ]
+        },
+        {
+          "id": "EF00DA64-1363-4567-82A2-31A42D6CEE4B",
+          "name": "PreDelay",
+          "displayType": "knob",
+          "channelType": "instrument",
+          "outputs": [
+            {
+              "id": "B6579BBE-C558-4BA1-9593-6715FAA5611E",
+              "type": "cc",
+              "control": 41,
+              "channel": 4,
+              "outputPort": "Session 1 Network"
+            }
+          ]
+        },
+        {
+          "id": "278EEAB6-8AD6-4A11-9D89-2C01ACFEE51B",
+          "name": "Tone",
+          "displayType": "knob",
+          "channelType": "instrument",
+          "outputs": [
+            {
+              "id": "401B2107-F737-42D6-987A-2CC9CAFF48B1",
+              "type": "cc",
+              "control": 42,
+              "channel": 4,
+              "outputPort": "Session 1 Network"
+            }
+          ]
+        },
+        {
+          "id": "98DA413C-FD8F-45A1-9CC3-0CA9A657C8AA",
+          "name": "Mod",
+          "displayType": "knob",
+          "channelType": "instrument",
+          "outputs": [
+            {
+              "id": "41C03A6B-1913-46A9-AE7E-A1688A7D9CA4",
+              "type": "cc",
+              "control": 43,
+              "channel": 4,
+              "outputPort": "Session 1 Network"
+            }
+          ]
+        },
+        {
+          "id": "8761485E-6BAD-4FA9-958D-92F2DDE429A7",
+          "name": "LowEnd",
+          "displayType": "knob",
+          "channelType": "instrument",
+          "outputs": [
+            {
+              "id": "19AC9FB3-FD05-41D1-83A9-06011FAF6B71",
+              "type": "cc",
+              "control": 44,
+              "channel": 4,
+              "outputPort": "Session 1 Network"
+            }
+          ]
+        },
+        {
+          "id": "9CE94780-4125-4678-A43D-C8E2149C649D",
+          "name": "Mode",
+          "displayType": "knob",
+          "channelType": "instrument",
+          "outputs": [
+            {
+              "id": "937DFD46-454B-423C-8AB3-12EBAFF23650",
+              "type": "cc",
+              "control": 45,
+              "channel": 4,
+              "outputPort": "Session 1 Network"
+            }
+          ]
+        },
+        {
+          "id": "DE124CD1-43CE-48EE-9F64-047BD5D453E8",
+          "name": "Shift 1",
+          "displayType": "knob",
+          "channelType": "instrument",
+          "outputs": [
+            {
+              "id": "90C35021-0218-4CF0-860B-69E54E647698",
+              "type": "cc",
+              "control": 46,
+              "channel": 4,
+              "outputPort": "Session 1 Network"
+            }
+          ]
+        },
+        {
+          "id": "9756CCFB-7F4E-4509-B114-5458B8069599",
+          "name": "Shift 2",
+          "displayType": "knob",
+          "channelType": "instrument",
+          "outputs": [
+            {
+              "id": "EAABB924-E390-48CF-84D3-5DDDDFFCFE84",
+              "type": "cc",
+              "control": 47,
+              "channel": 4,
+              "outputPort": "Session 1 Network"
+            }
+          ]
+        },
+        {
+          "id": "2700FAB2-D6E1-4554-9FD0-89905329C543",
+          "name": "Amount",
+          "displayType": "knob",
+          "channelType": "instrument",
+          "outputs": [
+            {
+              "id": "47145235-E61C-4190-AD2B-749CA2F75A03",
+              "type": "cc",
+              "control": 48,
+              "channel": 4,
+              "outputPort": "Session 1 Network"
+            }
+          ]
+        },
+        {
+          "id": "98D2E64F-934F-482B-949C-535DAE9E2F43",
+          "name": "Hold",
+          "displayType": "momentaryButton",
+          "channelType": "instrument",
+          "outputs": [
+            {
+              "id": "041F5279-6B7A-47CF-9CE3-9B8B7DD8BE95",
+              "type": "cc",
+              "control": 49,
+              "channel": 4,
+              "outputPort": "Session 1 Network"
+            }
+          ]
+        },
+        {
+          "id": "29B648ED-34D1-48A6-B3A7-2492F6EAD13E",
+          "name": "Freeze",
+          "displayType": "toggleButton",
+          "channelType": "instrument",
+          "outputs": [
+            {
+              "id": "DE2E86CB-1E05-426F-B277-DD8479512EFA",
+              "type": "cc",
+              "control": 50,
+              "channel": 4,
+              "outputPort": "Session 1 Network"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "controls": []
+}

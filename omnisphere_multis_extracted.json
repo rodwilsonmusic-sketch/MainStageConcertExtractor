@@ -1,0 +1,482 @@
+[
+    {
+        "multiName": "Great Things Arp multi",
+        "liveSlots": [
+            "Incandescent Shimmer",
+            "Poppie Pluckers",
+            "Anticpation of Energy 1",
+            "Essence of Arps",
+            "Incandescent Shimmer",
+            "Essence of Pluck",
+            null,
+            null
+        ],
+        "categoryFolder": "Arp Multi",
+        "fileName": "Great Things Arp multi.mlt_omn"
+    },
+    {
+        "multiName": "BSynthLight",
+        "liveSlots": [
+            "Sparkling JD",
+            "D50 - Glass Voices Cinema",
+            "PRO6 - To Infinity and Beyond",
+            "Supersaw Sensations 1",
+            "MKS-20 - Electric Grand",
+            "JD-800 - Crystal Wash",
+            null,
+            null
+        ],
+        "categoryFolder": "BigSynth",
+        "fileName": "BSynthLight.mlt_omn"
+    },
+    {
+        "multiName": "BSynthLight 2",
+        "liveSlots": [
+            "Sparkling JD",
+            "D50 - Glass Voices Cinema",
+            "PRO6 - To Infinity and Beyond",
+            "Supersaw Sensations 1",
+            "MKS-20 - Electric Grand",
+            "JD-800 - Crystal Wash",
+            null,
+            null
+        ],
+        "categoryFolder": "BigSynth",
+        "fileName": "BSynthLight 2.mlt_omn"
+    },
+    {
+        "multiName": "BigSynth",
+        "liveSlots": [
+            "Childishness",
+            "D50 - Glass Voices Cinema",
+            "Modern Supersaw Oct",
+            "OB6 - Synth Power",
+            "Supersaw Sensations 1",
+            "LA Air Brass",
+            "Vox Bowls",
+            "Clear as Day"
+        ],
+        "categoryFolder": "BigSynth",
+        "fileName": "BigSynth.mlt_omn"
+    },
+    {
+        "multiName": "BigSynthRW",
+        "liveSlots": [
+            "Childishness",
+            "D50 - Glass Voices Cinema",
+            "Modern Supersaw Oct",
+            "OB6 - Synth Power",
+            "Supersaw Sensations 1",
+            "LA Air Brass",
+            "Vox Bowls",
+            "OohAah Morph"
+        ],
+        "categoryFolder": "BigSynth",
+        "fileName": "BigSynthRW.mlt_omn"
+    },
+    {
+        "multiName": "BigSynth_Jehhovah",
+        "liveSlots": [
+            "Boys Choir Oos  ^",
+            "D50 - Glass Voices Cinema",
+            "D50 - Glass Voices Cinema",
+            "Classic Roland Synth Brass 1",
+            "D50 - Glass Voices Swell",
+            "LA Air Brass",
+            "Classic Roland Synth Brass 1",
+            "LA Air Brass"
+        ],
+        "categoryFolder": "BigSynth",
+        "fileName": "BigSynth_Jehhovah.mlt_omn"
+    },
+    {
+        "multiName": "BigSynth_ThisIsOurGod",
+        "liveSlots": [
+            "Boys Choir Oos  ^",
+            "D50 - Glass Voices Cinema",
+            "D50 - Glass Voices Cinema",
+            "Classic Roland Synth Brass 1",
+            "D50 - Glass Voices Swell",
+            "LA Air Brass",
+            "Classic Roland Synth Brass 1",
+            "LA Air Brass"
+        ],
+        "categoryFolder": "BigSynth",
+        "fileName": "BigSynth_ThisIsOurGod.mlt_omn"
+    },
+    {
+        "multiName": "Lead Greater Things multi",
+        "liveSlots": [
+            "Essence of Arps",
+            "JP8000 - Digitrancer",
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "categoryFolder": "Lead Multis",
+        "fileName": "Lead Greater Things multi.mlt_omn"
+    },
+    {
+        "multiName": "Ac Piano 2 multi",
+        "liveSlots": [
+            "LA Custom C7 Grand",
+            "LA Custom C7 Grand Cinematic",
+            "LA Custom C7 Grand Softest",
+            "Dark Stereo Upright",
+            "LA Custom C7 - Pop",
+            "Duo - Upright Innocence",
+            "CP-70 Warm and Big",
+            "Felt Grand Falls"
+        ],
+        "categoryFolder": "My Category",
+        "fileName": "Ac Piano 2 multi.mlt_omn"
+    },
+    {
+        "multiName": "Ac Piano multi",
+        "liveSlots": [
+            "LA Custom C7 Grand",
+            "LA Custom C7 Grand Cinematic",
+            "LA Custom C7 Grand Softest",
+            "Dark Stereo Upright",
+            "LA Custom C7 - Pop",
+            "Duo - Upright Innocence",
+            "Duo - Hybrid Electric Grand",
+            "Felt Grand Falls"
+        ],
+        "categoryFolder": "My Category",
+        "fileName": "Ac Piano multi.mlt_omn"
+    },
+    {
+        "multiName": "BigSynth",
+        "liveSlots": [
+            "D50 - Glass Voices Cinema",
+            "Modern Supersaw Oct",
+            "OB6 - Synth Power",
+            "Supersaw Sensations 1",
+            "LA Air Brass",
+            null,
+            null,
+            null
+        ],
+        "categoryFolder": "My Category",
+        "fileName": "BigSynth.mlt_omn"
+    },
+    {
+        "multiName": "BigSynthA",
+        "liveSlots": [
+            "Childishness",
+            "D50 - Glass Voices Cinema",
+            "Modern Supersaw Oct",
+            "OB6 - Synth Power",
+            "Supersaw Sensations 1",
+            "LA Air Brass",
+            "Vox Bowls",
+            "OohAah Morph"
+        ],
+        "categoryFolder": "My Category",
+        "fileName": "BigSynthA.mlt_omn"
+    },
+    {
+        "multiName": "BigSynthPadVIRUSA",
+        "liveSlots": [
+            "VIRUS - Lamentation Pad",
+            "D50 - Glass Voices Cinema",
+            "Modern Supersaw Oct",
+            "OB6 - Synth Power",
+            "Supersaw Sensations 1",
+            "LA Air Brass",
+            "Epiphany",
+            "OohAah Morph"
+        ],
+        "categoryFolder": "My Category",
+        "fileName": "BigSynthPadVIRUSA.mlt_omn"
+    },
+    {
+        "multiName": "BigSynth_Jehhovah",
+        "liveSlots": [
+            "Dramatic Eurosweepers 3",
+            "D50 - Glass Voices Cinema",
+            "D50 - Glass Voices Cinema",
+            "Classic Roland Synth Brass 1",
+            "Classic Jupiter Resosweep",
+            "LA Air Brass",
+            "JP8000 - Chart Pulser",
+            "LA Air Brass"
+        ],
+        "categoryFolder": "My Category",
+        "fileName": "BigSynth_Jehhovah.mlt_omn"
+    },
+    {
+        "multiName": "BigSynth_ThisIsOurGod",
+        "liveSlots": [
+            "Boys Choir Oos  ^",
+            "D50 - Glass Voices Cinema",
+            "D50 - Glass Voices Cinema",
+            "Classic Roland Synth Brass 1",
+            "D50 - Glass Voices Swell",
+            "LA Air Brass",
+            "Classic Roland Synth Brass 1",
+            "LA Air Brass"
+        ],
+        "categoryFolder": "My Category",
+        "fileName": "BigSynth_ThisIsOurGod.mlt_omn"
+    },
+    {
+        "multiName": "BigSynth_ThisIsOurGodKeyE",
+        "liveSlots": [
+            "Boys Choir Oos  ^",
+            "D50 - Glass Voices Cinema",
+            "D50 - Glass Voices Cinema",
+            "Classic Roland Synth Brass 1",
+            "D50 - Glass Voices Swell",
+            "LA Air Brass",
+            "Classic Roland Synth Brass 1",
+            "LA Air Brass"
+        ],
+        "categoryFolder": "My Category",
+        "fileName": "BigSynth_ThisIsOurGodKeyE.mlt_omn"
+    },
+    {
+        "multiName": "Champion Bells",
+        "liveSlots": [
+            "Attack Shimmer",
+            "Lesliefied Strat",
+            "D50 - Bell Chorale",
+            "Duo - Organic Chimer",
+            "GAIA - Hybrid Pluck",
+            "FM Reduction Bass",
+            null,
+            null
+        ],
+        "categoryFolder": "My Category",
+        "fileName": "Champion Bells.mlt_omn"
+    },
+    {
+        "multiName": "Double Tracked Guitars 30 ips",
+        "liveSlots": [
+            "Double Tracked Guitars 30 ips",
+            "Double Tracked Guitars 30 ips",
+            "Double Tracked Guitars 30 ips",
+            "Double Tracked Guitars 30 ips",
+            "Double Tracked Guitars 30 ips",
+            "Double Tracked Guitars 30 ips",
+            "Double Tracked Guitars 30 ips",
+            "Double Tracked Guitars 30 ips"
+        ],
+        "categoryFolder": "My Category",
+        "fileName": "Double Tracked Guitars 30 ips.mlt_omn"
+    },
+    {
+        "multiName": "Drone 4 Pads Multi",
+        "liveSlots": [
+            "Eternal Evolution",
+            "Intrepidation",
+            "Richness",
+            "Rusher",
+            null,
+            null,
+            null,
+            null
+        ],
+        "categoryFolder": "My Category",
+        "fileName": "Drone 4 Pads Multi.mlt_omn"
+    },
+    {
+        "multiName": "Elec Piano multi",
+        "liveSlots": [
+            "Rhodes - LA Custom Stereo Phaser",
+            "JD-800 Crystal Rhodes Wash",
+            "MKS-20 Electric Grand",
+            "Duo - Triumphant Victory",
+            null,
+            null,
+            null,
+            null
+        ],
+        "categoryFolder": "My Category",
+        "fileName": "Elec Piano multi.mlt_omn"
+    },
+    {
+        "multiName": "Pulsing Arp 1",
+        "liveSlots": [
+            "Universalia Majora",
+            "Electro Ebow 2",
+            "Supergate Juno",
+            "Childishness",
+            "Kinetic Prophets",
+            "Dancing Popcorn",
+            "Fanatiques Arp",
+            "Pulsing Air Trance"
+        ],
+        "categoryFolder": "My Category",
+        "fileName": "Pulsing Arp 1.mlt_omn"
+    },
+    {
+        "multiName": "Strings Drone 3 Multi",
+        "liveSlots": [
+            "Eternal Evolution",
+            "D50 - Angel Rays",
+            "Atmospheric Rivers",
+            "Aura Shimmer",
+            "Rusher",
+            "PPG Warm Glass Pads",
+            "Warm Glass",
+            "Basic Dark Pad Velo"
+        ],
+        "categoryFolder": "My Category",
+        "fileName": "Strings Drone 3 Multi.mlt_omn"
+    },
+    {
+        "multiName": "Strings Pad 2 Multi",
+        "liveSlots": [
+            "Eternal Evolution",
+            "Analog Bright Violins",
+            "Cathedral String Orchestra",
+            "Massive Hybrid Strings",
+            "Rusher",
+            "PPG Warm Glass Pads",
+            "Warm Glass",
+            "Dark Juno Pad 2"
+        ],
+        "categoryFolder": "My Category",
+        "fileName": "Strings Pad 2 Multi.mlt_omn"
+    },
+    {
+        "multiName": "Strings Pad 3Multi",
+        "liveSlots": [
+            "Eternal Evolution",
+            "Adagio Transparent Strings Warm",
+            "Cathedral String Orchestra",
+            "Massive Hybrid Strings",
+            "Rusher",
+            "PPG Warm Glass Pads",
+            "Warm Glass",
+            "Basic Dark Pad Velo"
+        ],
+        "categoryFolder": "My Category",
+        "fileName": "Strings Pad 3Multi.mlt_omn"
+    },
+    {
+        "multiName": "SynthLight",
+        "liveSlots": [
+            "VIRUS - Lamentation Pad",
+            "D50 - Glass Voices Cinema",
+            "D50 - Classic Staccato Heaven",
+            "Boys Choir Oos - f",
+            null,
+            null,
+            null,
+            null
+        ],
+        "categoryFolder": "My Category",
+        "fileName": "SynthLight.mlt_omn"
+    },
+    {
+        "multiName": "Pads 1 Multi",
+        "liveSlots": [
+            "Eternal Evolution",
+            "Intrepidation",
+            "Richness",
+            "Lush Green Hybrid Strings",
+            "Rusher",
+            "PPG Warm Glass Pads",
+            "Warm Glass",
+            "OohAah Morph"
+        ],
+        "categoryFolder": "Pad Multis",
+        "fileName": "Pads 1 Multi.mlt_omn"
+    },
+    {
+        "multiName": "Pads 2 Multi",
+        "liveSlots": [
+            "Eternal Evolution",
+            "Intrepidation",
+            "Richness",
+            "Massive Hybrid Strings",
+            "Rusher",
+            "PPG Warm Glass Pads",
+            "Warm Glass",
+            "OohAah Morph"
+        ],
+        "categoryFolder": "Pad Multis",
+        "fileName": "Pads 2 Multi.mlt_omn"
+    },
+    {
+        "multiName": "Pads 2b Multi",
+        "liveSlots": [
+            "Eternal Evolution",
+            "Intrepidation",
+            "Richness",
+            "Basic Dark Pad Velo",
+            "Rusher",
+            "PPG Warm Glass Pads",
+            "Warm Glass",
+            "OohAah Morph"
+        ],
+        "categoryFolder": "Pad Multis",
+        "fileName": "Pads 2b Multi.mlt_omn"
+    },
+    {
+        "multiName": "Strings Only 1Multi",
+        "liveSlots": [
+            "Platinum Shiny Strings",
+            "Adagio Transparent Strings Warm",
+            "Cathedral String Orchestra",
+            "Massive Hybrid Strings",
+            null,
+            null,
+            null,
+            null
+        ],
+        "categoryFolder": "Pad Multis",
+        "fileName": "Strings Only 1Multi.mlt_omn"
+    },
+    {
+        "multiName": "Strings Pad 4Multi",
+        "liveSlots": [
+            "Platinum Shiny Strings",
+            "Adagio Transparent Strings Warm",
+            "Cathedral String Orchestra",
+            "Massive Hybrid Strings",
+            "Rusher",
+            "PPG Warm Glass Pads",
+            "Warm Glass",
+            "Basic Dark Pad Velo"
+        ],
+        "categoryFolder": "Pad Multis",
+        "fileName": "Strings Pad 4Multi.mlt_omn"
+    },
+    {
+        "multiName": "Ac Piano multi",
+        "liveSlots": [
+            "LA Custom C7 Grand",
+            "LA Custom C7 Grand Cinematic",
+            "LA Custom C7 Grand Softest",
+            "Dark Stereo Upright",
+            "MKS-20 - Piano 1 Gospel",
+            "LA Custom C7 - Pop",
+            "LA Custom C7 Grand Piano",
+            null
+        ],
+        "categoryFolder": "PiANO MULTIs",
+        "fileName": "Ac Piano multi.mlt_omn"
+    },
+    {
+        "multiName": "Intrepidation Split with bass",
+        "liveSlots": [
+            "Intrepidation",
+            "Richness",
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "categoryFolder": "Split Multis",
+        "fileName": "Intrepidation Split with bass.mlt_omn"
+    }
+]

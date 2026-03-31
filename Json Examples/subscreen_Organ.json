@@ -1,0 +1,150 @@
+{
+  "layoutType": "b3",
+  "name": "Organ",
+  "controls": [
+    {
+      "outputs": [
+        {
+          "channel": 16,
+          "outputPort": "UnAssigned",
+          "control": 11,
+          "id": "2B0086AF-0E35-49B8-B70B-066BAB591F93",
+          "type": "cc"
+        }
+      ],
+      "id": "5F76BEA6-0511-4025-9364-DAF74F7E5082",
+      "name": "D1"
+    },
+    {
+      "outputs": [
+        {
+          "control": 12,
+          "outputPort": "UnAssigned",
+          "type": "cc",
+          "id": "655DFFA6-F601-40BB-AB1F-BD6BD86BA0C0",
+          "channel": 16
+        }
+      ],
+      "id": "A3E38EA7-322E-4494-B692-5A360FBC8D60",
+      "name": "D2"
+    },
+    {
+      "outputs": [
+        {
+          "control": 13,
+          "outputPort": "UnAssigned",
+          "type": "cc",
+          "id": "4A941939-2AEC-4218-9762-F591B2E551FF",
+          "channel": 16
+        }
+      ],
+      "id": "49336AC4-0B03-48CC-954D-70B5E7AD9237",
+      "name": "D3"
+    },
+    {
+      "outputs": [
+        {
+          "channel": 16,
+          "id": "0FF572BD-9A7E-49A3-B35D-5E37C151663F",
+          "type": "cc",
+          "outputPort": "UnAssigned",
+          "control": 14
+        }
+      ],
+      "id": "6CC1848A-1FF4-4E96-94CF-9E1C70920771",
+      "name": "D4"
+    },
+    {
+      "outputs": [
+        {
+          "id": "F644E89D-C0E0-490E-B290-ADA5FE961C09",
+          "type": "cc",
+          "channel": 16,
+          "control": 15,
+          "outputPort": "UnAssigned"
+        }
+      ],
+      "id": "0F6A670E-06C2-418A-9159-A742F3AD19CE",
+      "name": "D5"
+    },
+    {
+      "outputs": [
+        {
+          "type": "cc",
+          "outputPort": "UnAssigned",
+          "id": "D36007CB-8C84-4E71-BBBD-89816BAABE1B",
+          "channel": 16,
+          "control": 16
+        }
+      ],
+      "id": "BCE752D5-F252-4C0A-9A81-8F7011C44463",
+      "name": "D6"
+    },
+    {
+      "outputs": [
+        {
+          "control": 17,
+          "id": "1EC1CB23-8D57-4F1E-B1E6-70677EE4E2B4",
+          "type": "cc",
+          "channel": 16,
+          "outputPort": "UnAssigned"
+        }
+      ],
+      "id": "6DF43E13-BA54-45D5-B55A-C8DE86BEE599",
+      "name": "D7"
+    },
+    {
+      "outputs": [
+        {
+          "control": 18,
+          "channel": 16,
+          "outputPort": "UnAssigned",
+          "type": "cc",
+          "id": "B34D95A7-1680-4B10-83D8-710C5BDE18DF"
+        }
+      ],
+      "id": "AA9256FA-601F-4CF9-96D7-28D82728F82D",
+      "name": "D8"
+    },
+    {
+      "outputs": [
+        {
+          "control": 19,
+          "id": "F6C85BB3-86D0-432F-82EF-D7DEDC06AA4B",
+          "channel": 16,
+          "type": "cc",
+          "outputPort": "UnAssigned"
+        }
+      ],
+      "id": "FD6FD311-1C15-473F-AFEB-9275ABB5B2EB",
+      "name": "D9"
+    },
+    {
+      "outputs": [
+        {
+          "id": "053A3074-F000-4EDA-BD81-BAE0CD60FCC6",
+          "outputPort": "UnAssigned",
+          "type": "note",
+          "note": 20,
+          "channel": 16
+        }
+      ],
+      "id": "497E05AB-F53C-43C1-B088-C9A28860B459",
+      "name": "Leslie"
+    },
+    {
+      "outputs": [
+        {
+          "id": "CD843C14-BC3B-4581-A440-CCD7ACB77232",
+          "channel": 16,
+          "type": "cc",
+          "control": 21,
+          "outputPort": "UnAssigned"
+        }
+      ],
+      "id": "80E1AD4E-A8E2-4FBE-A377-17B33B37EFCE",
+      "name": "C/V"
+    }
+  ],
+  "id": "90E08F68-9AF9-462B-880C-CBD0A8466A7C"
+}

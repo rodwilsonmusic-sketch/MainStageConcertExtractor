@@ -1,0 +1,147 @@
+{
+  "layoutType": "paged",
+  "name": "BlueSky",
+  "pages": [
+    {
+      "name": "Plate",
+      "panels": [
+        {
+          "controls": [
+            {
+              "name": "Decay",
+              "outputs": [],
+              "displayType": "fader",
+              "color": "#FF9933",
+              "id": "F94D528F-D887-4D7A-9F70-9D2070542F62"
+            },
+            {
+              "name": "Pre-Delay",
+              "outputs": [],
+              "displayType": "knob",
+              "color": "#FF9933",
+              "id": "564DC1A1-D4B8-4711-8F05-987A417241CA"
+            }
+          ],
+          "id": "217CE763-005B-4FFC-9D96-6C0C9578AD35",
+          "axis": "vertical"
+        }
+      ],
+      "id": "590A5973-B1C2-4D9B-9C92-46E20E4F1B0D"
+    },
+    {
+      "name": "Room",
+      "panels": [
+        {
+          "axis": "vertical",
+          "controls": [
+            {
+              "color": "#FF3399",
+              "name": "Size",
+              "outputs": [],
+              "displayType": "fader",
+              "id": "27394576-C971-4CB6-BDCE-9CFB17421E6B"
+            },
+            {
+              "color": "#FF3399",
+              "name": "Diffusion",
+              "outputs": [],
+              "displayType": "fader",
+              "id": "783671F7-26BC-45EF-9DF9-034F1A1E3BC3"
+            }
+          ],
+          "id": "3B2D54B4-3548-4E34-91D6-0E8757AE0018"
+        }
+      ],
+      "id": "DA5B0EAD-FE97-485D-AFD2-535E212E86DF"
+    },
+    {
+      "name": "Shimmer",
+      "panels": [
+        {
+          "controls": [
+            {
+              "outputs": [],
+              "id": "EFDC2DF1-C2A8-47FE-BAA9-0BF1335B8F64",
+              "name": "Shift",
+              "color": "#9933FF",
+              "displayType": "knob"
+            },
+            {
+              "outputs": [],
+              "id": "D802CD76-558F-4BBA-A95D-6CB78070DA54",
+              "name": "Regen",
+              "color": "#9933FF",
+              "displayType": "fader"
+            }
+          ],
+          "id": "DE3C996B-22F6-4753-8069-D0F3A4B17A4D",
+          "axis": "vertical"
+        }
+      ],
+      "id": "1E986B12-0250-4B49-8471-C3D9409EBB2C"
+    }
+  ],
+  "permanentPanels": [
+    {
+      "controls": [
+        {
+          "linkedPageId": "590A5973-B1C2-4D9B-9C92-46E20E4F1B0D",
+          "color": "#3399FF",
+          "outputs": [],
+          "id": "031076DD-A7FF-424D-8E3A-C70D38032EE6",
+          "name": "Plate",
+          "colorOff": "#1A4D80"
+        },
+        {
+          "linkedPageId": "DA5B0EAD-FE97-485D-AFD2-535E212E86DF",
+          "color": "#3399FF",
+          "outputs": [],
+          "id": "9C489BF7-052A-4FBA-B1F0-6CFD295613BB",
+          "name": "Room",
+          "colorOff": "#1A4D80"
+        },
+        {
+          "linkedPageId": "1E986B12-0250-4B49-8471-C3D9409EBB2C",
+          "color": "#3399FF",
+          "outputs": [],
+          "id": "4580C405-517A-465C-B719-4F60BBA7FABD",
+          "name": "Shimmer",
+          "colorOff": "#1A4D80"
+        }
+      ],
+      "id": "E740B417-3EC6-4B08-968E-FC673CB4E198",
+      "label": "Mode",
+      "axis": "vertical"
+    },
+    {
+      "controls": [
+        {
+          "displayType": "knob",
+          "outputs": [],
+          "id": "6E523CBE-8A0C-4C7D-B091-93B7ED471700",
+          "name": "Low Cut",
+          "color": "#00FFCC"
+        },
+        {
+          "displayType": "knob",
+          "outputs": [],
+          "id": "8337EB9E-9002-4B37-8D37-28E6843459B7",
+          "name": "High Cut",
+          "color": "#00FFCC"
+        },
+        {
+          "displayType": "fader",
+          "outputs": [],
+          "id": "55CC3C76-8EF9-4BA8-8D20-FC277FDE6ABC",
+          "name": "Main Mix",
+          "color": "#00FFCC"
+        }
+      ],
+      "id": "77AB9ACF-4394-48E2-B98B-7EC3CA92652D",
+      "label": "Global Mix",
+      "axis": "vertical"
+    }
+  ],
+  "controls": [],
+  "id": "5E62D4E3-E8B0-4BD8-BF7D-B5F6C1926B50"
+}
